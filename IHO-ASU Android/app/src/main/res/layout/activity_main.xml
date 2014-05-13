@@ -36,7 +36,7 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/button1"
+                    android:id="@+id/news"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.51"
@@ -46,7 +46,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/button2"
+                    android:id="@+id/field"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
@@ -62,7 +62,7 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/about"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.89"
@@ -72,7 +72,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/gallery"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
@@ -87,7 +87,7 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/connect"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
@@ -97,7 +97,7 @@
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/button6"
+                    android:id="@+id/donate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.75"
@@ -110,5 +110,13 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/scrollView1"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="193dp"></LinearLayout>
 
 </RelativeLayout>
