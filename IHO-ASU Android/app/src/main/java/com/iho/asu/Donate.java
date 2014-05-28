@@ -9,14 +9,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
 
-public class About extends Fragment{
+public class Donate extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         ScrollView sv = new ScrollView(getActivity().getApplicationContext());
         sv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
         sv.addView(inflater.inflate(
-                R.layout.fragment_about, container, false));
+                R.layout.fragment_donate, container, false));
         return sv;
     }
 

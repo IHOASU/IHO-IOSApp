@@ -1,9 +1,12 @@
 package com.iho.asu;
 
 import android.app.Activity;
-import android.app.Fragment;
+import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,22 +20,23 @@ public class MainActivity extends Activity implements OnClickListener{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MainFragment fv = new MainFragment(this);
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.add(R.id.main_layout, fv);
+        ft.commit();
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
-        // Inflate the menu; this adds items to the action bar if it is present.
+
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             return true;
@@ -42,15 +46,25 @@ public class MainActivity extends Activity implements OnClickListener{
 
     @Override
     public void onClick(View v) {
-        switch(v.getId()){
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        switch (v.getId()) {
             case R.id.about:
-                Fragment newFragment = (Fragment) new About();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                transaction.replace(R.id.about_fragment, newFragment);
-                transaction.addToBackStack(null);
-
-                transaction.commit();
+                About about = new About();
+                fragmentTransaction.replace(R.id.main_layout, about);
+                fragmentTransaction.commit();
+                break;
+            case R.id.donate:
+                Donate donate = new Donate();
+                fragmentTransaction.replace(R.id.main_layout, donate);
+                fragmentTransaction.commit();
+                break;
+            case R.id.investButton:
+                Log.d("Invest","Clicked Invest Button");
+                Uri uri = Uri.parse("https://securelb.imodules.com/s/1469/foundation/Inner2Columns3.aspx?sid=1469&gid=2&pgid=426&cid=1155&bledit=1&dids=216");
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
         }
     }
 }
