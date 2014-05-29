@@ -3,7 +3,6 @@ package com.iho.asu;
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import android.webkit.WebView;
 public class MainFragment extends Fragment {
 
     public Activity mainActivity;
+    public MainFragment(){}
     public MainFragment(Activity mainActivity){
         this.mainActivity = mainActivity;
     }
@@ -24,9 +24,7 @@ public class MainFragment extends Fragment {
         View v = inflater.inflate(
                 R.layout.fragment_main, container, false);
         WebView webView = (WebView)(v.findViewById(R.id.webView));
-        Log.d("Web","["+webView+"]");
         webView.loadUrl("file:///android_asset/index.html");
-
         return v;
     }
 

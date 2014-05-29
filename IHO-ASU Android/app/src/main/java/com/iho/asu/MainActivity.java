@@ -6,7 +6,6 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -60,10 +59,19 @@ public class MainActivity extends Activity implements OnClickListener{
                 fragmentTransaction.commit();
                 break;
             case R.id.investButton:
-                Log.d("Invest","Clicked Invest Button");
                 Uri uri = Uri.parse("https://securelb.imodules.com/s/1469/foundation/Inner2Columns3.aspx?sid=1469&gid=2&pgid=426&cid=1155&bledit=1&dids=216");
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                break;
+            case R.id.creditsButton:
+                Credits credits = new Credits();
+                fragmentTransaction.replace(R.id.main_layout, credits);
+                fragmentTransaction.commit();
+                break;
+            case R.id.customBackButton:
+                MainFragment mainFragment = new MainFragment();
+                fragmentTransaction.replace(R.id.main_layout, mainFragment);
+                fragmentTransaction.commit();
                 break;
         }
     }

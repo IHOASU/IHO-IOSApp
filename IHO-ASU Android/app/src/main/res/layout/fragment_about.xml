@@ -1,14 +1,29 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/activity_horizontal_margin">
+    >
 
+    <ImageButton
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/customBackButton"
+        android:background="@drawable/header"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/customBackButton">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -22,18 +37,18 @@
                     android:layout_gravity="center_horizontal|top"
                     android:background="@drawable/about" />
             </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="268dp"
-                android:text="@string/aboutInfo"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:textSize="20dp" />
-        </LinearLayout>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aboutInfo"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="20dp" />
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -58,7 +73,7 @@
                     android:textSize="20dp" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="44dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/locationInfo"
                     android:layout_gravity="center"
                     android:textAlignment="textStart"
@@ -88,7 +103,7 @@
                     android:textSize="20dp" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="44dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/contactInfo"
                     android:layout_gravity="center"
                     android:textAlignment="textStart"
@@ -118,13 +133,14 @@
                     android:textSize="20dp"/>
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="68dp"
+                    android:layout_height="wrap_content"
                     android:text="@string/mailInfo"
                     android:layout_gravity="center"
                     android:textAlignment="textStart"
                     android:textSize="20dp"/>
             </LinearLayout>
+
         </LinearLayout>
+        </ScrollView>
 
-
-</LinearLayout>
+</RelativeLayout>

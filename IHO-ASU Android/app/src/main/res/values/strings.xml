@@ -17,9 +17,16 @@ The Institute of Human Origins is a research center of the College of Liberal Ar
     <string name="contactInfo">480.727.6580\n
     iho@asu.edu</string>
     <string name="mailInfo">ASU Institute of Human Origins\nPO Box 874101\nTempe, AZ 85287-4101</string>
-    <string name="donateInfo">
-        \nThe Institute of Human Origins invites you to share in the excitement of discovery, the pursuit of new knowledge, and the public discussion of the enduring puzzle of how we “became human.” The study of how and where humans developed on Earth has never been more vibrant than today. We are seeking visionary partners to join our mission to advance the science of human origins and explore the ongoing challenges of our field and laboratory research.\n
+    <string name="donateInfo">        \nThe Institute of Human Origins invites you to share in the excitement of discovery, the pursuit of new knowledge, and the public discussion of the enduring puzzle of how we “became human.” The study of how and where humans developed on Earth has never been more vibrant than today. We are seeking visionary partners to join our mission to advance the science of human origins and explore the ongoing challenges of our field and laboratory research.\n
         \nAn investment in IHO helps to fund student scholarships, support research in laboratories and field sites, and meet the growing needs of our researchers and students. Please help us continue the search!\n
         \nPlease contact IHO at 480.727.6580 for more information or to talk to someone about making an annual contribution, or to target your contribution for a particular scholarship, endowment, or fund.\n
         \nIf you would like to send donation by check, please make your donation payable to "ASU Foundation" and mail to ASU Institute of Human Origins, PO Box 874101, Tempe, AZ 85287-4101.</string>
+    <string name="creditInfo">William Kimbel, Director
+Julie Russ, Program Coordinator Sr.
+Lindsay Mullen, Coordinator</string>
+    <string name="asuTeamInfo">Barathi Baburaj\nDr.Timothy Lindquist, Faculty Adviser</string>
+    <string name="creditsLucy">Thank you IHO graduate student Neysa Grider-Potter for the "Lucy" facts.\n
+Special thanks to IHO Board Member Ross Leventhal for supporting this project!</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
