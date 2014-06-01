@@ -1,12 +1,13 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
 
     <ImageButton
         android:layout_width="384dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:id="@+id/customBackButton"
         android:background="@drawable/header"
         android:onClick="onClick"
@@ -18,7 +19,9 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/customBackButton">
+        android:layout_below="@+id/customBackButton"
+        android:id="@+id/scrollView2"
+        android:background="@android:color/background_light">
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,6 +51,7 @@
                     android:layout_gravity="center"
                     android:textAlignment="center"
                     android:textSize="20dp" />
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -131,6 +135,7 @@
                     android:text="Mailing address"
                     android:textStyle="bold"
                     android:textSize="20dp"/>
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -138,9 +143,17 @@
                     android:layout_gravity="center"
                     android:textAlignment="textStart"
                     android:textSize="20dp"/>
+
             </LinearLayout>
 
         </LinearLayout>
         </ScrollView>
 
-</RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView5"
+        android:background="@drawable/footer"
+        android:layout_below="@+id/scrollView2" />
+
+</LinearLayout>

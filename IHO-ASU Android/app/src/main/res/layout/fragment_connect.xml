@@ -1,0 +1,318 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageButton
+        android:layout_width="384dp"
+        android:layout_height="40dp"
+        android:id="@+id/customBackButton"
+        android:background="@drawable/header"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/customBackButton"
+        android:id="@+id/scrollView2"
+        android:background="@android:color/background_light">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/connect1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:text="Institute of Human Origins"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:onClick="onClick" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:id="@+id/iholayout"
+                android:baselineAligned="false"
+                android:background="@drawable/border"
+                android:visibility="visible">
+                <Button
+                    android:id="@+id/website"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:text="Website"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:onClick="onClick" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:text="Location"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:onClick="onClick" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/locationLayout"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/border"
+                    android:visibility="invisible">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/locationInfo"
+                        android:textIsSelectable="false"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Link to location"
+                        android:id="@+id/linkToLocation"
+                        android:textStyle="bold"
+                        android:textIsSelectable="true"
+                        android:onClick="onClick"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/contact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape"
+                    android:text="Contact"
+                    android:textColor="@android:color/background_light"
+                    android:textStyle="bold"
+                    android:onClick="onClick" />
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/contactLayout"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:background="@drawable/border"
+                    android:visibility="invisible">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phone 480.727.6580 \nFax 480.727.6570 \nEmail iho@asu.edu\n"
+                        android:textIsSelectable="false"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mailing Address"
+                        android:textStyle="bold"
+                        android:textIsSelectable="true"
+                        android:onClick="onClick"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="false"
+                        android:text="ASU Institute of Human Origins PO Box 874101 Tempe, AZ 85287-4101\n"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="false"
+                        android:id="@+id/linkToContact"
+                        android:text="Link to Contact"
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textStyle="bold"
+                        android:onClick="onClick"
+                        android:textSize="20dp" />
+                </LinearLayout>
+               </LinearLayout>
+
+            <Button
+                android:id="@+id/connect2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:text="Becoming Human"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:id="@+id/becomingHumanLayout"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/becomingHuman"
+                    android:textSize="20dp" />
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/visitBecomingHumanBtn"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/visitbecominghumanbtn"
+                    android:onClick="onClick" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/connect3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:text="Sign Up for E-News"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:id="@+id/signUpLayout"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please enter your email address below to sign up for the IHO E-News! "
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/editText" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton"
+                        android:background="@drawable/submitbtn" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageButton2"
+                        android:background="@drawable/clearbtn" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/connect4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:text="Facebook/Twitter"
+                android:onClick="onClick"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:id="@+id/fbLayout"
+                android:background="@drawable/border">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Like us on Facebook, follow us on Twitter! "
+                    android:textSize="20dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fbButton"
+                    android:background="@drawable/fb"
+                    android:onClick="onClick" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="         "/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/twButton"
+                    android:background="@drawable/twitter"
+                    android:onClick="onClick" />
+            </LinearLayout>
+          </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView5"
+        android:background="@drawable/footer"
+        android:layout_below="@+id/scrollView2" />
+
+</LinearLayout>
