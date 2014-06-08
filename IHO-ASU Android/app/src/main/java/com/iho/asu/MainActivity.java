@@ -19,6 +19,12 @@ public class MainActivity extends Activity implements OnClickListener{
     static boolean isIHOLayoutVisible = false;
     static boolean isBecomingHumanLayoutVisible = false;
     static boolean isContactLayoutVisible = false;
+    static boolean isLocationLayoutVisible = false;
+    private static final String[] TEXTS = { "Image #1", "Image #2", "Image #3" };
+    private static final int[] IMAGES = { R.drawable.img1, R.drawable.img2,
+            R.drawable.img3 };
+    private int mPosition = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +60,7 @@ public class MainActivity extends Activity implements OnClickListener{
         Uri uri;
         Intent intent;
         LinearLayout ll;
+        Images img = new Images();
         switch (v.getId()) {
             case R.id.about:
                 About about = new About();
@@ -160,6 +167,16 @@ public class MainActivity extends Activity implements OnClickListener{
                     isContactLayoutVisible=false;
                 }
                 break;
+            case R.id.locationBtn:
+                ll = (LinearLayout)findViewById(R.id.locationLayout);
+                if(!isLocationLayoutVisible){
+                    ll.setVisibility(View.VISIBLE);
+                    isLocationLayoutVisible = true;
+                } else{
+                    ll.setVisibility(View.INVISIBLE);
+                    isLocationLayoutVisible=false;
+                }
+                break;
             case R.id.watchNow:
                 uri = Uri.parse("http://video.nationalgeographic.com/video/news/112811-prehistoric-caves-ngtoday");
                 intent = new Intent(Intent.ACTION_VIEW, uri);
@@ -175,8 +192,9 @@ public class MainActivity extends Activity implements OnClickListener{
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
-
-
+            case R.id.galleryBtn:
+                Intent imgIntent = new Intent(getApplicationContext(), Images.class);
+                startActivity(imgIntent);
         }
     }
 }

@@ -33,13 +33,14 @@
             android:orientation="horizontal" >
 
             <Button
-                android:id="@+id/gallery"
+                android:id="@+id/galleryBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
                 android:text="@string/imgGallery"
                 android:textColor="@android:color/background_light"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClick" />
 
         </LinearLayout>
         <LinearLayout
@@ -71,7 +72,8 @@
             android:orientation="vertical"
             android:id="@+id/videoLayout"
             android:visibility="visible"
-            android:padding="@dimen/activity_horizontal_margin">
+            android:padding="@dimen/activity_horizontal_margin"
+               android:background="@drawable/border">
 
                 <TextView
                     android:layout_width="match_parent"

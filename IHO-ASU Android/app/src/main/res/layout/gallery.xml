@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextSwitcher
+        android:id="@+id/textSwitcher"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="#99000000"
+        android:padding="10dp" />
+
+
+    <ImageSwitcher
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageSwitcher"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/textSwitcher"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:onClick="onSwitch"
+        android:text="Next Image"
+        android:id="@+id/nextImg" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onSwitch"
+        android:text="Prev Image"
+        android:layout_alignTop="@+id/nextImg"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/prevImg" />
+
+</RelativeLayout>
