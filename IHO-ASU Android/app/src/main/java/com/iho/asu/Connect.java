@@ -8,11 +8,18 @@ import android.view.ViewGroup;
 
 
 public class Connect extends Fragment{
+
+    public int resource;
+
+    public Connect(){};
+    public Connect(int resource){
+        this.resource = resource;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(
-                R.layout.fragment_connect, container, false);
+                resource, container, false);
     }
 
     @Override

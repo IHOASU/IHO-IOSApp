@@ -42,14 +42,15 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/news"
+                    android:id="@+id/ne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.51"
                     android:background="@drawable/shape"
                     android:text="@string/news"
                     android:textColor="@android:color/background_light"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:onClick="onClick" />
 
                 <Button
                     android:id="@+id/field"

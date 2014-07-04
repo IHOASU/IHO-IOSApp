@@ -61,16 +61,35 @@ public class MainActivity extends Activity implements OnClickListener{
         Intent intent;
         LinearLayout ll;
         Images img = new Images();
+        Connect connect;
+        NewsEvents ne;
         switch (v.getId()) {
             case R.id.about:
                 About about = new About();
                 fragmentTransaction.replace(R.id.main_layout, about);
                 fragmentTransaction.commit();
                 break;
+            case R.id.customConnectBackButton:
             case R.id.connect:
-                Connect connect = new Connect();
+                connect = new Connect(R.layout.fragment_connect);
                 fragmentTransaction.replace(R.id.main_layout, connect);
                 fragmentTransaction.commit();
+                break;
+            case R.id.customNEBackButton:
+            case R.id.ne:
+                ne = new NewsEvents(R.layout.fragment_news_events);
+                fragmentTransaction.replace(R.id.main_layout, ne);
+                fragmentTransaction.commit();
+                break;
+            case R.id.tr1:
+                uri = Uri.parse("https://iho.asu.edu/outreach/travel/galapagos2014");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
+            case R.id.tr2:
+                uri = Uri.parse("https://iho.asu.edu/outreach/travel/france2013");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
                 break;
             case R.id.donate:
                 Donate donate = new Donate();
@@ -127,55 +146,20 @@ public class MainActivity extends Activity implements OnClickListener{
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
-            case R.id.video:
-                ll = (LinearLayout)findViewById(R.id.videoLayout);
-                if(!isVideoLayoutVisible){
-                    ll.setVisibility(View.VISIBLE);
-                    isVideoLayoutVisible = true;
-                } else{
-                    ll.setVisibility(View.INVISIBLE);
-                    isVideoLayoutVisible=false;
-                }
-                break;
             case R.id.connect1:
-                ll = (LinearLayout)findViewById(R.id.iholayout);
-                if(!isIHOLayoutVisible){
-                    ll.setVisibility(View.VISIBLE);
-                    isIHOLayoutVisible = true;
-                } else{
-                    ll.setVisibility(View.INVISIBLE);
-                    isIHOLayoutVisible=false;
-                }
+                connect = new Connect(R.layout.fragment_iho);
+                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragmentTransaction.commit();
                 break;
             case R.id.connect2:
-                ll = (LinearLayout)findViewById(R.id.becomingHumanLayout);
-                if(!isBecomingHumanLayoutVisible){
-                    ll.setVisibility(View.VISIBLE);
-                    isBecomingHumanLayoutVisible = true;
-                } else{
-                    ll.setVisibility(View.INVISIBLE);
-                    isBecomingHumanLayoutVisible=false;
-                }
+                connect = new Connect(R.layout.fragment_bh);
+                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragmentTransaction.commit();
                 break;
-            case R.id.contact:
-                ll = (LinearLayout)findViewById(R.id.contactLayout);
-                if(!isContactLayoutVisible){
-                    ll.setVisibility(View.VISIBLE);
-                    isContactLayoutVisible = true;
-                } else{
-                    ll.setVisibility(View.INVISIBLE);
-                    isContactLayoutVisible=false;
-                }
-                break;
-            case R.id.locationBtn:
-                ll = (LinearLayout)findViewById(R.id.locationLayout);
-                if(!isLocationLayoutVisible){
-                    ll.setVisibility(View.VISIBLE);
-                    isLocationLayoutVisible = true;
-                } else{
-                    ll.setVisibility(View.INVISIBLE);
-                    isLocationLayoutVisible=false;
-                }
+            case R.id.connect3:
+                connect = new Connect(R.layout.fragment_sign_news);
+                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragmentTransaction.commit();
                 break;
             case R.id.watchNow:
                 uri = Uri.parse("http://video.nationalgeographic.com/video/news/112811-prehistoric-caves-ngtoday");
@@ -195,6 +179,17 @@ public class MainActivity extends Activity implements OnClickListener{
             case R.id.galleryBtn:
                 Intent imgIntent = new Intent(getApplicationContext(), Images.class);
                 startActivity(imgIntent);
+                break;
+            case R.id.mapItBtn:
+                uri = Uri.parse("https://www.google.com/maps/place/951+Cady+Mall/@33.419944,-111.9345045,17z/data=!3m1!4b1!4m2!3m1!1s0x872b08db89afde97:0x2a9f7cbb1d7f4e64");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
+            case R.id.ne6:
+                ne = new NewsEvents(R.layout.fragment_travel);
+                fragmentTransaction.replace(R.id.main_layout, ne);
+                fragmentTransaction.commit();
+                break;
         }
     }
 }

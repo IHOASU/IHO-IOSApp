@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <ImageButton
+        android:layout_width="384dp"
+        android:layout_height="40dp"
+        android:id="@+id/customNEBackButton"
+        android:background="@drawable/header_trvl_lrn"
+        android:onClick="onClick"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/customNEBackButton">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/linearLayout"
+            android:layout_below="@+id/customNEBackButton"
+            android:layout_alignParentLeft="true">
+
+            <ImageView
+                android:layout_width="290dp"
+                android:layout_height="260dp"
+                android:id="@+id/imageView"
+                android:background="@drawable/trvl_learn"
+                android:padding="16dp"
+                android:layout_below="@+id/customNEBackButton"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="25dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/trvl_learn"
+                android:id="@+id/textView"
+                android:layout_gravity="center_horizontal"
+                android:textSize="16dp" />
+
+            <Button
+                android:id="@+id/tr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:text="Galapagos"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:onClick="onClick" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:id="@+id/textView2"
+                android:layout_gravity="center_horizontal" />
+
+            <Button
+                android:id="@+id/tr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape"
+                android:text="France"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:onClick="onClick" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
