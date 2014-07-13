@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.iho.asu.Database.Columns;
 import com.iho.asu.Database.DataBaseHandler;
 import com.iho.asu.Database.Tables.Events;
+import com.iho.asu.Database.Tables.News;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -32,22 +33,21 @@ public class NewsDAO {
         dbHandler.close();
     }
 
-    public Events createEvents(String when, String where, String title, String mapLink, String reg) {
+    public News createEvents(byte[] news_img, String link, String title, String text) {
         ContentValues values = new ContentValues();
-        values.put(Columns.KEY_NEWS_WHEN.getColumnName(), when);
-        values.put(Columns.KEY_NEWS_WHERE.getColumnName(), where);
+        values.put(Columns.KEY_NEWS_IMAGE.getColumnName(), news_img);
+        values.put(Columns.KEY_NEWS_LINK.getColumnName(), link);
         values.put(Columns.KEY_NEWS_TITLE.getColumnName(), title);
-        values.put(Columns.KEY_NEWS_MAP.getColumnName(), mapLink);
-        values.put(Columns.KEY_NEWS_REG.getColumnName(), reg);
+        values.put(Columns.KEY_NEWS_TEXT.getColumnName(), text);
         long insertId = database.insert(DataBaseHandler.TABLE_NEWS, null,
                 values);
         Cursor news = database.query(DataBaseHandler.TABLE_NEWS,
                 allColumns, Columns.KEY_NEWS_ID.getColumnName() + " = " + insertId, null,
                 null, null, null);
         news.moveToFirst();
-        Events newEvent = cursorToEvent(news);
+        News newNews = cursorToNews(news);
         news.close();
-        return newEvent;
+        return newNews;
     }
 
     public void deleteEvent(Events news) {
@@ -57,28 +57,28 @@ public class NewsDAO {
                 + " = " + id, null);
     }
 
-    public List<Events> getAllEvents() {
-        List<Events> newss = new ArrayList<Events>();
+    public List<News> getAllNews() {
+        List<News> news = new ArrayList<News>();
 
         Cursor cursor = database.query(DataBaseHandler.TABLE_NEWS,
                 allColumns, null, null, null, null, null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
-            Events ev = cursorToEvent(cursor);
-            newss.add(ev);
+            News n = cursorToNews(cursor);
+            news.add(n);
             cursor.moveToNext();
         }
         // make sure to close the cursor
         cursor.close();
-        return newss;
+        return news;
     }
 
-    private Events cursorToEvent(Cursor cursor) {
-        Events ev = new Events();
-        ev.setId(cursor.getLong(0));
-        ev.setTitle(cursor.getString(1));
-        ev.setWhen(cursor.getString(2));
+    private News cursorToNews(Cursor cursor) {
+        News n = new News();
+        n.setId(cursor.getLong(0));
+        n.setTitle(cursor.getString(1));
+        n.setWhen(cursor.getString(2));
         ev.setWhere(cursor.getString(3));
         ev.setLocation_link(cursor.getString(4));
         ev.setDescription(cursor.getString(5));
