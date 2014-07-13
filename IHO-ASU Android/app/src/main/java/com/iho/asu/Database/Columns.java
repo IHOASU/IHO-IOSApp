@@ -9,7 +9,16 @@ public enum Columns {
     private Columns(String name){
         this.name = name;
     }
-    private String getColumnName(){
+    public String getColumnName(){
         return name;
+    }
+    public static String[] getEventColumnNames(){
+        return new String[]{KEY_EVENT_ID.name,KEY_EVENT_WHEN.name,KEY_EVENT_MAP.name,KEY_EVENT_WHERE.name,KEY_EVENT_TITLE.name,KEY_EVENT_DESC.name,KEY_EVENT_REG.name};
+    }
+    public static String[] getGalleryColumnNames(){
+        return new String[]{KEY_GALLERY_ID.name,KEY_GALLERY_NAME.name};
+    }
+    public static String[] getLecturerColumnNames(){
+        return new String[]{KEY_LECTURER_ID.name,KEY_LECTURER_NAME.name,KEY_LECTURE_IMAGE.name,KEY_LECTURER_BIO.name,KEY_LECTURER_EMAIL.name,KEY_LECTURER_LINK.name,KEY_LECTURE_TITLE.name};
     }
 }

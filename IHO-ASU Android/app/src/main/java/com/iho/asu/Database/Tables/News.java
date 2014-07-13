@@ -1,4 +1,4 @@
-package com.iho.asu.Database;
+package com.iho.asu.Database.Tables;
 
 /**
  * Created by Barathi on 7/4/2014.

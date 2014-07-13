@@ -1,4 +1,4 @@
-package com.iho.asu.Database;
+package com.iho.asu.Database.Tables;
 
 /**
  * Created by Barathi on 7/4/2014.
@@ -8,8 +8,17 @@ public class Lecturer {
     private String name;
     private String title;
     private String bio;
-    private String text;
-    private Object image;
+    private String link;
+    private byte[] image;
+    private String email;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public long getId() {
         return id;
@@ -43,19 +52,19 @@ public class Lecturer {
         this.bio = bio;
     }
 
-    public String getText() {
-        return text;
+    public String getLink() {
+        return link;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setLink(String link) {
+        this.link = link;
     }
 
-    public Object getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Object image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 }
