@@ -7,7 +7,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.iho.asu.Database.Columns;
 import com.iho.asu.Database.DataBaseHandler;
-import com.iho.asu.Database.Tables.Events;
 import com.iho.asu.Database.Tables.News;
 
 import java.sql.SQLException;
@@ -20,7 +19,7 @@ import java.util.List;
 public class NewsDAO {
     private SQLiteDatabase database;
     private DataBaseHandler dbHandler;
-    private String[] allColumns = Columns.getEventColumnNames();
+    private String[] allColumns = Columns.getNewsColumnNames();
     public NewsDAO(Context context) {
         dbHandler = new DataBaseHandler(context);
     }
@@ -33,7 +32,7 @@ public class NewsDAO {
         dbHandler.close();
     }
 
-    public News createEvents(byte[] news_img, String link, String title, String text) {
+    public News createNews(byte[] news_img, String link, String title, String text) {
         ContentValues values = new ContentValues();
         values.put(Columns.KEY_NEWS_IMAGE.getColumnName(), news_img);
         values.put(Columns.KEY_NEWS_LINK.getColumnName(), link);
@@ -50,9 +49,9 @@ public class NewsDAO {
         return newNews;
     }
 
-    public void deleteEvent(Events news) {
+    public void deleteNews(News news) {
         long id = news.getId();
-        System.out.println("Event deleted with id: " + id);
+        System.out.println("News deleted with id: " + id);
         database.delete(DataBaseHandler.TABLE_NEWS, Columns.KEY_NEWS_ID
                 + " = " + id, null);
     }
@@ -78,11 +77,9 @@ public class NewsDAO {
         News n = new News();
         n.setId(cursor.getLong(0));
         n.setTitle(cursor.getString(1));
-        n.setWhen(cursor.getString(2));
-        ev.setWhere(cursor.getString(3));
-        ev.setLocation_link(cursor.getString(4));
-        ev.setDescription(cursor.getString(5));
-        ev.setReg(cursor.getString(6));
-        return ev;
+        n.setText(cursor.getString(2));
+        n.setImage(cursor.getBlob(3));
+        n.setNewsLink(cursor.getString(4));
+        return n;
     }
 }

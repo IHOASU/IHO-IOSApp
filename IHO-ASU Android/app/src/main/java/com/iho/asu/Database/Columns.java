@@ -21,4 +21,10 @@ public enum Columns {
     public static String[] getLecturerColumnNames(){
         return new String[]{KEY_LECTURER_ID.name,KEY_LECTURER_NAME.name,KEY_LECTURE_IMAGE.name,KEY_LECTURER_BIO.name,KEY_LECTURER_EMAIL.name,KEY_LECTURER_LINK.name,KEY_LECTURE_TITLE.name};
     }
+    public static String[] getNewsColumnNames(){
+        return new String[]{KEY_NEWS_ID.name,KEY_NEWS_TITLE.name,KEY_NEWS_TEXT.name,KEY_NEWS_IMAGE.name,KEY_NEWS_LINK.name};
+    }
+    public static String[] getScienceColumnNames(){
+        return new String[]{KEY_SCIENCE_ID.name,KEY_SCIENCE_TITLE.name,KEY_SCIENCE_LINK.name};
+    }
 }

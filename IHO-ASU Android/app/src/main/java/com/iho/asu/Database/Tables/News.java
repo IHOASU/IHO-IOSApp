@@ -7,7 +7,7 @@ public class News {
     private long id;
     private String title;
     private String text;
-    private Object image;
+    private byte[] image;
     private String newsLink;
 
     public long getId() {
@@ -34,11 +34,11 @@ public class News {
         this.text = text;
     }
 
-    public Object getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Object image) {
+    public void setImage(byte[] image) {
         this.image = image;
     }
 
