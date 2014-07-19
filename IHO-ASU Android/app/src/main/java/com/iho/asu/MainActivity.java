@@ -11,6 +11,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.iho.asu.Pages.About;
+import com.iho.asu.Pages.Connect;
+import com.iho.asu.Pages.Credits;
+import com.iho.asu.Pages.Donate;
+import com.iho.asu.Pages.Gallery;
+import com.iho.asu.Pages.Images;
+import com.iho.asu.Pages.MainFragment;
+import com.iho.asu.Pages.NewsEvents;
+
 import static android.view.View.OnClickListener;
 
 
@@ -184,11 +193,6 @@ public class MainActivity extends Activity implements OnClickListener{
                 uri = Uri.parse("https://www.google.com/maps/place/951+Cady+Mall/@33.419944,-111.9345045,17z/data=!3m1!4b1!4m2!3m1!1s0x872b08db89afde97:0x2a9f7cbb1d7f4e64");
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
-                break;
-            case R.id.ne6:
-                ne = new NewsEvents(R.layout.fragment_travel);
-                fragmentTransaction.replace(R.id.main_layout, ne);
-                fragmentTransaction.commit();
                 break;
         }
     }

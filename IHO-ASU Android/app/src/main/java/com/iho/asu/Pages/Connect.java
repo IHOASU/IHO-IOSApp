@@ -1,4 +1,4 @@
-package com.iho.asu;
+package com.iho.asu.Pages;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -7,12 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-public class Gallery extends Fragment{
+public class Connect extends Fragment{
+
+    public int resource;
+
+    public Connect(){};
+    public Connect(int resource){
+        this.resource = resource;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(
-                R.layout.fragment_gallery, container, false);
+                resource, container, false);
     }
 
     @Override

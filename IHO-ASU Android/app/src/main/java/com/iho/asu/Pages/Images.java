@@ -1,4 +1,4 @@
-package com.iho.asu;
+package com.iho.asu.Pages;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import com.iho.asu.R;
 
 public class Images extends Activity {
 
