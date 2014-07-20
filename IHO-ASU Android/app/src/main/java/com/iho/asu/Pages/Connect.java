@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 public class Connect extends Fragment{
 
     public int resource;
-
-    public Connect(){};
     public Connect(int resource){
         this.resource = resource;
     }

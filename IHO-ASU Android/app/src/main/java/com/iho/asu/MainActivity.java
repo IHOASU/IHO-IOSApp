@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
 
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
@@ -24,11 +23,6 @@ import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity implements OnClickListener{
-    static boolean isVideoLayoutVisible = false;
-    static boolean isIHOLayoutVisible = false;
-    static boolean isBecomingHumanLayoutVisible = false;
-    static boolean isContactLayoutVisible = false;
-    static boolean isLocationLayoutVisible = false;
     private static final String[] TEXTS = { "Image #1", "Image #2", "Image #3" };
     private static final int[] IMAGES = { R.drawable.img1, R.drawable.img2,
             R.drawable.img3 };
@@ -68,8 +62,6 @@ public class MainActivity extends Activity implements OnClickListener{
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Uri uri;
         Intent intent;
-        LinearLayout ll;
-        Images img = new Images();
         Connect connect;
         NewsEvents ne;
         switch (v.getId()) {

@@ -12,8 +12,6 @@ import android.widget.ScrollView;
 public class NewsEvents extends Fragment{
 
     public int resource;
-
-    public NewsEvents(){};
     public NewsEvents(int resource){
         this.resource = resource;
     }
