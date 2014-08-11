@@ -65,6 +65,8 @@ public class MainActivity extends Activity implements OnClickListener{
         Uri uri;
         Intent intent;
         FieldNotes fieldNotes;
+        NewsEvents ne;
+        Connect connect;
         switch (v.getId()) {
             case R.id.about:
                 About about = new About();
@@ -73,13 +75,13 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customConnectBackButton:
             case R.id.connect:
-                Connect connect = new Connect(R.layout.fragment_connect);
+                connect = new Connect(R.layout.fragment_connect);
                 fragmentTransaction.replace(R.id.main_layout, connect);
                 fragmentTransaction.commit();
                 break;
             case R.id.customNEBackButton:
             case R.id.ne:
-                NewsEvents ne = new NewsEvents(R.layout.fragment_news_events);
+                ne = new NewsEvents(R.layout.fragment_news_events);
                 fragmentTransaction.replace(R.id.main_layout, ne);
                 fragmentTransaction.commit();
                 break;
@@ -197,6 +199,11 @@ public class MainActivity extends Activity implements OnClickListener{
                 Lucy lucyFragment = new Lucy();
                 fragmentTransaction.replace(R.id.field_layout, lucyFragment);
                 fragmentTransaction.commit();
+                break;
+            case R.id.fn4:
+                uri = Uri.parse("http://asuiho.wordpress.com/");
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
                 break;
 
 

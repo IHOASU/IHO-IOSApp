@@ -9,7 +9,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/customFNBackbutton"
         android:background="@drawable/header_lucy"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:onClick="onClick" />
     <ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
