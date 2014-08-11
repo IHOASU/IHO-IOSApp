@@ -14,8 +14,10 @@ import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
 import com.iho.asu.Pages.Donate;
+import com.iho.asu.Pages.FieldNotes;
 import com.iho.asu.Pages.Gallery;
 import com.iho.asu.Pages.Images;
+import com.iho.asu.Pages.Lucy;
 import com.iho.asu.Pages.MainFragment;
 import com.iho.asu.Pages.NewsEvents;
 
@@ -62,8 +64,7 @@ public class MainActivity extends Activity implements OnClickListener{
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Uri uri;
         Intent intent;
-        Connect connect;
-        NewsEvents ne;
+        FieldNotes fieldNotes;
         switch (v.getId()) {
             case R.id.about:
                 About about = new About();
@@ -72,13 +73,13 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customConnectBackButton:
             case R.id.connect:
-                connect = new Connect(R.layout.fragment_connect);
+                Connect connect = new Connect(R.layout.fragment_connect);
                 fragmentTransaction.replace(R.id.main_layout, connect);
                 fragmentTransaction.commit();
                 break;
             case R.id.customNEBackButton:
             case R.id.ne:
-                ne = new NewsEvents(R.layout.fragment_news_events);
+                NewsEvents ne = new NewsEvents(R.layout.fragment_news_events);
                 fragmentTransaction.replace(R.id.main_layout, ne);
                 fragmentTransaction.commit();
                 break;
@@ -186,6 +187,19 @@ public class MainActivity extends Activity implements OnClickListener{
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
+            case R.id.customFNBackbutton:
+            case R.id.field:
+                fieldNotes = new FieldNotes(R.layout.fragment_field);
+                fragmentTransaction.replace(R.id.main_layout, fieldNotes);
+                fragmentTransaction.commit();
+                break;
+            case R.id.fn3:
+                Lucy lucyFragment = new Lucy();
+                fragmentTransaction.replace(R.id.field_layout, lucyFragment);
+                fragmentTransaction.commit();
+                break;
+
+
         }
     }
 }
