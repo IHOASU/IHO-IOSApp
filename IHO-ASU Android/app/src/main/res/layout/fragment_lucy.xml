@@ -23,9 +23,7 @@
             android:orientation="vertical"
             android:id="@+id/linearLayout"
             android:layout_alignParentLeft="true"
-            android:layout_below="@+id/customFNBackbutton"
-            android:padding="@dimen/activity_horizontal_margin">
-
+            android:layout_below="@+id/customFNBackbutton">
             <WebView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -33,9 +31,6 @@
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="111dp" />
-
         </LinearLayout>
         </ScrollView>
-
-
 </RelativeLayout>

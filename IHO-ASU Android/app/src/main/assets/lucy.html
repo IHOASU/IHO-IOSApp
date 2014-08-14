@@ -30,7 +30,9 @@ document.addEventListener('DOMContentLoaded',function () {
 								   var faceColor = "#396b9e";
                                    //some code to colorize tapped regions 
                                    // and handle tap events outside of popup
-                                   
+                                   $('#lucy').on('pageinit',function(){
+										$('#infoPopup').popup('open',{positionTo:'window'});
+                                   });
                                    $('#skullPopup').bind({
                                                          popupbeforeposition: function(event, ui){
                                                          $(skull).attr("fill","red");
@@ -192,7 +194,9 @@ document.addEventListener('DOMContentLoaded',function () {
                                                       });
                                    });
                 </script>
-<div id="lucy" data-role="page" data-theme="b">
+<!--<div id="lucy" data-role="page" data-rel="popup" data-theme="b">-->
+<div id="lucy" data-rel="popup" data-theme="b">
+<p style="text-align:left;font-size:12px" >“Lucy” is the popular name for an individual fossil of a species of human ancestor—Australopithecus afarensis—that was discovered by Donald Johanson in 1974 in Hadar, Ethiopia. Click on the skeleton to learn more about why this species was so important.</p>
     <div data-role="content" data-theme="a">
         <div id="svgDiv">
            <svg style="width:340px ;height:420px ;top:0px;left:0px;bottom:0px;right:0px;" id="lucy_img" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
@@ -1330,10 +1334,7 @@ document.addEventListener('DOMContentLoaded',function () {
             </svg>
             
         </div>
-        <div data-role="popup" id="infoPopup" class="ui-content" style="max-width:275px" data-theme="b"> <a href="#" id="closeButtonInfo" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-            <p>“Lucy” is the popular name for an individual fossil of a species of human ancestor—Australopithecus afarensis—that was discovered by Donald Johanson in 1974 in Hadar, Ethiopia. Click on the skeleton to learn more about why this species was so important.</p>
-        </div>
-        <div data-role="popup" id="skullPopup" class="ui-content" style="max-width:275px" data-theme="b"> <a href="#" id="closeButtonSkull" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+        <div data-role="popup" id="skullPopup" class="ui-content" style="max-width:275px" data-theme="b"> <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <p>Estimates of brain size range from 380 to 550 cubic centimeters (cc). This is similar in size to that of chimpanzees who average 395cc and much smaller than modern humans who average 1475cc.</p>
         </div>
         <div data-role="popup" id="chinPopup" class="ui-content" style="max-width:280px" data-theme="b"> <a href="#" id="closeButtonChin" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
@@ -1359,6 +1360,9 @@ document.addEventListener('DOMContentLoaded',function () {
         </div>
         <div data-role="popup" id="leftHipPopup" class="ui-content" style="max-width:280px" data-theme="b"> <a href="#" id="closeButtonLeftHip" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <p>Evidence for bipedality: The pelvis is wide and bowl-shaped, as it is in humans.</p>
+        </div>
+		<div data-role="popup" id="infoPopup" class="ui-content" style="max-width:280px" data-theme="b"> <a href="#" id="closeButtonInfo" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+            <p>“Lucy” is the popular name for an individual fossil of a species of human ancestor—Australopithecus afarensis—that was discovered by Donald Johanson in 1974 in Hadar, Ethiopia. Click on the skeleton to learn more about why this species was so important.</p>
         </div>
         <div data-role="popup" id="leftLegPopup" class="ui-content" style="max-width:280px" data-theme="b"> <a href="#" id="closeButtonLeftLeg" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
             <p>Humans walk on two legs (bipedally) and have long legs and short arms. Chimpanzees walk on all fours and have longer arms than legs. Australopithecus are thought to have walked bipedally and had arms that are relatively shorter than chimpanzees but are relatively longer than humans.</p>

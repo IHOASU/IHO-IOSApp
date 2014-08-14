@@ -12,6 +12,7 @@ import android.widget.ScrollView;
 public class FieldNotes extends Fragment{
 
     public int resource;
+    public FieldNotes(){}
     public FieldNotes(int resource){
         this.resource = resource;
     }
