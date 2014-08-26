@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.iho.asu.Database.DBActivity.LecturerActivity;
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
@@ -194,6 +195,10 @@ public class MainActivity extends Activity implements OnClickListener{
                 fieldNotes = new FieldNotes(R.layout.fragment_field);
                 fragmentTransaction.replace(R.id.main_layout, fieldNotes);
                 fragmentTransaction.commit();
+                break;
+            case R.id.fn1:
+                intent = new Intent(this, LecturerActivity.class);
+                startActivity(intent);
                 break;
             case R.id.fn3:
                 Lucy lucyFragment = new Lucy();

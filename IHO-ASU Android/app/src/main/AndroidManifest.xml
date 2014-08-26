@@ -22,8 +22,8 @@
         </activity>
         <activity android:name="com.iho.asu.Pages.Images" />
         <activity
-            android:name="com.iho.asu.Database.DBActivity.FieldActivity"
-            android:label="@string/title_activity_field" >
+            android:name="com.iho.asu.Database.DBActivity.LecturerActivity"
+            android:label="@string/title_activity_lecturer" >
         </activity>
     </application>
 

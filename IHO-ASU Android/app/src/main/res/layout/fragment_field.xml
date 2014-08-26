@@ -34,14 +34,14 @@
                 android:id="@+id/textView1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="OUR LECTURES"/>
+                android:text="OUR LECTURERS"/>
 
             <Button
                 android:id="@+id/fn1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
-                android:text="Choose A Lecture                                   >"
+                android:text="Click to see our lecturers                         >"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:onClick="onClick" />
