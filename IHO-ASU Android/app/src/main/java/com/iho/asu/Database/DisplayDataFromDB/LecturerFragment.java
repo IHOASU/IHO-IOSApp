@@ -1,13 +1,13 @@
-package com.iho.asu.Database.DBActivity;
+package com.iho.asu.Database.DisplayDataFromDB;
 
-import android.app.FragmentTransaction;
-import android.app.ListActivity;
+import android.app.ListFragment;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class LecturerActivity extends ListActivity {
+public class LecturerFragment extends ListFragment {
 
     private static final String DB_NAME = "asuIHO.db";
 
@@ -28,34 +28,34 @@ public class LecturerActivity extends ListActivity {
     private static final String TABLE_NAME = "Lecturer";
 
     private SQLiteDatabase database;
-    private ListView listView;
     private ArrayList<String> lecturerNames = new ArrayList<String>();
     protected Map<String,Lecturer> lecturers = new HashMap<String, Lecturer>();
-    private  ImageTextFragment imgFragment;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater,
+                             ViewGroup container, Bundle savedInstanceState) {
+        View v = inflater.inflate(
+                R.layout.fragment_lecturer, container, false);
+        DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
+        database = dbOpenHelper.openDataBase();
+        getLecturers();
+        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, lecturerNames));
+        return v;
+    }
 
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lecturer);
-        DataBaseHelper dbOpenHelper = new DataBaseHelper(this, DB_NAME);
-        database = dbOpenHelper.openDataBase();
-        getLecturers();
-        setUpList();
-    }
-
-    private void setUpList() {
-        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, lecturerNames));
-        listView = getListView();
-        listView.setOnItemClickListener(new OnItemClickListener() {
-            public void onItemClick(AdapterView parent, View view,
-                                    int position, long id) {
-                imgFragment = new ImageTextFragment(lecturerNames.get(position),lecturers);
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.lecturer_layout, imgFragment);
-                ft.commit();
-            }
-        });
+    public void onListItemClick(ListView l, View v, int position, long id){
+        Intent i= new Intent(this.getActivity(),PerLecturerViewActivity.class );
+        String name = lecturerNames.get(position);
+        Lecturer lecturer = lecturers.get(name);
+        i.putExtra(Columns.KEY_LECTURER_NAME.getColumnName(), name);
+        i.putExtra(Columns.KEY_LECTURER_IMAGE.getColumnName(),lecturer.getImage());
+        i.putExtra(Columns.KEY_LECTURER_BIO.getColumnName(),lecturer.getBio());
+        i.putExtra(Columns.KEY_LECTURER_EMAIL.getColumnName(),lecturer.getEmail());
+        i.putExtra(Columns.KEY_LECTURE_TITLE.getColumnName(),lecturer.getTitle());
+        i.putExtra(Columns.KEY_LECTURER_LINK.getColumnName(),lecturer.getLink());
+        startActivity(i);
     }
 
     //Extracting elements from the database

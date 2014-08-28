@@ -21,10 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.iho.asu.Pages.Images" />
-        <activity
-            android:name="com.iho.asu.Database.DBActivity.LecturerActivity"
-            android:label="@string/title_activity_lecturer" >
-        </activity>
+        <activity android:name=".Database.DisplayDataFromDB.PerLecturerViewActivity" />
     </application>
 
 </manifest>
