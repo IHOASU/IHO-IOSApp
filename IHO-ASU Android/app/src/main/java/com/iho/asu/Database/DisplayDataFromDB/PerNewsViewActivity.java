@@ -27,33 +27,31 @@ public class PerNewsViewActivity extends Activity implements View.OnClickListene
     @Override
     public void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
-        setContentView(R.layout.per_lecturer);
-        TextView textView = (TextView) findViewById(R.id.name);
+        setContentView(R.layout.per_newsitem);
+        TextView textView = (TextView) findViewById(R.id.title);
         ImageView imageView = (ImageView) findViewById(R.id.image);
-        TextView textView1 = (TextView)findViewById(R.id.title);
-        TextView textView2 = (TextView)findViewById(R.id.bio);
+        TextView textView1 = (TextView)findViewById(R.id.text);
         Intent i = getIntent();
         link = i.getStringExtra(Columns.KEY_NEWS_LINK.getColumnName());
-        ByteArrayInputStream img = new ByteArrayInputStream(i.getByteArrayExtra(Columns.KEY_LECTURER_IMAGE.getColumnName()));
+        ByteArrayInputStream img = new ByteArrayInputStream(i.getByteArrayExtra(Columns.KEY_NEWS_IMAGE.getColumnName()));
         Bitmap displayImg = BitmapFactory.decodeStream(img);
         imageView.setImageBitmap(displayImg);
-        textView.setText(i.getStringExtra(Columns.KEY_LECTURER_NAME.getColumnName()));
-        textView1.setText(i.getStringExtra(Columns.KEY_LECTURE_TITLE.getColumnName()));
-        textView2.setText(i.getStringExtra(Columns.KEY_LECTURER_BIO.getColumnName()));
+        textView.setText(i.getStringExtra(Columns.KEY_NEWS_TITLE.getColumnName()));
+        textView1.setText(i.getStringExtra(Columns.KEY_NEWS_TEXT.getColumnName()));
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.lectureLink:
+            case R.id.newsLink:
                 Uri uri = Uri.parse(link);
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
             case R.id.customLecturerBackbutton:
-                LecturerFragment lecturerFragment = new LecturerFragment();
+                NewsFragment newsFragment = new NewsFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.lecturer_layout, lecturerFragment);
+                ft.replace(R.id.news_layout, newsFragment);
                 ft.commit();
                 break;
         }

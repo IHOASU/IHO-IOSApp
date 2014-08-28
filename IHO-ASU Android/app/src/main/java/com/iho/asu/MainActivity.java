@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.iho.asu.Database.DisplayDataFromDB.LecturerFragment;
+import com.iho.asu.Database.DisplayDataFromDB.NewsFragment;
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
@@ -211,6 +212,11 @@ public class MainActivity extends Activity implements OnClickListener{
                 uri = Uri.parse("http://asuiho.wordpress.com/");
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                break;
+            case R.id.ne1:
+                NewsFragment nfragment = new NewsFragment();
+                fragmentTransaction.replace(R.id.main_layout, nfragment);
+                fragmentTransaction.commit();
                 break;
 
 

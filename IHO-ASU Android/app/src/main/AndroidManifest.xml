@@ -22,6 +22,7 @@
         </activity>
         <activity android:name="com.iho.asu.Pages.Images" />
         <activity android:name=".Database.DisplayDataFromDB.PerLecturerViewActivity" />
+        <activity android:name=".Database.DisplayDataFromDB.PerNewsViewActivity" />
     </application>
 
 </manifest>

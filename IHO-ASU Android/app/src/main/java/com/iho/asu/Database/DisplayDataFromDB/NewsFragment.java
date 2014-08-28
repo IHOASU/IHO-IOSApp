@@ -46,7 +46,7 @@ public class NewsFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
-        Intent i= new Intent(this.getActivity(),PerLecturerViewActivity.class );
+        Intent i= new Intent(this.getActivity(),PerNewsViewActivity.class );
         String name = newsTitle.get(position);
         News news = newsItems.get(name);
         i.putExtra(Columns.KEY_NEWS_TITLE.getColumnName(), name);
