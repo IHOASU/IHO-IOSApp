@@ -55,6 +55,7 @@ public class LecturerFragment extends ListFragment {
         i.putExtra(Columns.KEY_LECTURER_EMAIL.getColumnName(),lecturer.getEmail());
         i.putExtra(Columns.KEY_LECTURE_TITLE.getColumnName(),lecturer.getTitle());
         i.putExtra(Columns.KEY_LECTURER_LINK.getColumnName(),lecturer.getLink());
+        i.putExtra("ViewNeeded","Lecturer");
         startActivity(i);
     }
 

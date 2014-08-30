@@ -46,13 +46,14 @@ public class NewsFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
-        Intent i= new Intent(this.getActivity(),PerNewsViewActivity.class );
+        Intent i= new Intent(this.getActivity(),ViewActivity.class );
         String name = newsTitle.get(position);
         News news = newsItems.get(name);
         i.putExtra(Columns.KEY_NEWS_TITLE.getColumnName(), name);
         i.putExtra(Columns.KEY_NEWS_IMAGE.getColumnName(),news.getImage());
         i.putExtra(Columns.KEY_NEWS_LINK.getColumnName(),news.getNewsLink());
         i.putExtra(Columns.KEY_NEWS_TEXT.getColumnName(),news.getText());
+        i.putExtra("ViewNeeded","News");
         startActivity(i);
     }
 

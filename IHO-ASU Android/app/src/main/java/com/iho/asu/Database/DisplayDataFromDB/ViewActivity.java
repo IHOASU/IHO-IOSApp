@@ -1,6 +1,7 @@
 package com.iho.asu.Database.DisplayDataFromDB;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -19,30 +20,51 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstance){
         super.onCreate(savedInstance);
         setContentView(R.layout.activity_view);
-        PerLecturerViewFragment perLecturerViewFragment = new PerLecturerViewFragment();
         Intent i = getIntent();
-        link = i.getStringExtra(Columns.KEY_LECTURER_LINK.getColumnName());
+        String typeOfView = i.getStringExtra("ViewNeeded");
+        Fragment returnFragment = getTheTypeOfFragment(typeOfView,i);
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.per_view, perLecturerViewFragment);
+        ft.add(R.id.per_view, returnFragment);
         ft.commit();
     }
 
     @Override
     public void onClick(View v) {
+        Uri uri = Uri.parse(link);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (v.getId()) {
             case R.id.lectureLink:
-                Uri uri = Uri.parse(link);
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
             case R.id.customLecturerBackbutton:
                 LecturerFragment lecturerFragment = new LecturerFragment();
-                FragmentTransaction ft = getFragmentManager().beginTransaction();
                 ft.replace(R.id.per_view,lecturerFragment);
                 ft.commit();
                 break;
+            case R.id.newsLink:
+                startActivity(intent);
+                break;
+            case R.id.customNewsBackbutton:
+                NewsFragment newsFragment = new NewsFragment();
+                ft.replace(R.id.per_view, newsFragment);
+                ft.commit();
+                break;
         }
+    }
+
+    private Fragment getTheTypeOfFragment(String type, Intent i){
+        Fragment returnFragment = new Fragment();
+        if(type.equalsIgnoreCase("Lecturer")){
+            returnFragment = new PerLecturerViewFragment();
+            link = i.getStringExtra(Columns.KEY_LECTURER_LINK.getColumnName());
+        } else if(type.equalsIgnoreCase("News")){
+            returnFragment = new PerNewsViewFragment();
+            link = i.getStringExtra(Columns.KEY_NEWS_LINK.getColumnName());
+        }
+
+        return returnFragment;
     }
 
     @Override
