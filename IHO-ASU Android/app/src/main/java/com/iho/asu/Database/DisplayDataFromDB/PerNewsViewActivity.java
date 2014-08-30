@@ -48,10 +48,10 @@ public class PerNewsViewActivity extends Activity implements View.OnClickListene
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
-            case R.id.customLecturerBackbutton:
+            case R.id.customNewsBackbutton:
                 NewsFragment newsFragment = new NewsFragment();
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
-                ft.replace(R.id.news_layout, newsFragment);
+                ft.replace(R.id.per_news, newsFragment);
                 ft.commit();
                 break;
         }

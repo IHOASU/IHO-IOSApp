@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:id="@+id/simple_db_text_img">
+    android:id="@+id/per_lecturer">
     <ImageButton
         android:layout_width="384dp"
         android:layout_height="40dp"
@@ -66,4 +65,4 @@
         android:onClick="onClick"/>
     </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</RelativeLayout>

@@ -46,7 +46,7 @@ public class LecturerFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
-        Intent i= new Intent(this.getActivity(),PerLecturerViewActivity.class );
+        Intent i= new Intent(this.getActivity(),ViewActivity.class );
         String name = lecturerNames.get(position);
         Lecturer lecturer = lecturers.get(name);
         i.putExtra(Columns.KEY_LECTURER_NAME.getColumnName(), name);
