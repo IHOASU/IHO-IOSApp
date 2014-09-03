@@ -6,8 +6,8 @@
     android:id="@+id/field_layout">
     <ImageButton
         android:layout_width="384dp"
-        android:layout_height="40dp"
-        android:id="@+id/customBackButton"
+        android:layout_height="60dp"
+        android:id="@+id/customFNBackButton"
         android:background="@drawable/header_field_notes"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
@@ -17,7 +17,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/customBackButton"
+        android:layout_below="@+id/customFNBackButton"
         android:id="@+id/scrollView2"
         android:background="@android:color/background_light">
     <LinearLayout
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
-                android:text="Click to see our lecturers                      >"
+                android:text="Click to see our lecturers                                                                 >"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:onClick="onClick" />
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
-                android:text="Read About It Here                                >"
+                android:text="Read About It Here                                                                            >"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:onClick="onClick" />
@@ -85,7 +85,7 @@
                 android:background="@drawable/shape"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:text="Find Out Now                                        >"
+                android:text="Find Out Now                                                                                     >"
                 android:onClick="onClick"
                 android:visibility="visible"
                 android:layout_below="@+id/linearLayout"

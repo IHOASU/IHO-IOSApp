@@ -29,10 +29,6 @@ import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity implements OnClickListener{
-    private static final String[] TEXTS = { "Image #1", "Image #2", "Image #3" };
-    private static final int[] IMAGES = { R.drawable.img1, R.drawable.img2,
-            R.drawable.img3 };
-    private int mPosition = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +81,7 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customNEBackButton:
             case R.id.ne:
-                ne = new NewsEvents(R.layout.fragment_news_events);
+                ne = new NewsEvents();
                 fragmentTransaction.replace(R.id.main_layout, ne);
                 fragmentTransaction.commit();
                 break;
@@ -195,7 +191,7 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customFNBackbutton:
             case R.id.field:
-                fieldNotes = new FieldNotes(R.layout.fragment_field);
+                fieldNotes = new FieldNotes();
                 fragmentTransaction.replace(R.id.main_layout, fieldNotes);
                 fragmentTransaction.commit();
                 break;

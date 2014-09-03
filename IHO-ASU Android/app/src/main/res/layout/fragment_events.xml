@@ -7,7 +7,7 @@
     <ImageButton
         android:layout_width="384dp"
         android:layout_height="40dp"
-        android:id="@+id/customEventsBackbutton"
+        android:id="@+id/customNEBackbutton"
         android:background="@drawable/header_events"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
