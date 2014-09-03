@@ -63,6 +63,22 @@
         android:textStyle="bold"
         android:text="Learn More About This Lecture"
         android:onClick="onClick"/>
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center" />
+
+    <Button
+            android:id="@+id/emailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:text="Ask A Question"
+            android:onClick="onClick" />
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

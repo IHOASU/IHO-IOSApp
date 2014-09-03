@@ -16,6 +16,7 @@ import com.iho.asu.R;
 public class ViewActivity extends Activity implements View.OnClickListener {
     private String link ="";
     private String eventLink="";
+    private String email ="";
 
     @Override
     public void onCreate(Bundle savedInstance){
@@ -67,6 +68,10 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 ft.replace(R.id.per_view, sFragment);
                 ft.commit();
                 break;
+            case R.id.emailButton:
+                Intent emailI = new Intent(Intent.ACTION_SENDTO,Uri.fromParts("mailto",email,null));
+                startActivity(Intent.createChooser(emailI,"Choose an Email Client:"));
+                break;
         }
     }
 
@@ -75,6 +80,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         if(type.equalsIgnoreCase("Lecturer")){
             returnFragment = new PerLecturerViewFragment();
             link = i.getStringExtra(Columns.KEY_LECTURER_LINK.getColumnName());
+            email = i.getStringExtra(Columns.KEY_LECTURER_EMAIL.getColumnName());
         } else if(type.equalsIgnoreCase("News")){
             returnFragment = new PerNewsViewFragment();
             link = i.getStringExtra(Columns.KEY_NEWS_LINK.getColumnName());
