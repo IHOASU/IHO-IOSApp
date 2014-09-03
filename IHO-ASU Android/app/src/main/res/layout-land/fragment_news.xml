@@ -2,28 +2,21 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/science_layout">
+    android:id="@+id/news_layout">
     <ImageButton
         android:layout_width="384dp"
-        android:layout_height="40dp"
-        android:id="@+id/customFNBackbutton"
-        android:background="@drawable/header_science"
+        android:layout_height="60dp"
+        android:id="@+id/customNEBackButton"
+        android:background="@drawable/header_news"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"/>
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@+id/customFNBackbutton"
-        android:background="@android:color/background_light">
     <ListView
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/customNEBackButton"
         android:text="Hello">
     </ListView>
-    </ScrollView>
 </RelativeLayout>
