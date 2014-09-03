@@ -10,8 +10,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.iho.asu.Database.DisplayDataFromDB.EventsFragment;
 import com.iho.asu.Database.DisplayDataFromDB.LecturerFragment;
 import com.iho.asu.Database.DisplayDataFromDB.NewsFragment;
+import com.iho.asu.Database.DisplayDataFromDB.ScienceFragment;
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
@@ -203,6 +205,11 @@ public class MainActivity extends Activity implements OnClickListener{
                 fragmentTransaction.replace(R.id.main_layout, lfragment);
                 fragmentTransaction.commit();
                 break;
+            case R.id.fn2:
+                ScienceFragment sfragment = new ScienceFragment();
+                fragmentTransaction.replace(R.id.main_layout, sfragment);
+                fragmentTransaction.commit();
+                break;
             case R.id.fn3:
                 Lucy lucyFragment = new Lucy();
                 fragmentTransaction.replace(R.id.field_layout, lucyFragment);
@@ -216,6 +223,11 @@ public class MainActivity extends Activity implements OnClickListener{
             case R.id.ne1:
                 NewsFragment nfragment = new NewsFragment();
                 fragmentTransaction.replace(R.id.main_layout, nfragment);
+                fragmentTransaction.commit();
+                break;
+            case R.id.ne2:
+                EventsFragment efragment = new EventsFragment();
+                fragmentTransaction.replace(R.id.main_layout, efragment);
                 fragmentTransaction.commit();
                 break;
 

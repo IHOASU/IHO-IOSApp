@@ -15,6 +15,7 @@ import com.iho.asu.R;
 
 public class ViewActivity extends Activity implements View.OnClickListener {
     private String link ="";
+    private String eventLink="";
 
     @Override
     public void onCreate(Bundle savedInstance){
@@ -35,20 +36,35 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (v.getId()) {
-            case R.id.lectureLink:
-                startActivity(intent);
-                break;
             case R.id.customLecturerBackbutton:
                 LecturerFragment lecturerFragment = new LecturerFragment();
                 ft.replace(R.id.per_view,lecturerFragment);
                 ft.commit();
                 break;
-            case R.id.newsLink:
-                startActivity(intent);
-                break;
             case R.id.customNewsBackbutton:
                 NewsFragment newsFragment = new NewsFragment();
                 ft.replace(R.id.per_view, newsFragment);
+                ft.commit();
+                break;
+            case R.id.eventsLink:
+            case R.id.newsLink:
+            case R.id.lectureLink:
+            case R.id.scienceLink:
+                startActivity(intent);
+                break;
+            case R.id.registerEvent:
+                uri = Uri.parse(eventLink);
+                intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+                break;
+            case R.id.customEventsBackbutton:
+                EventsFragment eFragment = new EventsFragment();
+                ft.replace(R.id.per_view, eFragment);
+                ft.commit();
+                break;
+            case R.id.customScienceBackbutton:
+                ScienceFragment sFragment = new ScienceFragment();
+                ft.replace(R.id.per_view, sFragment);
                 ft.commit();
                 break;
         }
@@ -62,8 +78,14 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         } else if(type.equalsIgnoreCase("News")){
             returnFragment = new PerNewsViewFragment();
             link = i.getStringExtra(Columns.KEY_NEWS_LINK.getColumnName());
+        } else if(type.equalsIgnoreCase("Events")){
+            returnFragment = new PerEventsViewFragment();
+            link = i.getStringExtra(Columns.KEY_EVENT_MAP.getColumnName());
+            eventLink = i.getStringExtra(Columns.KEY_EVENT_REG.getColumnName());
+        } else if(type.equalsIgnoreCase("Science")){
+            returnFragment = new PerScienceViewFragment();
+            link = i.getStringExtra(Columns.KEY_SCIENCE_LINK.getColumnName());
         }
-
         return returnFragment;
     }
 
