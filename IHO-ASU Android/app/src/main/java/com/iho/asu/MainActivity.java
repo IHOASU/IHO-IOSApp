@@ -198,12 +198,12 @@ public class MainActivity extends Activity implements OnClickListener{
             case R.id.customLecturerBackbutton:
             case R.id.fn1:
                 LecturerFragment lfragment = new LecturerFragment();
-                fragmentTransaction.replace(R.id.field_layout, lfragment);
+                fragmentTransaction.replace(R.id.main_layout, lfragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.fn2:
                 ScienceFragment sfragment = new ScienceFragment();
-                fragmentTransaction.replace(R.id.field_layout, sfragment);
+                fragmentTransaction.replace(R.id.main_layout, sfragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.fn3:
@@ -218,12 +218,12 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.ne1:
                 NewsFragment nfragment = new NewsFragment();
-                fragmentTransaction.replace(R.id.news_layout, nfragment);
+                fragmentTransaction.replace(R.id.main_layout, nfragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.ne2:
                 EventsFragment efragment = new EventsFragment();
-                fragmentTransaction.replace(R.id.news_layout, efragment);
+                fragmentTransaction.replace(R.id.main_layout, efragment);
                 fragmentTransaction.commit();
                 break;
 

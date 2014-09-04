@@ -11,8 +11,6 @@ import com.iho.asu.R;
 
 public class FieldNotes extends Fragment{
 
-    public int resource;
-    public FieldNotes(){};
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {

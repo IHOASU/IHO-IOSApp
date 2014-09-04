@@ -7,7 +7,7 @@
     <ImageButton
         android:layout_width="384dp"
         android:layout_height="40dp"
-        android:id="@+id/customNEBackbutton"
+        android:id="@+id/customNEBackButton"
         android:background="@drawable/header_events"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
@@ -17,7 +17,7 @@
         android:id="@android:id/list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/customNEBackbutton"
+        android:layout_below="@+id/customNEBackButton"
         android:text="Hello">
     </ListView>
 </RelativeLayout>
