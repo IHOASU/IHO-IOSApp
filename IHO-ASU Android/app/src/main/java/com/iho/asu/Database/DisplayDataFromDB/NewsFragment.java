@@ -62,7 +62,6 @@ public class NewsFragment extends ListFragment {
         String[] columns = Columns.getNewsColumnNames();
         Cursor newsCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_NEWS_ID.getColumnName());
         newsCursor.moveToFirst();
-        newsCursor.moveToFirst();
         while (!newsCursor.isAfterLast()) {
             cursorToNews(newsCursor);
             newsCursor.moveToNext();

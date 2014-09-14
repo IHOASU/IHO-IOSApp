@@ -1,6 +1,7 @@
 package com.iho.asu;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
@@ -29,15 +30,16 @@ import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity implements OnClickListener{
+    public static Fragment fragment = new MainFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MainFragment fv = new MainFragment(this);
+        //MainFragment fv = new MainFragment(this);
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.main_layout, fv);
+        ft.add(R.id.main_layout, fragment);
         ft.commit();
     }
 

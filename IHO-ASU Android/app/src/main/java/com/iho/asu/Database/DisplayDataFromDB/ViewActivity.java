@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.iho.asu.Database.Columns;
+import com.iho.asu.MainActivity;
+import com.iho.asu.Pages.FieldNotes;
+import com.iho.asu.Pages.NewsEvents;
 import com.iho.asu.R;
 
 
@@ -35,6 +38,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
         Uri uri = Uri.parse(link);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        Intent i= new Intent(this,MainActivity.class );
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (v.getId()) {
             case R.id.customLecturerBackbutton:
@@ -70,7 +74,15 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.emailButton:
                 Intent emailI = new Intent(Intent.ACTION_SENDTO,Uri.fromParts("mailto",email,null));
-                startActivity(Intent.createChooser(emailI,"Choose an Email Client:"));
+                startActivity(Intent.createChooser(emailI, "Choose an Email Client:"));
+                break;
+            case R.id.customFNBackbutton:
+                MainActivity.fragment = new FieldNotes();
+                startActivity(i);
+                break;
+            case R.id.customNEBackButton:
+                MainActivity.fragment = new NewsEvents();
+                startActivity(i);
                 break;
         }
     }

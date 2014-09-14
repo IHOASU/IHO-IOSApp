@@ -64,7 +64,6 @@ public class EventsFragment extends ListFragment {
         String[] columns = Columns.getEventColumnNames();
         Cursor eventsCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_EVENT_ID.getColumnName());
         eventsCursor.moveToFirst();
-        eventsCursor.moveToFirst();
         while (!eventsCursor.isAfterLast()) {
             cursorToEvents(eventsCursor);
             eventsCursor.moveToNext();

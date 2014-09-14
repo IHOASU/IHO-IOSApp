@@ -5,7 +5,7 @@ package com.iho.asu.Database.Tables;
  */
 public class Gallery {
     private long id;
-    private String name;
+    private byte[] name;
 
     public long getId() {
         return id;
@@ -15,11 +15,11 @@ public class Gallery {
         this.id = id;
     }
 
-    public String getName() {
+    public byte[] getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(byte[] name) {
         this.name = name;
     }
 }

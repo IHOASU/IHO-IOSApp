@@ -64,7 +64,6 @@ public class LecturerFragment extends ListFragment {
         String[] columns = Columns.getLecturerColumnNames();
         Cursor lecCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_LECTURER_ID.getColumnName());
         lecCursor.moveToFirst();
-        lecCursor.moveToFirst();
         while (!lecCursor.isAfterLast()) {
             cursorToLecturer(lecCursor);
             lecCursor.moveToNext();
