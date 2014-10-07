@@ -7,6 +7,7 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,20 +26,20 @@ import com.iho.asu.Pages.Images;
 import com.iho.asu.Pages.Lucy;
 import com.iho.asu.Pages.MainFragment;
 import com.iho.asu.Pages.NewsEvents;
+import com.iho.asu.Pages.Travel;
 
 import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity implements OnClickListener{
     public static Fragment fragment = new MainFragment();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //MainFragment fv = new MainFragment(this);
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
+        Log.d("MainActivity",ft.isEmpty()+"");
         ft.add(R.id.main_layout, fragment);
         ft.commit();
     }
@@ -46,7 +47,6 @@ public class MainActivity extends Activity implements OnClickListener{
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -217,6 +217,7 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.ne1:
                 fragment = new NewsFragment();
+                fragmentTransaction.remove(fragmentManager.findFragmentById(R.id.news_layout));
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
@@ -225,8 +226,11 @@ public class MainActivity extends Activity implements OnClickListener{
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
-
-
+            case R.id.ne3:
+                fragment = new Travel();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.commit();
+                break;
         }
     }
 }
