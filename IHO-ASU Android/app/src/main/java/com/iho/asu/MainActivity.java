@@ -82,6 +82,7 @@ public class MainActivity extends Activity implements OnClickListener{
             case R.id.ne:
                 fragment = new NewsEvents();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case R.id.tr1:
@@ -196,11 +197,13 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customLecturerBackbutton:
             case R.id.fn1:
+                fragmentTransaction.remove(fragment);
                 fragment = new LecturerFragment();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.fn2:
+                fragmentTransaction.remove(fragment);
                 fragment = new ScienceFragment();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
@@ -216,17 +219,19 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.ne1:
+                fragmentTransaction.remove(fragment);
                 fragment = new NewsFragment();
-                fragmentTransaction.remove(fragmentManager.findFragmentById(R.id.news_layout));
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.ne2:
+                fragmentTransaction.remove(fragment);
                 fragment = new EventsFragment();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.ne3:
+                fragmentTransaction.remove(fragment);
                 fragment = new Travel();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();

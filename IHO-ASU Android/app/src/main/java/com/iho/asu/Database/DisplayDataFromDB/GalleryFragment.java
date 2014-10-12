@@ -4,6 +4,9 @@ import android.app.Fragment;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
@@ -18,7 +21,11 @@ import android.widget.ViewSwitcher;
 
 import com.iho.asu.Database.Columns;
 import com.iho.asu.Database.DataBaseHelper;
+import com.iho.asu.Database.Tables.Gallery;
 import com.iho.asu.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class GalleryFragment extends Fragment {
 
@@ -31,7 +38,8 @@ public class GalleryFragment extends Fragment {
     private static final String DB_NAME = "asuIHO.db";
     private static final String TABLE_NAME = "Gallery";
     private SQLiteDatabase database;
-
+    protected List<Gallery> galleryItems = new ArrayList<Gallery>();
+    protected Gallery[] galleryArray;
     @Override
     public View onCreateView(LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -64,36 +72,35 @@ public class GalleryFragment extends Fragment {
         mImageSwitcher.setInAnimation(context, android.R.anim.slide_in_left);
         mImageSwitcher.setOutAnimation(context, android.R.anim.slide_out_right);
         getGalleryItems();
+        galleryArray = new Gallery[galleryItems.size()];
+        galleryItems.toArray(galleryArray);
         onSwitch(null);
         return v;
     }
 
     public void onSwitch(View view) {
-        mTextSwitcher.setText(TEXTS[mPosition]);
-        mImageSwitcher.setBackgroundResource(IMAGES[mPosition]);
-        mPosition = (mPosition + 1) % TEXTS.length;
+        Gallery currentItem = galleryArray[mPosition];
+        Drawable image = new BitmapDrawable(BitmapFactory.decodeByteArray(currentItem.getName(), 0, currentItem.getName().length));
+        mImageSwitcher.setImageDrawable(image);
+        mPosition = (mPosition + 1) % galleryItems.size();
     }
 
     private void getGalleryItems() {
         String[] columns = Columns.getGalleryColumnNames();
-        String query = "Select * from Gallery";
-        Cursor galleryCursor = database.rawQuery(query,null);
-
-        if(galleryCursor.moveToFirst()) {
-            while (!galleryCursor.isAfterLast()) {
-                cursorToGallery(galleryCursor);
-                galleryCursor.moveToNext();
-            }
+        Cursor galleryCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_GALLERY_ID.getColumnName());
+        galleryCursor.moveToFirst();
+        while (!galleryCursor.isAfterLast()) {
+            cursorToGallery(galleryCursor);
+            galleryCursor.moveToNext();
         }
         galleryCursor.close();
     }
 
     private void cursorToGallery(Cursor cursor) {
         com.iho.asu.Database.Tables.Gallery n = new com.iho.asu.Database.Tables.Gallery();
-        if(cursor.getBlob(1)!=null){
-
-        }
-
+        n.setId(cursor.getLong(0));
+        n.setName(cursor.getBlob(1));
+        galleryItems.add(n);
         Log.d("cursorToGallery","Received");
     }
 }
