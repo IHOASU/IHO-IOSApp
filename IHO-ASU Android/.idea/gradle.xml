@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\Barathi\Documents\GitHub\IHO-IOS\IHO-ASU Android" />
-            <option value="C:\Users\Barathi\Documents\GitHub\IHO-IOS\IHO-ASU Android\app" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
       </GradleProjectSettings>

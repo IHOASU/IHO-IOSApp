@@ -79,6 +79,7 @@
 		5FC93CC11910F01F0037ED99 /* jquery.mobile-1.3.2.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CBF1910F01F0037ED99 /* jquery.mobile-1.3.2.min.css */; };
 		5FC93CC21910F01F0037ED99 /* jquery.mobile-1.3.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */; };
 		5FC93CC41910F96A0037ED99 /* rsz_iho_h_mg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */; };
+		8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -192,6 +193,7 @@
 		5FC93CBF1910F01F0037ED99 /* jquery.mobile-1.3.2.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jquery.mobile-1.3.2.min.css"; sourceTree = "<group>"; };
 		5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.3.2.min.js"; sourceTree = "<group>"; };
 		5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_iho_h_mg.png; sourceTree = "<group>"; };
+		8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IHOlogoforapp.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +365,7 @@
 		5F566B3018FC46120042F4CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */,
 				5F566B1618FC45400042F4CA /* skull.html */,
 				5F9BA5461912B2DE002F26A6 /* rsz_launch_iphone_retina.png */,
 				5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */,
@@ -477,6 +480,7 @@
 				5F566B6E18FC467B0042F4CA /* sediments.jpg in Resources */,
 				5F566B6318FC467B0042F4CA /* invest.png in Resources */,
 				5F566B7118FC467B0042F4CA /* youtube.png in Resources */,
+				8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */,
 				5FC93CC41910F96A0037ED99 /* rsz_iho_h_mg.png in Resources */,
 				5F566B6818FC467B0042F4CA /* lucy_chin.png in Resources */,
 				5F566B6218FC467B0042F4CA /* Images.xcassets in Resources */,
@@ -716,6 +720,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IHO-ASU/IHO-ASU-Prefix.pch";
 				INFOPLIST_FILE = "IHO-ASU/IHO-ASU-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -729,6 +734,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IHO-ASU/IHO-ASU-Prefix.pch";
 				INFOPLIST_FILE = "IHO-ASU/IHO-ASU-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

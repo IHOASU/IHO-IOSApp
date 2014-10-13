@@ -33,7 +33,7 @@
     bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     
     //menubar specifications
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+   // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
@@ -51,7 +51,7 @@
     
     [self.view bringSubviewToFront:mapIt];
     mapIt.layer.cornerRadius=15;
-    [mapIt setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0] ];
+    //[mapIt setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0] ];
     [mapIt addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
     
     if(!ipad){

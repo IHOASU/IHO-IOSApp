@@ -30,8 +30,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+   // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
+   // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
     NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];

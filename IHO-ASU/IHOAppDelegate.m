@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 ASU. All rights reserved.
 //
 
+
 #import "IHOAppDelegate.h"
 
 @implementation IHOAppDelegate
@@ -13,6 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+   [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:0 green:0.2 blue:0.4 alpha:1]];
+    //[[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:0 green:0.2 blue:0.4 alpha:1]];
     return YES;
 }
 							
