@@ -29,7 +29,7 @@ public class ScienceFragment extends ListFragment {
     private SQLiteDatabase database;
     int i = 0;
     private Map<String,String> scienceDetailedTitle = new HashMap<String, String>();
-    protected Map<String,Science> scienceItems = new HashMap<String, Science>();
+    protected Map<String,Science> scienceItems;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -38,6 +38,7 @@ public class ScienceFragment extends ListFragment {
                 R.layout.fragment_science, container, false);
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
+        scienceItems = new HashMap<String, Science>();
         getScienceItems();
         setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, scienceDetailedTitle.keySet().toArray(new String[0])));
         return v;

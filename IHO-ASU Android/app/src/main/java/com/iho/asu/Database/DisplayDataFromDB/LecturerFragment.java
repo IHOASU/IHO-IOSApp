@@ -38,8 +38,12 @@ public class LecturerFragment extends ListFragment {
                 R.layout.fragment_lecturer, container, false);
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
+        lecturerNames.clear();
+        lecturers.clear();
         getLecturers();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, lecturerNames));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, lecturerNames);
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 

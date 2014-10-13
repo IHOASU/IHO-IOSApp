@@ -38,8 +38,12 @@ public class EventsFragment extends ListFragment {
                 R.layout.fragment_events, container, false);
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
+        eventsItems.clear();
+        eventsTitle.clear();
         getEventsItems();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, eventsTitle));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, eventsTitle);
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 

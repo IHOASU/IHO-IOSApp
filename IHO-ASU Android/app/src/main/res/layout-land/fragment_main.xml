@@ -6,7 +6,7 @@
     >
     <ImageButton
         android:layout_width="384dp"
-        android:layout_height="60dp"
+        android:layout_height="70dp"
         android:id="@+id/button"
         android:background="@drawable/h21"
         android:onClick="onClick"
