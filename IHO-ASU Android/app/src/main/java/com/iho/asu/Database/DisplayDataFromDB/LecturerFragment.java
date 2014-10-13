@@ -38,15 +38,19 @@ public class LecturerFragment extends ListFragment {
                 R.layout.fragment_lecturer, container, false);
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
+        lecturerNames.clear();
+        lecturers.clear();
         getLecturers();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, lecturerNames));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, lecturerNames);
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
-        Intent i= new Intent(this.getActivity(),PerLecturerViewActivity.class );
+        Intent i= new Intent(this.getActivity(),ViewActivity.class );
         String name = lecturerNames.get(position);
         Lecturer lecturer = lecturers.get(name);
         i.putExtra(Columns.KEY_LECTURER_NAME.getColumnName(), name);
@@ -55,6 +59,7 @@ public class LecturerFragment extends ListFragment {
         i.putExtra(Columns.KEY_LECTURER_EMAIL.getColumnName(),lecturer.getEmail());
         i.putExtra(Columns.KEY_LECTURE_TITLE.getColumnName(),lecturer.getTitle());
         i.putExtra(Columns.KEY_LECTURER_LINK.getColumnName(),lecturer.getLink());
+        i.putExtra("ViewNeeded","Lecturer");
         startActivity(i);
     }
 
@@ -62,7 +67,6 @@ public class LecturerFragment extends ListFragment {
     private void getLecturers() {
         String[] columns = Columns.getLecturerColumnNames();
         Cursor lecCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_LECTURER_ID.getColumnName());
-        lecCursor.moveToFirst();
         lecCursor.moveToFirst();
         while (!lecCursor.isAfterLast()) {
             cursorToLecturer(lecCursor);

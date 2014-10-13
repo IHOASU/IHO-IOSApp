@@ -38,21 +38,26 @@ public class NewsFragment extends ListFragment {
                 R.layout.fragment_news, container, false);
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
+        newsItems.clear();
+        newsTitle.clear();
         getNewsItems();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, newsTitle));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, newsTitle);
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id){
-        Intent i= new Intent(this.getActivity(),PerNewsViewActivity.class );
+        Intent i= new Intent(this.getActivity(),ViewActivity.class );
         String name = newsTitle.get(position);
         News news = newsItems.get(name);
         i.putExtra(Columns.KEY_NEWS_TITLE.getColumnName(), name);
         i.putExtra(Columns.KEY_NEWS_IMAGE.getColumnName(),news.getImage());
         i.putExtra(Columns.KEY_NEWS_LINK.getColumnName(),news.getNewsLink());
         i.putExtra(Columns.KEY_NEWS_TEXT.getColumnName(),news.getText());
+        i.putExtra("ViewNeeded","News");
         startActivity(i);
     }
 
@@ -60,7 +65,6 @@ public class NewsFragment extends ListFragment {
     private void getNewsItems() {
         String[] columns = Columns.getNewsColumnNames();
         Cursor newsCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_NEWS_ID.getColumnName());
-        newsCursor.moveToFirst();
         newsCursor.moveToFirst();
         while (!newsCursor.isAfterLast()) {
             cursorToNews(newsCursor);

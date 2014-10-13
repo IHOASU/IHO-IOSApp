@@ -13,7 +13,13 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
-
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/customBackButton"
+        android:id="@+id/scrollView2"
+        android:background="@android:color/background_light">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -41,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
-                android:text="Click to see our lecturers                         >"
+                android:text="Click to see our lecturers                      >"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
                 android:onClick="onClick" />
@@ -115,5 +121,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
+    </ScrollView>
 </RelativeLayout>

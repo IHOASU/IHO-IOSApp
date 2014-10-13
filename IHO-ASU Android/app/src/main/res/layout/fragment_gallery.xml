@@ -111,7 +111,7 @@
 
             <Button
                 android:id="@+id/watchNow"
-                android:layout_width="342dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/shape"
                 android:text="Watch Now"

@@ -1,52 +1,52 @@
 package com.iho.asu;
 
 import android.app.Activity;
+import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.iho.asu.Database.DisplayDataFromDB.EventsFragment;
+import com.iho.asu.Database.DisplayDataFromDB.GalleryFragment;
 import com.iho.asu.Database.DisplayDataFromDB.LecturerFragment;
 import com.iho.asu.Database.DisplayDataFromDB.NewsFragment;
+import com.iho.asu.Database.DisplayDataFromDB.ScienceFragment;
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
 import com.iho.asu.Pages.Donate;
 import com.iho.asu.Pages.FieldNotes;
 import com.iho.asu.Pages.Gallery;
-import com.iho.asu.Pages.Images;
 import com.iho.asu.Pages.Lucy;
 import com.iho.asu.Pages.MainFragment;
 import com.iho.asu.Pages.NewsEvents;
+import com.iho.asu.Pages.Travel;
 
 import static android.view.View.OnClickListener;
 
 
 public class MainActivity extends Activity implements OnClickListener{
-    private static final String[] TEXTS = { "Image #1", "Image #2", "Image #3" };
-    private static final int[] IMAGES = { R.drawable.img1, R.drawable.img2,
-            R.drawable.img3 };
-    private int mPosition = 0;
-
+    public static Fragment fragment = new MainFragment();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MainFragment fv = new MainFragment(this);
         FragmentManager fm = getFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.main_layout, fv);
+        Log.d("MainActivity",ft.isEmpty()+"");
+        ft.add(R.id.main_layout, fragment);
         ft.commit();
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -66,25 +66,24 @@ public class MainActivity extends Activity implements OnClickListener{
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         Uri uri;
         Intent intent;
-        FieldNotes fieldNotes;
-        NewsEvents ne;
-        Connect connect;
         switch (v.getId()) {
             case R.id.about:
-                About about = new About();
-                fragmentTransaction.replace(R.id.main_layout, about);
+                fragment = new About();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.customConnectBackButton:
             case R.id.connect:
-                connect = new Connect(R.layout.fragment_connect);
-                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragment = new Connect(R.layout.fragment_connect);
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.customNEBackButton:
+            case R.id.customNewsEBackbutton:
             case R.id.ne:
-                ne = new NewsEvents(R.layout.fragment_news_events);
-                fragmentTransaction.replace(R.id.main_layout, ne);
+                fragment = new NewsEvents();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
             case R.id.tr1:
@@ -98,13 +97,13 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.donate:
-                Donate donate = new Donate();
-                fragmentTransaction.replace(R.id.main_layout, donate);
+                fragment = new Donate();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.gallery:
-                Gallery gallery = new Gallery();
-                fragmentTransaction.replace(R.id.main_layout, gallery);
+                fragment = new Gallery();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.investButton:
@@ -133,13 +132,13 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.creditsButton:
-                Credits credits = new Credits();
-                fragmentTransaction.replace(R.id.main_layout, credits);
+                fragment = new Credits();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.customBackButton:
-                MainFragment mainFragment = new MainFragment();
-                fragmentTransaction.replace(R.id.main_layout, mainFragment);
+                fragment = new MainFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.youtubeBtn:
@@ -153,18 +152,18 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.connect1:
-                connect = new Connect(R.layout.fragment_iho);
-                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragment = new Connect(R.layout.fragment_iho);
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.connect2:
-                connect = new Connect(R.layout.fragment_bh);
-                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragment = new Connect(R.layout.fragment_bh);
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.connect3:
-                connect = new Connect(R.layout.fragment_sign_news);
-                fragmentTransaction.replace(R.id.main_layout, connect);
+                fragment = new Connect(R.layout.fragment_sign_news);
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.watchNow:
@@ -183,8 +182,10 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.galleryBtn:
-                Intent imgIntent = new Intent(getApplicationContext(), Images.class);
-                startActivity(imgIntent);
+                fragmentTransaction.remove(fragment);
+                fragment = new GalleryFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.commit();
                 break;
             case R.id.mapItBtn:
                 uri = Uri.parse("https://www.google.com/maps/place/951+Cady+Mall/@33.419944,-111.9345045,17z/data=!3m1!4b1!4m2!3m1!1s0x872b08db89afde97:0x2a9f7cbb1d7f4e64");
@@ -193,19 +194,26 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.customFNBackbutton:
             case R.id.field:
-                fieldNotes = new FieldNotes(R.layout.fragment_field);
-                fragmentTransaction.replace(R.id.main_layout, fieldNotes);
+                fragment = new FieldNotes();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.customLecturerBackbutton:
             case R.id.fn1:
-                LecturerFragment lfragment = new LecturerFragment();
-                fragmentTransaction.replace(R.id.main_layout, lfragment);
+                fragmentTransaction.remove(fragment);
+                fragment = new LecturerFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.commit();
+                break;
+            case R.id.fn2:
+                fragmentTransaction.remove(fragment);
+                fragment = new ScienceFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.fn3:
-                Lucy lucyFragment = new Lucy();
-                fragmentTransaction.replace(R.id.field_layout, lucyFragment);
+                fragment = new Lucy();
+                fragmentTransaction.replace(R.id.field_layout, fragment);
                 fragmentTransaction.commit();
                 break;
             case R.id.fn4:
@@ -214,12 +222,23 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.ne1:
-                NewsFragment nfragment = new NewsFragment();
-                fragmentTransaction.replace(R.id.main_layout, nfragment);
+                fragmentTransaction.remove(fragment);
+                fragment = new NewsFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
-
-
+            case R.id.ne2:
+                fragmentTransaction.remove(fragment);
+                fragment = new EventsFragment();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.commit();
+                break;
+            case R.id.ne3:
+                fragmentTransaction.remove(fragment);
+                fragment = new Travel();
+                fragmentTransaction.replace(R.id.main_layout, fragment);
+                fragmentTransaction.commit();
+                break;
         }
     }
 }
