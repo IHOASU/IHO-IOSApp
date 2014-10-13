@@ -175,7 +175,7 @@
       //imageView.image = [images objectAtIndex:indexPath.row];
    
     NewsDetail *Item = [newsItems objectAtIndex:indexPath.row];
-    [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+   // [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
     [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
     [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     [cell.textLabel setText:[NSString stringWithString:Item.newstitle]];
@@ -190,7 +190,7 @@
         //imageView.image = [images objectAtIndex:indexPath.row];
         
         EventsDetail *Item = [eventItems objectAtIndex:indexPath.row];
-        [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+       // [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
         [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
         [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
         [cell.textLabel setText:[NSString stringWithString:Item.title]];
@@ -201,7 +201,7 @@
         static NSString *CellIdentifier = @"travelCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
-        [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+       // [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
         [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
         [cell.textLabel setText:@"IHO TRAVEL AND LEARN"];
     

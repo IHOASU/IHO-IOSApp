@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface LucyViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIWebView *displayLucy;
+//@property (weak, nonatomic) IBOutlet UIWebView *displayLucy;
 
 @end

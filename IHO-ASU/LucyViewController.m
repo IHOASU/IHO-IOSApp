@@ -10,10 +10,12 @@
 
 @interface LucyViewController ()
 
+
 @end
 
 @implementation LucyViewController
-@synthesize displayLucy;
+//@synthesize displayLucy;
+UIWebView *displayLucy;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,8 +34,10 @@
     if (path){
         
         NSData *data=[NSData dataWithContentsOfFile:path];
+        displayLucy =  [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, 320, 50)];
         [displayLucy loadData:data MIMEType:@"text/html" textEncodingName:@"convert"  baseURL:nil];
-        displayLucy.scrollView.scrollEnabled= FALSE;
+        displayLucy.scrollView.scrollEnabled= TRUE;
+        [self.view addSubview:displayLucy];
     }
 }
 

@@ -50,7 +50,7 @@ static GalleryViewController *_database;
         
         if (sqlite3_open([sqLiteDb UTF8String],&_asuIHO)==SQLITE_OK)
         {
-            NSString *query = [NSString stringWithFormat:@"SELECT imageID,imageName FROM Gallery"];
+            NSString *query = [NSString stringWithFormat:@"SELECT imageID,imageName FROM Gallery where LectID is NULL"];
             const char *query_stmt = [query UTF8String];
             if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
             {

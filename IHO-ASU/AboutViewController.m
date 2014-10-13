@@ -56,7 +56,7 @@
     
     if(!ipad){
     //display location
-    CGRect textview1= CGRectMake(8,345,150,40) ;
+    CGRect textview1= CGRectMake(8,325,150,40) ;
     UITextView *address=[[UITextView alloc] initWithFrame:textview1];
     address.font=[UIFont fontWithName:@"Arial" size:8];
     address.text = @"951 South Cady Mall\nSocial Sciences building #103\nASU Tempe Campus";
@@ -71,6 +71,7 @@
     number.font=[UIFont fontWithName:@"Arial" size:8];
     number.text = @"480.727.6580\niho@asu.edu";
     number.editable=NO;
+    number.scrollEnabled = NO;
     [self.view addSubview:number];
     
     //mailing
@@ -79,6 +80,7 @@
     Mailing.font=[UIFont fontWithName:@"Arial" size:8];
     Mailing.text = @"ASU Institute of Human Origins\nPO Box 874101\nTempe, AZ 85287-4101";
     Mailing.editable=NO;
+    Mailing.scrollEnabled = NO;
     [self.view addSubview:Mailing];
     
     }

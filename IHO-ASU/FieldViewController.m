@@ -168,7 +168,7 @@ NSArray *scItems;
           static NSString *CellIdentifier = @"newsCell";
           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     LecturerDetail *Item = [lectItems objectAtIndex:indexPath.row];
-          [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+          [cell setBackgroundColor:[UIColor colorWithRed:5 green:56 blue:104 alpha:1.0 ]];
 
      [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
@@ -179,7 +179,7 @@ NSArray *scItems;
         static NSString *CellIdentifier = @"scCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
         Science *Item = [scItems objectAtIndex:indexPath.row];
-        [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+       // [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
         [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
         [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
         [cell.textLabel setText:[NSString stringWithString:Item.Sciencetitle]];
@@ -189,7 +189,7 @@ NSArray *scItems;
     {
         static NSString *CellIdentifier = @"lucyDetails";
         UITableViewCell *cell =  [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-        [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
+       // [cell setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
         
         [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
         [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
