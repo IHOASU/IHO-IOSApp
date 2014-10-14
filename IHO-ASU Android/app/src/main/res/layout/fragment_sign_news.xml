@@ -43,7 +43,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText" />
+            android:id="@+id/subscriberId" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -56,16 +56,18 @@
             android:layout_height="wrap_content">
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton"
-                android:background="@drawable/submitbtn" />
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:id="@+id/enewsSubmit"
+                android:background="@drawable/submitbtn"
+                android:onClick="onClick" />
 
             <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/imageButton2"
-                android:background="@drawable/clearbtn" />
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:id="@+id/clearEmailId"
+                android:background="@drawable/clearbtn"
+                android:onClick="onClick" />
         </LinearLayout>
     </LinearLayout>
     <ImageView

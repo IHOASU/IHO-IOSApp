@@ -87,7 +87,7 @@ public class GalleryFragment extends Fragment {
 
     private void getGalleryItems() {
         String[] columns = Columns.getGalleryColumnNames();
-        Cursor galleryCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_GALLERY_ID.getColumnName());
+        Cursor galleryCursor = database.query(TABLE_NAME, columns, null, null, null, null, null);
         galleryCursor.moveToFirst();
         while (!galleryCursor.isAfterLast()) {
             cursorToGallery(galleryCursor);
@@ -98,9 +98,10 @@ public class GalleryFragment extends Fragment {
 
     private void cursorToGallery(Cursor cursor) {
         com.iho.asu.Database.Tables.Gallery n = new com.iho.asu.Database.Tables.Gallery();
-        n.setId(cursor.getLong(0));
-        n.setName(cursor.getBlob(1));
+        if(!cursor.isNull( 0 ))n.setId(cursor.getLong(0));
+        if(!cursor.isNull( 1 ))n.setName(cursor.getBlob(1));
         galleryItems.add(n);
         Log.d("cursorToGallery","Received");
     }
+
 }

@@ -21,7 +21,8 @@
         android:padding="@dimen/activity_horizontal_margin"
         android:id="@+id/becomingHumanLayout"
         android:background="@drawable/border"
-        android:layout_below="@+id/customConnectBackButton">
+        android:layout_below="@+id/customConnectBackButton"
+        android:weightSum="1">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -29,12 +30,13 @@
             android:textSize="16dp" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="364dp"
+            android:layout_height="40dp"
             android:id="@+id/visitBecomingHumanBtn"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/visitbecominghumanbtn"
-            android:onClick="onClick" />
+            android:onClick="onClick"
+            android:layout_weight="0.13" />
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"
