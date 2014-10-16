@@ -29,14 +29,17 @@
             android:text="@string/becomingHuman"
             android:textSize="16dp" />
 
-        <ImageButton
-            android:layout_width="364dp"
-            android:layout_height="40dp"
+        <Button
             android:id="@+id/visitBecomingHumanBtn"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/visitbecominghumanbtn"
+            android:layout_width="334dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.00"
+            android:background="@drawable/shape"
+            android:text="Visit BecomingHuman.org"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
             android:onClick="onClick"
-            android:layout_weight="0.13" />
+            android:layout_gravity="center_horizontal"/>
     </LinearLayout>
     <ImageView
         android:layout_width="match_parent"

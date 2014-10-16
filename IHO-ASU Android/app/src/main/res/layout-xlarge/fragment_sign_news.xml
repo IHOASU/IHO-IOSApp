@@ -56,17 +56,26 @@
             android:layout_height="wrap_content"
             android:weightSum="1">
 
-            <ImageButton
-                android:layout_width="172dp"
-                android:layout_height="66dp"
-                android:id="@+id/imageButton"
-                android:background="@drawable/submitbtn" />
-
-            <ImageButton
-                android:layout_width="148dp"
-                android:layout_height="66dp"
-                android:id="@+id/imageButton2"
-                android:background="@drawable/clearbtn" />
+            <Button
+                android:id="@+id/enewsSubmit"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape"
+                android:text="Submit"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:onClick="onClick"
+                android:layout_gravity="center_horizontal"/>
+            <Button
+                android:id="@+id/clearbtn"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:background="@drawable/shape"
+                android:text="Clear"
+                android:textColor="@android:color/background_light"
+                android:textStyle="bold"
+                android:onClick="onClick"
+                android:layout_gravity="center_horizontal"/>
         </LinearLayout>
     </LinearLayout>
     <ImageView

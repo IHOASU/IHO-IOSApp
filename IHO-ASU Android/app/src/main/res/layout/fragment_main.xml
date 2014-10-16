@@ -47,7 +47,6 @@
                     android:id="@+id/ne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.51"
                     android:background="@drawable/shape"
                     android:text="@string/news"
                     android:textColor="@android:color/background_light"
