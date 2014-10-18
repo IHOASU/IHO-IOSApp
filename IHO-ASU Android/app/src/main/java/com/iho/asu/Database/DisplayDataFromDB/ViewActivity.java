@@ -55,6 +55,7 @@ public class ViewActivity extends Activity implements View.OnClickListener {
             case R.id.newsLink:
             case R.id.lectureLink:
             case R.id.scienceLink:
+            case R.id.travelLink:
                 startActivity(intent);
                 break;
             case R.id.registerEvent:
@@ -103,6 +104,9 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         } else if(type.equalsIgnoreCase("Science")){
             returnFragment = new PerScienceViewFragment();
             link = i.getStringExtra(Columns.KEY_SCIENCE_LINK.getColumnName());
+        }else if(type.equalsIgnoreCase("Travel")){
+            returnFragment = new PerTravelViewFragment();
+            link = i.getStringExtra(Columns.KEY_TRAVEL_LINK.getColumnName());
         }
         return returnFragment;
     }
@@ -111,5 +115,8 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     public void onStart(){
         super.onStart();
     }
+
+
+
 
 }

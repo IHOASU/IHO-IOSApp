@@ -4,11 +4,11 @@ import android.app.Fragment;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,10 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GalleryFragment extends Fragment {
-
-    private static final String[] TEXTS = { "Hadar, Ethiopia Landscape", "Student Survey", "Mossel Bay Caves" };
-    private static final int[] IMAGES = { R.drawable.img1, R.drawable.img2,
-            R.drawable.img3 };
     private int mPosition = 0;
     private TextSwitcher mTextSwitcher;
     private ImageSwitcher mImageSwitcher;
@@ -80,8 +76,11 @@ public class GalleryFragment extends Fragment {
 
     public void onSwitch(View view) {
         Gallery currentItem = galleryArray[mPosition];
-        Drawable image = new BitmapDrawable(BitmapFactory.decodeByteArray(currentItem.getName(), 0, currentItem.getName().length));
-        mImageSwitcher.setImageDrawable(image);
+        if(!(currentItem == null || currentItem.getName()==null)){
+            Bitmap b1= BitmapFactory.decodeByteArray(currentItem.getName(), 0, currentItem.getName().length);
+            Drawable drawable =new BitmapDrawable(b1);
+            mImageSwitcher.setImageDrawable(drawable);
+        }
         mPosition = (mPosition + 1) % galleryItems.size();
     }
 
@@ -101,7 +100,6 @@ public class GalleryFragment extends Fragment {
         if(!cursor.isNull( 0 ))n.setId(cursor.getLong(0));
         if(!cursor.isNull( 1 ))n.setName(cursor.getBlob(1));
         galleryItems.add(n);
-        Log.d("cursorToGallery","Received");
     }
 
 }

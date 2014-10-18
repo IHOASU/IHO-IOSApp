@@ -1,9 +1,11 @@
 package com.iho.asu.Database.DisplayDataFromDB;
 
 import android.app.ListFragment;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,9 +43,7 @@ public class NewsFragment extends ListFragment {
         newsItems.clear();
         newsTitle.clear();
         getNewsItems();
-        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, newsTitle);
-        this.setListAdapter(adapter);
-        adapter.notifyDataSetChanged();
+        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, newsTitle));
         return v;
     }
 
@@ -84,4 +84,5 @@ public class NewsFragment extends ListFragment {
         newsTitle.add(title);
         newsItems.put(title, n);
     }
+
 }

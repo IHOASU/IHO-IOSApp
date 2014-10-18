@@ -51,7 +51,8 @@
                     android:text="@string/news"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
-                    android:onClick="onClick" />
+                    android:onClick="onClick"
+                    android:layout_weight="0.55" />
 
                 <Button
                     android:id="@+id/field"
