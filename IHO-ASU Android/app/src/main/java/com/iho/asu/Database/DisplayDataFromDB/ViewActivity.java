@@ -41,6 +41,11 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         Intent i= new Intent(this,MainActivity.class );
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (v.getId()) {
+            case R.id.customLecturerGalleryBackbutton:
+                PerLecturerViewFragment fragment = new PerLecturerViewFragment();
+                ft.replace(R.id.per_view, fragment);
+                ft.commit();
+                break;
             case R.id.customLecturerBackbutton:
                 LecturerFragment lecturerFragment = new LecturerFragment();
                 ft.replace(R.id.per_view,lecturerFragment);
@@ -55,12 +60,18 @@ public class ViewActivity extends Activity implements View.OnClickListener {
             case R.id.newsLink:
             case R.id.lectureLink:
             case R.id.scienceLink:
+            case R.id.travelLink:
                 startActivity(intent);
                 break;
             case R.id.registerEvent:
                 uri = Uri.parse(eventLink);
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+                break;
+            case R.id.viewGallery:
+                LecturerGalleryFragment gFragment = new LecturerGalleryFragment(email);
+                ft.replace(R.id.per_view, gFragment);
+                ft.commit();
                 break;
             case R.id.customEventsBackbutton:
                 EventsFragment eFragment = new EventsFragment();
@@ -103,6 +114,9 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         } else if(type.equalsIgnoreCase("Science")){
             returnFragment = new PerScienceViewFragment();
             link = i.getStringExtra(Columns.KEY_SCIENCE_LINK.getColumnName());
+        }else if(type.equalsIgnoreCase("Travel")){
+            returnFragment = new PerTravelViewFragment();
+            link = i.getStringExtra(Columns.KEY_TRAVEL_LINK.getColumnName());
         }
         return returnFragment;
     }
@@ -111,5 +125,8 @@ public class ViewActivity extends Activity implements View.OnClickListener {
     public void onStart(){
         super.onStart();
     }
+
+
+
 
 }

@@ -13,6 +13,13 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true" />
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/customConnectBackButton"
+        android:id="@+id/scrollView2"
+        android:background="@android:color/background_light">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -109,6 +116,7 @@
             android:textSize="20dp" />
 
     </LinearLayout>
+    </ScrollView>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

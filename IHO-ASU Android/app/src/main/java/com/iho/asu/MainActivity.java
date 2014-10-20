@@ -6,17 +6,22 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.iho.asu.Database.DisplayDataFromDB.EventsFragment;
 import com.iho.asu.Database.DisplayDataFromDB.GalleryFragment;
 import com.iho.asu.Database.DisplayDataFromDB.LecturerFragment;
 import com.iho.asu.Database.DisplayDataFromDB.NewsFragment;
 import com.iho.asu.Database.DisplayDataFromDB.ScienceFragment;
+import com.iho.asu.Database.DisplayDataFromDB.TravelFragment;
 import com.iho.asu.Pages.About;
 import com.iho.asu.Pages.Connect;
 import com.iho.asu.Pages.Credits;
@@ -26,9 +31,9 @@ import com.iho.asu.Pages.Gallery;
 import com.iho.asu.Pages.Lucy;
 import com.iho.asu.Pages.MainFragment;
 import com.iho.asu.Pages.NewsEvents;
-import com.iho.asu.Pages.Travel;
 
 import static android.view.View.OnClickListener;
+
 
 
 public class MainActivity extends Activity implements OnClickListener{
@@ -85,16 +90,6 @@ public class MainActivity extends Activity implements OnClickListener{
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
-                break;
-            case R.id.tr1:
-                uri = Uri.parse("https://iho.asu.edu/outreach/travel/galapagos2014");
-                intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-                break;
-            case R.id.tr2:
-                uri = Uri.parse("https://iho.asu.edu/outreach/travel/france2013");
-                intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
                 break;
             case R.id.donate:
                 fragment = new Donate();
@@ -193,6 +188,7 @@ public class MainActivity extends Activity implements OnClickListener{
                 startActivity(intent);
                 break;
             case R.id.customFNBackbutton:
+            case R.id.customFNLandscapeBackButton:
             case R.id.field:
                 fragment = new FieldNotes();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
@@ -235,10 +231,42 @@ public class MainActivity extends Activity implements OnClickListener{
                 break;
             case R.id.ne3:
                 fragmentTransaction.remove(fragment);
-                fragment = new Travel();
+                fragment = new TravelFragment();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
                 fragmentTransaction.commit();
                 break;
+            case R.id.enewsSubmit:
+                Editable txt = ((EditText)fragment.getView().findViewById(R.id.subscriberId)).getText();
+                String emailId = (txt!=null)?txt.toString():"";
+                if(emailId.length()>1 &&emailId.contains("@")) {
+                    new SendEmailTask(emailId).execute();
+                    Toast.makeText(getApplicationContext(), "Thank you for subscribing to our news letter", Toast.LENGTH_LONG).show();
+                } else{
+                    Toast.makeText(getApplicationContext(), "Please enter a valid email address", Toast.LENGTH_LONG).show();
+                }
+                break;
+            case R.id.clearEmailId:
+                ((EditText)fragment.getView().findViewById(R.id.subscriberId)).setText("");
+                break;
+        }
+    }
+
+    class SendEmailTask extends AsyncTask<Void, Void, Boolean> {
+        String emailId="";
+        SendEmailTask(String emailId){
+            this.emailId = emailId;
+        }
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            GMailSender sender = new GMailSender("eNewsSubscription@gmail.com","ihoasu2014");
+            try {
+                sender.sendMail("E News Subscription"," Please send eNews to "+emailId,emailId, "iho@asu.edu");
+                System.out.println("send");
+            } catch (Exception e) {
+                System.err.println("err"+e);
+                Log.e("SendMail", e.getMessage(), e);
+            }
+            return null;
         }
     }
 }

@@ -80,6 +80,24 @@
             android:textStyle="bold"
             android:text="Ask A Question"
             android:onClick="onClick" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/viewGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:text="View Gallery"
+            android:onClick="onClick" />
+
     </LinearLayout>
     </ScrollView>
 </RelativeLayout>

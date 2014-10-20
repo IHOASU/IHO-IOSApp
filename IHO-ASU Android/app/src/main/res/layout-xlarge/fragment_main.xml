@@ -8,7 +8,7 @@
         android:layout_width="384dp"
         android:layout_height="80dp"
         android:id="@+id/button"
-        android:background="@drawable/h21"
+        android:background="@drawable/ihologo"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"

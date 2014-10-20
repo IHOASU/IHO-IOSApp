@@ -84,4 +84,5 @@ public class NewsFragment extends ListFragment {
         newsTitle.add(title);
         newsItems.put(title, n);
     }
+
 }

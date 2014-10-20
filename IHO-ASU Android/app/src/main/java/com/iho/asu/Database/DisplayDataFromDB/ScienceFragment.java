@@ -39,8 +39,11 @@ public class ScienceFragment extends ListFragment {
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
         scienceItems = new HashMap<String, Science>();
+        scienceItems.clear();
         getScienceItems();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, scienceDetailedTitle.keySet().toArray(new String[0])));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, scienceDetailedTitle.keySet().toArray(new String[0]));
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 
@@ -61,7 +64,6 @@ public class ScienceFragment extends ListFragment {
         String[] columns = Columns.getScienceColumnNames();
         Cursor scienceCursor = database.query(TABLE_NAME, columns, null, null, null, null, Columns.KEY_SCIENCE_ID.getColumnName());
         scienceCursor.moveToFirst();
-        scienceCursor.moveToFirst();
         while (!scienceCursor.isAfterLast()) {
             cursorToScience(scienceCursor);
             scienceCursor.moveToNext();
@@ -76,6 +78,6 @@ public class ScienceFragment extends ListFragment {
         n.setTitle(title);
         n.setLink(cursor.getString(2));
         scienceItems.put(title, n);
-        scienceDetailedTitle.put("Science Item"+(++i)+"...",title);
+        scienceDetailedTitle.put(title,title);
     }
 }

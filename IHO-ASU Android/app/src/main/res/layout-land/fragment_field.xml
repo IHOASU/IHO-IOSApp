@@ -7,7 +7,7 @@
     <ImageButton
         android:layout_width="384dp"
         android:layout_height="60dp"
-        android:id="@+id/customFNBackButton"
+        android:id="@+id/customFNLandscapeBackButton"
         android:background="@drawable/header_field_notes"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
@@ -17,7 +17,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/customFNBackButton"
+        android:layout_below="@+id/customFNLandscapeBackButton"
         android:id="@+id/scrollView2"
         android:background="@android:color/background_light">
     <LinearLayout
@@ -112,7 +112,7 @@
                 android:background="@drawable/shape"
                 android:textColor="@android:color/background_light"
                 android:textStyle="bold"
-                android:text="Visit Now                                                >"
+                android:text="Visit Now                                                              >"
                 android:onClick="onClick"
                 android:visibility="visible"
                 android:layout_below="@+id/linearLayout"

@@ -8,7 +8,7 @@
         android:layout_width="384dp"
         android:layout_height="55dp"
         android:id="@+id/button"
-        android:background="@drawable/h21"
+        android:background="@drawable/ihologo"
         android:onClick="onClick"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
@@ -47,12 +47,12 @@
                     android:id="@+id/ne"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="0.51"
                     android:background="@drawable/shape"
                     android:text="@string/news"
                     android:textColor="@android:color/background_light"
                     android:textStyle="bold"
-                    android:onClick="onClick" />
+                    android:onClick="onClick"
+                    android:layout_weight="0.55" />
 
                 <Button
                     android:id="@+id/field"
