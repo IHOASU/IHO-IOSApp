@@ -41,6 +41,11 @@ public class ViewActivity extends Activity implements View.OnClickListener {
         Intent i= new Intent(this,MainActivity.class );
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         switch (v.getId()) {
+            case R.id.customLecturerGalleryBackbutton:
+                PerLecturerViewFragment fragment = new PerLecturerViewFragment();
+                ft.replace(R.id.per_view, fragment);
+                ft.commit();
+                break;
             case R.id.customLecturerBackbutton:
                 LecturerFragment lecturerFragment = new LecturerFragment();
                 ft.replace(R.id.per_view,lecturerFragment);

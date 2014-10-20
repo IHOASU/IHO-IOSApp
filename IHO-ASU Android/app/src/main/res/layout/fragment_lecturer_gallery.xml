@@ -7,7 +7,7 @@
         <ImageButton
             android:layout_width="384dp"
             android:layout_height="40dp"
-            android:id="@+id/customLecturerBackbutton"
+            android:id="@+id/customLecturerGalleryBackbutton"
             android:background="@drawable/header_lecturers"
             android:onClick="onClick"
             android:layout_alignParentRight="true"
@@ -17,6 +17,6 @@
         android:id="@android:id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/customLecturerBackbutton">
+        android:layout_below="@+id/customLecturerGalleryBackbutton">
     </ListView>
 </RelativeLayout>

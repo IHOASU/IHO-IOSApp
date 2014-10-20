@@ -7,7 +7,7 @@
         <ImageButton
             android:layout_width="384dp"
             android:layout_height="60dp"
-            android:id="@+id/customLecturerBackbutton"
+            android:id="@+id/customLecturerGalleryBackbutton"
             android:background="@drawable/header_lecturers"
             android:onClick="onClick"
             android:layout_alignParentRight="true"
