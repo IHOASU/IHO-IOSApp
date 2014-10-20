@@ -39,8 +39,11 @@ public class ScienceFragment extends ListFragment {
         DataBaseHelper dbOpenHelper = new DataBaseHelper(this.getActivity(), DB_NAME);
         database = dbOpenHelper.openDataBase();
         scienceItems = new HashMap<String, Science>();
+        scienceItems.clear();
         getScienceItems();
-        setListAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, scienceDetailedTitle.keySet().toArray(new String[0])));
+        ArrayAdapter adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, scienceDetailedTitle.keySet().toArray(new String[0]));
+        this.setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
         return v;
     }
 

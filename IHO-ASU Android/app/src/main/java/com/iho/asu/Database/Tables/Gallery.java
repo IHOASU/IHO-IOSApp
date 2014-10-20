@@ -6,6 +6,24 @@ package com.iho.asu.Database.Tables;
 public class Gallery {
     private long id;
     private byte[] name;
+    private String imageCaption;
+    private String lectEmail;
+
+    public void setImageCaption(String imageCaption) {
+        this.imageCaption = imageCaption;
+    }
+
+    public void setLectEmail(String lectEmail) {
+        this.lectEmail = lectEmail;
+    }
+
+    public String getImageCaption() {
+        return imageCaption;
+    }
+
+    public String getLectEmail() {
+        return lectEmail;
+    }
 
     public long getId() {
         return id;

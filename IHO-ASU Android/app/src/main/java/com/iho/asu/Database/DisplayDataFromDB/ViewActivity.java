@@ -63,6 +63,11 @@ public class ViewActivity extends Activity implements View.OnClickListener {
                 intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
                 break;
+            case R.id.viewGallery:
+                LecturerGalleryFragment gFragment = new LecturerGalleryFragment(email);
+                ft.replace(R.id.per_view, gFragment);
+                ft.commit();
+                break;
             case R.id.customEventsBackbutton:
                 EventsFragment eFragment = new EventsFragment();
                 ft.replace(R.id.per_view, eFragment);

@@ -91,16 +91,6 @@ public class MainActivity extends Activity implements OnClickListener{
                 fragmentTransaction.addToBackStack(null);
                 fragmentTransaction.commit();
                 break;
-            case R.id.tr1:
-                uri = Uri.parse("https://iho.asu.edu/outreach/travel/galapagos2014");
-                intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-                break;
-            case R.id.tr2:
-                uri = Uri.parse("https://iho.asu.edu/outreach/travel/france2013");
-                intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-                break;
             case R.id.donate:
                 fragment = new Donate();
                 fragmentTransaction.replace(R.id.main_layout, fragment);
