@@ -88,7 +88,7 @@ NSArray *scItems;
     NSMutableArray *obj = [[NSMutableArray alloc ] init ];
     sqlite3_stmt *statement;
     
-    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Title,Bio,Link,Email FROM Lecturer"];
+    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Bio,Link,Email FROM Lecturer"];
     const char *query_stmt = [query UTF8String];
     if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
     {
@@ -99,14 +99,13 @@ NSArray *scItems;
             //read data from the result
             NSString *Name =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
             NSData *imgData = [[NSData alloc] initWithBytes:sqlite3_column_blob(statement, 2) length:sqlite3_column_bytes(statement, 2)];
-             NSString *title =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
-            NSString *Bio = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
+            NSString *Bio = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
+            NSString *title = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
+
             NSString *link  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 5)];
             NSString *email =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)];
-            LecturerDetail *newItem = [[LecturerDetail alloc] initWithLectid:LectID name:Name title:title image:imgData bio:Bio link:link email:email];
-            if(title==nil)
-                NSLog(@"No data present");
-            else
+            LecturerDetail *newItem = [[LecturerDetail alloc] initWithLectid:LectID name:Name image:imgData bio:Bio title:title link:link email:email];
+            
                 //UIImage *img = [[UIImage alloc]initWithData:imgData ];
                 [obj addObject:newItem];
             
@@ -165,10 +164,10 @@ NSArray *scItems;
   
     
       if(indexPath.section==0){
-          static NSString *CellIdentifier = @"newsCell";
+          static NSString *CellIdentifier = @"lectCell";
           UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     LecturerDetail *Item = [lectItems objectAtIndex:indexPath.row];
-          [cell setBackgroundColor:[UIColor colorWithRed:5 green:56 blue:104 alpha:1.0 ]];
+          //[cell setBackgroundColor:[UIColor colorWithRed:5 green:56 blue:104 alpha:1.0 ]];
 
      [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];

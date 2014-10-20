@@ -9,7 +9,6 @@
 #import "GalleryViewController.h"
 #import <sqlite3.h>
 #import "GalleryShowImageViewController.h"
-
 @interface GalleryViewController ()
 
 {
@@ -50,7 +49,7 @@ static GalleryViewController *_database;
         
         if (sqlite3_open([sqLiteDb UTF8String],&_asuIHO)==SQLITE_OK)
         {
-            NSString *query = [NSString stringWithFormat:@"SELECT imageID,imageName FROM Gallery where LectID is NULL"];
+            NSString *query = [NSString stringWithFormat:@"SELECT ImageID,ImageName FROM Gallery where LectEmail is NULL"];
             const char *query_stmt = [query UTF8String];
             if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
             {
@@ -99,11 +98,14 @@ static GalleryViewController *_database;
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    //UIImageView *imageView = (UIImageView *)[cell viewWithTag:100];
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(80,70,213,170)];
+   /*//UIImageView *imageView = (UIImageView *)[cell viewWithTag:100]
+    UIImageView *galleryImage = [[UIImageView alloc] initWithImage:[images objectAtIndex:indexPath.row]];
+    //galleryImage.image = [UIImage imageWithData:[images objectAtIndex:indexPath.row]];
+    galleryImage.contentMode = UIViewContentModeScaleAspectFit;
     //imageView.image = [images objectAtIndex:indexPath.row];
-    imageView.image = [UIImage imageWithData:[images objectAtIndex:indexPath.row]];
+    //imageView.image = [UIImage imageWithData:[images objectAtIndex:indexPath.row]];*/
     
+    [cell.backgroundView  addSubview:[[UIImageView alloc] initWithImage:[images objectAtIndex:indexPath.row]]];
     return cell;
 }
 

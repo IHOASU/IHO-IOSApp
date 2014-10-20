@@ -68,7 +68,6 @@
 		5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9241811907FD460097D1F4 /* EventDetailsViewController.m */; };
 		5F92418519080F6F0097D1F4 /* EventsDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F92418419080F6F0097D1F4 /* EventsDetail.m */; };
 		5F9BA5471912B2DE002F26A6 /* rsz_launch_iphone_retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F9BA5461912B2DE002F26A6 /* rsz_launch_iphone_retina.png */; };
-		5F9BA54A19137D1F002F26A6 /* GalleryShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9BA54919137D1F002F26A6 /* GalleryShowImageViewController.m */; };
 		5F9E8C1918FDBE350008C7F1 /* About.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E8C1518FDBE350008C7F1 /* About.html */; };
 		5F9E8C1A18FDBE350008C7F1 /* Donate.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E8C1618FDBE350008C7F1 /* Donate.txt */; };
 		5F9E8C1C18FDBE350008C7F1 /* search-icon-64.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F9E8C1818FDBE350008C7F1 /* search-icon-64.png */; };
@@ -80,6 +79,9 @@
 		5FC93CC21910F01F0037ED99 /* jquery.mobile-1.3.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */; };
 		5FC93CC41910F96A0037ED99 /* rsz_iho_h_mg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */; };
 		8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */; };
+		8C91F7FE19F1CF470025C5FB /* UIViewController+ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */; };
+		8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */; };
+		8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,8 +182,6 @@
 		5F92418319080F6F0097D1F4 /* EventsDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsDetail.h; sourceTree = "<group>"; };
 		5F92418419080F6F0097D1F4 /* EventsDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsDetail.m; sourceTree = "<group>"; };
 		5F9BA5461912B2DE002F26A6 /* rsz_launch_iphone_retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_launch_iphone_retina.png; sourceTree = "<group>"; };
-		5F9BA54819137D1F002F26A6 /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryShowImageViewController.h; sourceTree = "<group>"; };
-		5F9BA54919137D1F002F26A6 /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryShowImageViewController.m; sourceTree = "<group>"; };
 		5F9E8C1518FDBE350008C7F1 /* About.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = About.html; sourceTree = "<group>"; };
 		5F9E8C1618FDBE350008C7F1 /* Donate.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Donate.txt; sourceTree = "<group>"; };
 		5F9E8C1818FDBE350008C7F1 /* search-icon-64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-icon-64.png"; sourceTree = "<group>"; };
@@ -194,6 +194,12 @@
 		5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.3.2.min.js"; sourceTree = "<group>"; };
 		5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_iho_h_mg.png; sourceTree = "<group>"; };
 		8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IHOlogoforapp.jpg; sourceTree = "<group>"; };
+		8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
+		8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
+		8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageContent.h"; sourceTree = "<group>"; };
+		8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageContent.m"; sourceTree = "<group>"; };
+		8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryShowImageViewController.h; path = "IHO-ASU/GalleryShowImageViewController.h"; sourceTree = "<group>"; };
+		8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryShowImageViewController.m; path = "IHO-ASU/GalleryShowImageViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +230,12 @@
 		5F566AAA18FC43A60042F4CA = {
 			isa = PBXGroup;
 			children = (
+				8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */,
+				8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */,
+				8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */,
+				8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */,
+				8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */,
+				8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */,
 				5F566ABC18FC43A60042F4CA /* IHO-ASU */,
 				5F566ADE18FC43A60042F4CA /* IHO-ASUTests */,
 				5F566AB518FC43A60042F4CA /* Frameworks */,
@@ -310,8 +322,6 @@
 				5F566ABD18FC43A60042F4CA /* Supporting Files */,
 				5FB10DF519105A3600081FB2 /* LucyViewController.h */,
 				5FB10DF619105A3600081FB2 /* LucyViewController.m */,
-				5F9BA54819137D1F002F26A6 /* GalleryShowImageViewController.h */,
-				5F9BA54919137D1F002F26A6 /* GalleryShowImageViewController.m */,
 			);
 			path = "IHO-ASU";
 			sourceTree = "<group>";
@@ -448,6 +458,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = ASU;
 				TargetAttributes = {
+					5F566AB218FC43A60042F4CA = {
+						DevelopmentTeam = LH63ZPT659;
+					};
 					5F566AD618FC43A60042F4CA = {
 						TestTargetID = 5F566AB218FC43A60042F4CA;
 					};
@@ -536,12 +549,12 @@
 				5F566B2418FC45400042F4CA /* GalleryViewController.m in Sources */,
 				5F566AC318FC43A60042F4CA /* main.m in Sources */,
 				5F566B2A18FC45400042F4CA /* MainViewController.m in Sources */,
-				5F9BA54A19137D1F002F26A6 /* GalleryShowImageViewController.m in Sources */,
 				5FB10DF719105A3600081FB2 /* LucyViewController.m in Sources */,
 				5F566B2918FC45400042F4CA /* LecturerDetailsViewController.m in Sources */,
 				5F566B2618FC45400042F4CA /* index.js in Sources */,
 				5F38C3BE18FEF6E5003A62CC /* Science.m in Sources */,
 				5F566B2718FC45400042F4CA /* jquery-1.11.0.min.js in Sources */,
+				8C91F7FE19F1CF470025C5FB /* UIViewController+ImageViewController.m in Sources */,
 				5F566B1C18FC45400042F4CA /* ConnectViewController.m in Sources */,
 				5F69C23C19102EDC009DC156 /* TravelandLearnViewController.m in Sources */,
 				5F566B2018FC45400042F4CA /* DonateViewController.m in Sources */,
@@ -551,6 +564,7 @@
 				5F566B2818FC45400042F4CA /* LecturerDetail.m in Sources */,
 				5F566B1918FC45400042F4CA /* AboutViewController.m in Sources */,
 				5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */,
+				8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */,
 				5FC93CC21910F01F0037ED99 /* jquery.mobile-1.3.2.min.js in Sources */,
 				5F566B2318FC45400042F4CA /* GalleryOptionsViewController.m in Sources */,
 				5F566B1E18FC45400042F4CA /* CreditDetailsViewController.m in Sources */,
@@ -558,6 +572,7 @@
 				5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */,
 				5F566B2218FC45400042F4CA /* FieldViewController.m in Sources */,
 				5F566B2B18FC45400042F4CA /* News+EventsViewController.m in Sources */,
+				8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */,
 				5F566B2D18FC45400042F4CA /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -26,10 +26,8 @@
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 4, 10,  36)];
     imageView.image = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    
     //[self.navigationItem se]
 
-    
     //UIImage *logo = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
     self.navigationItem.titleView = imageView ;
     news.layer.cornerRadius=15;
@@ -58,6 +56,13 @@
     NSURL *baseURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@", [[NSBundle mainBundle] bundlePath]]];
     ihoLogo.scalesPageToFit = YES;
     [self.ihoLogo loadHTMLString:html baseURL:baseURL];
+    
+    //set up toolbar
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2,5,self.view.frame.size.width,100)];
+    [title setNumberOfLines:1];
+        title.text = @"ASU IHO @2014";
+    [self.navigationController.toolbar addSubview:title];
+    
     }
 
 

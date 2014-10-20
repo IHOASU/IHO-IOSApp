@@ -45,7 +45,7 @@
         if (details != nil) {
         newsImage.image = [UIImage imageWithData:details.image];
         [newsLink setTitle:@"Click to know more" forState:UIControlStateNormal];
-       // [newsContent setFont: [UIFont fontWithName:@"ArialMT" size:30]];
+        [newsContent setFont:[UIFont fontWithName:@"Arial" size:15]];
         [newsContent setText:details.text];
         
         }

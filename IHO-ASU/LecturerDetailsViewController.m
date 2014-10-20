@@ -49,7 +49,7 @@
         if (detail!= nil) {
            
             _lectImage.image=[UIImage imageWithData:detail.image];
-            _lecttitle.text = detail.title;
+            _lecttitle.text = detail.name;
             _bio.text = detail.bio;
             
             
@@ -90,7 +90,7 @@
     
     sqlite3_stmt *statement;
     LecturerDetail *newItem = nil;
-    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Title,Bio,Link,Email FROM Lecturer WHERE LectID=%d",letID];
+    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Bio,Title,Link,Email FROM Lecturer WHERE LectID=%d",letID];
     const char *query_stmt = [query UTF8String];
     if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
     {
@@ -101,11 +101,12 @@
             //read data from the result
             NSString *Name =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
             NSData *imgData = [[NSData alloc] initWithBytes:sqlite3_column_blob(statement, 2) length:sqlite3_column_bytes(statement, 2)];
-            NSString *title =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
-            NSString *Bio = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
+            NSString *Bio = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
+            NSString *title = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
+
             NSString *link  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 5)];
             NSString *email =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)];
-             newItem = [[LecturerDetail alloc] initWithLectid:LectID name:Name title:title image:imgData bio:Bio link:link email:email];
+            newItem = [[LecturerDetail alloc] initWithLectid:LectID name:Name image:imgData bio:Bio title:title link:link email:email];
             
             break;
         }

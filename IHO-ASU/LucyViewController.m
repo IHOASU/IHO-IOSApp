@@ -34,9 +34,11 @@ UIWebView *displayLucy;
     if (path){
         
         NSData *data=[NSData dataWithContentsOfFile:path];
-        displayLucy =  [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, 320, 50)];
+        displayLucy =  [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-100)];
         [displayLucy loadData:data MIMEType:@"text/html" textEncodingName:@"convert"  baseURL:nil];
-        displayLucy.scrollView.scrollEnabled= TRUE;
+        displayLucy.scalesPageToFit=YES;
+        displayLucy.scrollView.showsVerticalScrollIndicator=YES;
+        displayLucy.scrollView.scrollEnabled= YES;
         [self.view addSubview:displayLucy];
     }
 }
@@ -45,6 +47,10 @@ UIWebView *displayLucy;
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+- (void)willAnimateRotationToInterfaceOrientation: (UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [displayLucy setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
 }
 
 /*

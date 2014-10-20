@@ -37,8 +37,6 @@
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
-    self.about_link.delegate = self;
-    
     //Declare the webview to display content
     NSString *path = [[NSBundle mainBundle] pathForResource:@"About" ofType:@"html"];
     if (path){
@@ -53,7 +51,7 @@
     mapIt.layer.cornerRadius=15;
     //[mapIt setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0] ];
     [mapIt addTarget:self action:@selector(BtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    
+    /*
     if(!ipad){
     //display location
     CGRect textview1= CGRectMake(8,325,150,40) ;
@@ -94,7 +92,7 @@
         
     }
     
-    
+    */
     
 }
 
