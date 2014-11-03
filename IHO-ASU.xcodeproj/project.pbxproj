@@ -84,10 +84,10 @@
 		8C3B8BA319FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */; };
 		8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */; };
 		8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */; };
-		8C91F7FE19F1CF470025C5FB /* UIViewController+ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */; };
-		8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */; };
 		8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */; };
 		8CA4677919FE6D4D006F79E3 /* FB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4677819FE6D4D006F79E3 /* FB.png */; };
+		8CB30F571A07D17700DEBA30 /* UIViewController+ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */; };
+		8CB30F581A07D17700DEBA30 /* UIViewController+ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,13 +210,13 @@
 		8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+LecturerList.m"; sourceTree = "<group>"; };
 		8C6700B819FC377E0041FA6E /* UITableViewController+ScienceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+ScienceList.h"; sourceTree = "<group>"; };
 		8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+ScienceList.m"; sourceTree = "<group>"; };
-		8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ImageViewController.h"; path = "../UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
-		8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ImageViewController.m"; path = "../UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
-		8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ImageContent.h"; path = "../UIViewController+ImageContent.h"; sourceTree = "<group>"; };
-		8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ImageContent.m"; path = "../UIViewController+ImageContent.m"; sourceTree = "<group>"; };
 		8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryShowImageViewController.h; sourceTree = "<group>"; };
 		8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryShowImageViewController.m; sourceTree = "<group>"; };
 		8CA4677819FE6D4D006F79E3 /* FB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FB.png; sourceTree = "<group>"; };
+		8CB30F531A07D17700DEBA30 /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageContent.h"; sourceTree = "<group>"; };
+		8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageContent.m"; sourceTree = "<group>"; };
+		8CB30F551A07D17700DEBA30 /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
+		8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,10 +281,10 @@
 				8CA4677819FE6D4D006F79E3 /* FB.png */,
 				8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */,
 				8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */,
-				8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */,
-				8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */,
-				8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */,
-				8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */,
+				8CB30F531A07D17700DEBA30 /* UIViewController+ImageContent.h */,
+				8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */,
+				8CB30F551A07D17700DEBA30 /* UIViewController+ImageViewController.h */,
+				8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */,
 				5F566AC518FC43A60042F4CA /* IHOAppDelegate.h */,
 				5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */,
 				5F566AC818FC43A60042F4CA /* Main_iPhone.storyboard */,
@@ -587,7 +587,6 @@
 				5F566B2618FC45400042F4CA /* index.js in Sources */,
 				5F38C3BE18FEF6E5003A62CC /* Science.m in Sources */,
 				5F566B2718FC45400042F4CA /* jquery-1.11.0.min.js in Sources */,
-				8C91F7FE19F1CF470025C5FB /* UIViewController+ImageViewController.m in Sources */,
 				5F566B1C18FC45400042F4CA /* ConnectViewController.m in Sources */,
 				5F69C23C19102EDC009DC156 /* TravelandLearnViewController.m in Sources */,
 				5F566B2018FC45400042F4CA /* DonateViewController.m in Sources */,
@@ -599,14 +598,15 @@
 				5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */,
 				8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */,
 				5F566B2318FC45400042F4CA /* GalleryOptionsViewController.m in Sources */,
+				8CB30F581A07D17700DEBA30 /* UIViewController+ImageViewController.m in Sources */,
 				5F566B1E18FC45400042F4CA /* CreditDetailsViewController.m in Sources */,
 				5F566AD018FC43A60042F4CA /* IHOViewController.m in Sources */,
+				8CB30F571A07D17700DEBA30 /* UIViewController+ImageContent.m in Sources */,
 				5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */,
 				8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */,
 				5F566B2218FC45400042F4CA /* FieldViewController.m in Sources */,
 				5F566B2B18FC45400042F4CA /* News+EventsViewController.m in Sources */,
 				8C3B8B9519FE996D005020D3 /* NSObject+Travel.m in Sources */,
-				8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */,
 				5F566B2D18FC45400042F4CA /* NewsDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

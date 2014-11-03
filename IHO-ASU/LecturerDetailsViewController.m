@@ -10,7 +10,7 @@
 #import "LecturerDetail.h"
 #import <MessageUI/MessageUI.h>
 
-@interface LecturerDetailsViewController ()
+@interface LecturerDetailsViewController ()<MFMailComposeViewControllerDelegate>
 {
     LecturerDetail *detail;
 }
@@ -51,7 +51,7 @@
             _lectImage.image=[UIImage imageWithData:detail.image];
             _lecttitle.text = detail.title;
             _bio.text = detail.bio;
-            [_bio setScrollEnabled:YES];
+           
             
             
         }
@@ -61,10 +61,8 @@
         NSLog(@"Not working");
     }
 
-'''''''''''''''''''''''''''''''''''''''''''''''''''
-    
-    
-    
+    self.tableView.separatorColor = [UIColor clearColor];
+   
 }
 
 
@@ -83,9 +81,18 @@
     
 }
 
+-(void)viewDidLayoutSubviews
+{
+    [_lecttitle sizeToFit];
+    [_bio sizeToFit];
+}
+
+
+
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 
 -(LecturerDetail *)lectDetail:(int)letID{
     
@@ -136,6 +143,17 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+ 
+ - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ if(indexPath.row==0)
+ return 280;
+ else if(indexPath.row==1)
+ return _lecttitle.frame.size.height;
+ else
+ return 189;
+ 
+ }
 */
 
 - (IBAction)linkB:(id)sender {
