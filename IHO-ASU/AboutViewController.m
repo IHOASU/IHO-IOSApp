@@ -43,8 +43,7 @@
     
         NSData *data=[NSData dataWithContentsOfFile:path];
         [about_link loadData:data MIMEType:@"text/html" textEncodingName:@"convert"  baseURL:nil];
-        about_link.scrollView.scrollEnabled= FALSE;
-    [self.view addSubview:about_link];
+    //[self.view addSubview:about_link];
     }
     
     [self.view bringSubviewToFront:mapIt];
@@ -96,6 +95,7 @@
     
 }
 
+
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if ( navigationType == UIWebViewNavigationTypeLinkClicked )
@@ -116,6 +116,24 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+
+-(void)reloadTableView
+{
+    
+    [self reloadTableView];
+    
+}
+
+
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
 }
 
 @end

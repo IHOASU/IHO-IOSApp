@@ -11,8 +11,11 @@
 
 @class LecturerDetail;
 
-@interface LecturerDetailsViewController : UIViewController{
+@interface LecturerDetailsViewController : UITableViewController{
     int _lectID;
+    
+    
+    
 }
 
 

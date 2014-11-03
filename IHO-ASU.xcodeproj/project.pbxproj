@@ -49,7 +49,6 @@
 		5F566B2E18FC45400042F4CA /* skull.html in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B1618FC45400042F4CA /* skull.html */; };
 		5F566B5418FC467B0042F4CA /* ASU IHO vertical.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B3118FC467B0042F4CA /* ASU IHO vertical.jpg */; };
 		5F566B5918FC467B0042F4CA /* claszen_logo_maroon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B3918FC467B0042F4CA /* claszen_logo_maroon.png */; };
-		5F566B5B18FC467B0042F4CA /* f_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B3D18FC467B0042F4CA /* f_logo.png */; };
 		5F566B6018FC467B0042F4CA /* IHO_h_mg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B4218FC467B0042F4CA /* IHO_h_mg.png */; };
 		5F566B6218FC467B0042F4CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B4418FC467B0042F4CA /* Images.xcassets */; };
 		5F566B6318FC467B0042F4CA /* invest.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B4518FC467B0042F4CA /* invest.png */; };
@@ -62,7 +61,7 @@
 		5F566B7118FC467B0042F4CA /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = 5F566B5318FC467B0042F4CA /* youtube.png */; };
 		5F566B7318FC47810042F4CA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F566B7218FC47810042F4CA /* libsqlite3.dylib */; };
 		5F69C23C19102EDC009DC156 /* TravelandLearnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F69C23B19102EDC009DC156 /* TravelandLearnViewController.m */; };
-		5F69C23E19103649009DC156 /* travel learn imge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F69C23D19103649009DC156 /* travel learn imge.jpg */; };
+		5F69C23E19103649009DC156 /* travellearnimge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5F69C23D19103649009DC156 /* travellearnimge.jpg */; };
 		5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F92417B1907F6480097D1F4 /* BeingHumanViewController.m */; };
 		5F92417F1907F66D0097D1F4 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F92417E1907F66D0097D1F4 /* SignUpViewController.m */; };
 		5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9241811907FD460097D1F4 /* EventDetailsViewController.m */; };
@@ -74,14 +73,21 @@
 		5FB10DF2191051F500081FB2 /* asuIHO.db in Resources */ = {isa = PBXBuildFile; fileRef = 5FB10DF1191051F500081FB2 /* asuIHO.db */; };
 		5FB10DF41910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai in Resources */ = {isa = PBXBuildFile; fileRef = 5FB10DF31910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai */; };
 		5FB10DF719105A3600081FB2 /* LucyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB10DF619105A3600081FB2 /* LucyViewController.m */; };
-		5FB10DF919105D0000081FB2 /* Lucy.html in Resources */ = {isa = PBXBuildFile; fileRef = 5FB10DF819105D0000081FB2 /* Lucy.html */; };
-		5FC93CC11910F01F0037ED99 /* jquery.mobile-1.3.2.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CBF1910F01F0037ED99 /* jquery.mobile-1.3.2.min.css */; };
-		5FC93CC21910F01F0037ED99 /* jquery.mobile-1.3.2.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */; };
 		5FC93CC41910F96A0037ED99 /* rsz_iho_h_mg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */; };
 		8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */; };
+		8C3B8B9519FE996D005020D3 /* NSObject+Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */; };
+		8C3B8B9819FEAC78005020D3 /* UITableViewController+NewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */; };
+		8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */; };
+		8C3B8B9D19FEDC71005020D3 /* lucy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9C19FEDC71005020D3 /* lucy.html */; };
+		8C3B8BA119FEDDFF005020D3 /* jquery-1.10.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */; };
+		8C3B8BA219FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */; };
+		8C3B8BA319FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */; };
+		8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */; };
+		8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */; };
 		8C91F7FE19F1CF470025C5FB /* UIViewController+ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */; };
 		8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */; };
 		8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */; };
+		8CA4677919FE6D4D006F79E3 /* FB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4677819FE6D4D006F79E3 /* FB.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,7 +164,6 @@
 		5F566B1618FC45400042F4CA /* skull.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skull.html; sourceTree = "<group>"; };
 		5F566B3118FC467B0042F4CA /* ASU IHO vertical.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ASU IHO vertical.jpg"; sourceTree = "<group>"; };
 		5F566B3918FC467B0042F4CA /* claszen_logo_maroon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = claszen_logo_maroon.png; sourceTree = "<group>"; };
-		5F566B3D18FC467B0042F4CA /* f_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = f_logo.png; sourceTree = "<group>"; };
 		5F566B4218FC467B0042F4CA /* IHO_h_mg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IHO_h_mg.png; sourceTree = "<group>"; };
 		5F566B4418FC467B0042F4CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5F566B4518FC467B0042F4CA /* invest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = invest.png; sourceTree = "<group>"; };
@@ -172,7 +177,7 @@
 		5F566B7218FC47810042F4CA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		5F69C23A19102EDC009DC156 /* TravelandLearnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TravelandLearnViewController.h; sourceTree = "<group>"; };
 		5F69C23B19102EDC009DC156 /* TravelandLearnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TravelandLearnViewController.m; sourceTree = "<group>"; };
-		5F69C23D19103649009DC156 /* travel learn imge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "travel learn imge.jpg"; sourceTree = "<group>"; };
+		5F69C23D19103649009DC156 /* travellearnimge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = travellearnimge.jpg; sourceTree = "<group>"; };
 		5F92417A1907F6480097D1F4 /* BeingHumanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BeingHumanViewController.h; sourceTree = "<group>"; };
 		5F92417B1907F6480097D1F4 /* BeingHumanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BeingHumanViewController.m; sourceTree = "<group>"; };
 		5F92417D1907F66D0097D1F4 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -189,17 +194,29 @@
 		5FB10DF31910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lucy_FullSkeleton_uncolored.ai; sourceTree = "<group>"; };
 		5FB10DF519105A3600081FB2 /* LucyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LucyViewController.h; sourceTree = "<group>"; };
 		5FB10DF619105A3600081FB2 /* LucyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LucyViewController.m; sourceTree = "<group>"; };
-		5FB10DF819105D0000081FB2 /* Lucy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Lucy.html; sourceTree = "<group>"; };
-		5FC93CBF1910F01F0037ED99 /* jquery.mobile-1.3.2.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jquery.mobile-1.3.2.min.css"; sourceTree = "<group>"; };
-		5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.3.2.min.js"; sourceTree = "<group>"; };
 		5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_iho_h_mg.png; sourceTree = "<group>"; };
 		8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IHOlogoforapp.jpg; sourceTree = "<group>"; };
-		8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
-		8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
-		8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageContent.h"; sourceTree = "<group>"; };
-		8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageContent.m"; sourceTree = "<group>"; };
-		8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GalleryShowImageViewController.h; path = "IHO-ASU/GalleryShowImageViewController.h"; sourceTree = "<group>"; };
-		8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GalleryShowImageViewController.m; path = "IHO-ASU/GalleryShowImageViewController.m"; sourceTree = "<group>"; };
+		8C3B8B9319FE996D005020D3 /* NSObject+Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Travel.h"; sourceTree = "<group>"; };
+		8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Travel.m"; sourceTree = "<group>"; };
+		8C3B8B9619FEAC78005020D3 /* UITableViewController+NewsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+NewsList.h"; sourceTree = "<group>"; };
+		8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+NewsList.m"; sourceTree = "<group>"; };
+		8C3B8B9919FEAC93005020D3 /* UITableViewController+EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+EventsList.h"; sourceTree = "<group>"; };
+		8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+EventsList.m"; sourceTree = "<group>"; };
+		8C3B8B9C19FEDC71005020D3 /* lucy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lucy.html; sourceTree = "<group>"; };
+		8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.10.2.min.js"; sourceTree = "<group>"; };
+		8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jquery.mobile-1.4.2.min.css"; sourceTree = "<group>"; };
+		8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.4.2.min.js"; sourceTree = "<group>"; };
+		8C6700B419FC34C50041FA6E /* UITableViewController+LecturerList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+LecturerList.h"; sourceTree = "<group>"; };
+		8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+LecturerList.m"; sourceTree = "<group>"; };
+		8C6700B819FC377E0041FA6E /* UITableViewController+ScienceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+ScienceList.h"; sourceTree = "<group>"; };
+		8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+ScienceList.m"; sourceTree = "<group>"; };
+		8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ImageViewController.h"; path = "../UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
+		8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ImageViewController.m"; path = "../UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
+		8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+ImageContent.h"; path = "../UIViewController+ImageContent.h"; sourceTree = "<group>"; };
+		8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+ImageContent.m"; path = "../UIViewController+ImageContent.m"; sourceTree = "<group>"; };
+		8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryShowImageViewController.h; sourceTree = "<group>"; };
+		8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryShowImageViewController.m; sourceTree = "<group>"; };
+		8CA4677819FE6D4D006F79E3 /* FB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FB.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,12 +247,6 @@
 		5F566AAA18FC43A60042F4CA = {
 			isa = PBXGroup;
 			children = (
-				8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */,
-				8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */,
-				8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */,
-				8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */,
-				8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */,
-				8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */,
 				5F566ABC18FC43A60042F4CA /* IHO-ASU */,
 				5F566ADE18FC43A60042F4CA /* IHO-ASUTests */,
 				5F566AB518FC43A60042F4CA /* Frameworks */,
@@ -267,6 +278,13 @@
 		5F566ABC18FC43A60042F4CA /* IHO-ASU */ = {
 			isa = PBXGroup;
 			children = (
+				8CA4677819FE6D4D006F79E3 /* FB.png */,
+				8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */,
+				8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */,
+				8C91F7FF19F1D1740025C5FB /* UIViewController+ImageContent.h */,
+				8C91F80019F1D1740025C5FB /* UIViewController+ImageContent.m */,
+				8C91F7FC19F1CF470025C5FB /* UIViewController+ImageViewController.h */,
+				8C91F7FD19F1CF470025C5FB /* UIViewController+ImageViewController.m */,
 				5F566AC518FC43A60042F4CA /* IHOAppDelegate.h */,
 				5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */,
 				5F566AC818FC43A60042F4CA /* Main_iPhone.storyboard */,
@@ -322,6 +340,16 @@
 				5F566ABD18FC43A60042F4CA /* Supporting Files */,
 				5FB10DF519105A3600081FB2 /* LucyViewController.h */,
 				5FB10DF619105A3600081FB2 /* LucyViewController.m */,
+				8C6700B419FC34C50041FA6E /* UITableViewController+LecturerList.h */,
+				8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */,
+				8C6700B819FC377E0041FA6E /* UITableViewController+ScienceList.h */,
+				8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */,
+				8C3B8B9319FE996D005020D3 /* NSObject+Travel.h */,
+				8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */,
+				8C3B8B9619FEAC78005020D3 /* UITableViewController+NewsList.h */,
+				8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */,
+				8C3B8B9919FEAC93005020D3 /* UITableViewController+EventsList.h */,
+				8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */,
 			);
 			path = "IHO-ASU";
 			sourceTree = "<group>";
@@ -375,21 +403,22 @@
 		5F566B3018FC46120042F4CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */,
+				8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */,
+				8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */,
+				8C3B8B9C19FEDC71005020D3 /* lucy.html */,
 				8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */,
 				5F566B1618FC45400042F4CA /* skull.html */,
 				5F9BA5461912B2DE002F26A6 /* rsz_launch_iphone_retina.png */,
 				5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */,
-				5FC93CBF1910F01F0037ED99 /* jquery.mobile-1.3.2.min.css */,
-				5FC93CC01910F01F0037ED99 /* jquery.mobile-1.3.2.min.js */,
 				5FB10DF31910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai */,
 				5FB10DF1191051F500081FB2 /* asuIHO.db */,
-				5F69C23D19103649009DC156 /* travel learn imge.jpg */,
+				5F69C23D19103649009DC156 /* travellearnimge.jpg */,
 				5F9E8C1518FDBE350008C7F1 /* About.html */,
 				5F9E8C1618FDBE350008C7F1 /* Donate.txt */,
 				5F9E8C1818FDBE350008C7F1 /* search-icon-64.png */,
 				5F566B3118FC467B0042F4CA /* ASU IHO vertical.jpg */,
 				5F566B3918FC467B0042F4CA /* claszen_logo_maroon.png */,
-				5F566B3D18FC467B0042F4CA /* f_logo.png */,
 				5F566B4218FC467B0042F4CA /* IHO_h_mg.png */,
 				5F566B4418FC467B0042F4CA /* Images.xcassets */,
 				5F566B4518FC467B0042F4CA /* invest.png */,
@@ -405,7 +434,6 @@
 				5F38C3BA18FEE30C003A62CC /* skulliPad.html */,
 				5F4BF99B1904B7E200EF3BFF /* location.html */,
 				5F4BF99D1904B7F100EF3BFF /* Contact.html */,
-				5FB10DF819105D0000081FB2 /* Lucy.html */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -491,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F566B6E18FC467B0042F4CA /* sediments.jpg in Resources */,
+				8C3B8BA119FEDDFF005020D3 /* jquery-1.10.2.min.js in Resources */,
 				5F566B6318FC467B0042F4CA /* invest.png in Resources */,
 				5F566B7118FC467B0042F4CA /* youtube.png in Resources */,
 				8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */,
@@ -498,15 +527,17 @@
 				5F566B6818FC467B0042F4CA /* lucy_chin.png in Resources */,
 				5F566B6218FC467B0042F4CA /* Images.xcassets in Resources */,
 				5F566B6A18FC467B0042F4CA /* lucy.png in Resources */,
+				8C3B8B9D19FEDC71005020D3 /* lucy.html in Resources */,
 				5F566B2E18FC45400042F4CA /* skull.html in Resources */,
 				5F566B1A18FC45400042F4CA /* Main_iPad.storyboard in Resources */,
 				5F566B6918FC467B0042F4CA /* lucy_skull.png in Resources */,
-				5FC93CC11910F01F0037ED99 /* jquery.mobile-1.3.2.min.css in Resources */,
-				5FB10DF919105D0000081FB2 /* Lucy.html in Resources */,
 				5F9BA5471912B2DE002F26A6 /* rsz_launch_iphone_retina.png in Resources */,
 				5F566B2118FC45400042F4CA /* InfoPlist.strings in Resources */,
 				5F9E8C1C18FDBE350008C7F1 /* search-icon-64.png in Resources */,
+				8C3B8BA319FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js in Resources */,
 				5F566B7018FC467B0042F4CA /* vimeo.png in Resources */,
+				8CA4677919FE6D4D006F79E3 /* FB.png in Resources */,
+				8C3B8BA219FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css in Resources */,
 				5FB10DF41910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai in Resources */,
 				5F566B6F18FC467B0042F4CA /* twitter.png in Resources */,
 				5F566B5918FC467B0042F4CA /* claszen_logo_maroon.png in Resources */,
@@ -516,7 +547,7 @@
 				5F566B5418FC467B0042F4CA /* ASU IHO vertical.jpg in Resources */,
 				5F566B6018FC467B0042F4CA /* IHO_h_mg.png in Resources */,
 				5F38C3BB18FEE30C003A62CC /* skulliPad.html in Resources */,
-				5F69C23E19103649009DC156 /* travel learn imge.jpg in Resources */,
+				5F69C23E19103649009DC156 /* travellearnimge.jpg in Resources */,
 				5F566ACA18FC43A60042F4CA /* Main_iPhone.storyboard in Resources */,
 				5FB10DF2191051F500081FB2 /* asuIHO.db in Resources */,
 				5F9E8C1918FDBE350008C7F1 /* About.html in Resources */,
@@ -524,7 +555,6 @@
 				5F4BF99C1904B7E200EF3BFF /* location.html in Resources */,
 				5F566AC118FC43A60042F4CA /* InfoPlist.strings in Resources */,
 				5F4BF99E1904B7F100EF3BFF /* Contact.html in Resources */,
-				5F566B5B18FC467B0042F4CA /* f_logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,12 +573,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */,
 				5F4BF9A11904C09400EF3BFF /* ConnectDetailsViewController.m in Sources */,
+				8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */,
 				5F92418519080F6F0097D1F4 /* EventsDetail.m in Sources */,
 				5F566B1F18FC45400042F4CA /* DonateSiteViewController.m in Sources */,
 				5F566B2418FC45400042F4CA /* GalleryViewController.m in Sources */,
 				5F566AC318FC43A60042F4CA /* main.m in Sources */,
 				5F566B2A18FC45400042F4CA /* MainViewController.m in Sources */,
+				8C3B8B9819FEAC78005020D3 /* UITableViewController+NewsList.m in Sources */,
 				5FB10DF719105A3600081FB2 /* LucyViewController.m in Sources */,
 				5F566B2918FC45400042F4CA /* LecturerDetailsViewController.m in Sources */,
 				5F566B2618FC45400042F4CA /* index.js in Sources */,
@@ -565,13 +598,14 @@
 				5F566B1918FC45400042F4CA /* AboutViewController.m in Sources */,
 				5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */,
 				8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */,
-				5FC93CC21910F01F0037ED99 /* jquery.mobile-1.3.2.min.js in Sources */,
 				5F566B2318FC45400042F4CA /* GalleryOptionsViewController.m in Sources */,
 				5F566B1E18FC45400042F4CA /* CreditDetailsViewController.m in Sources */,
 				5F566AD018FC43A60042F4CA /* IHOViewController.m in Sources */,
 				5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */,
+				8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */,
 				5F566B2218FC45400042F4CA /* FieldViewController.m in Sources */,
 				5F566B2B18FC45400042F4CA /* News+EventsViewController.m in Sources */,
+				8C3B8B9519FE996D005020D3 /* NSObject+Travel.m in Sources */,
 				8C91F80119F1D1740025C5FB /* UIViewController+ImageContent.m in Sources */,
 				5F566B2D18FC45400042F4CA /* NewsDetailViewController.m in Sources */,
 			);

@@ -98,14 +98,14 @@ static GalleryViewController *_database;
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-   /*//UIImageView *imageView = (UIImageView *)[cell viewWithTag:100]
+   //UIImageView *imageView = (UIImageView *)[cell viewWithTag:100]
     UIImageView *galleryImage = [[UIImageView alloc] initWithImage:[images objectAtIndex:indexPath.row]];
     //galleryImage.image = [UIImage imageWithData:[images objectAtIndex:indexPath.row]];
     galleryImage.contentMode = UIViewContentModeScaleAspectFit;
     //imageView.image = [images objectAtIndex:indexPath.row];
     //imageView.image = [UIImage imageWithData:[images objectAtIndex:indexPath.row]];*/
     
-    [cell.backgroundView  addSubview:[[UIImageView alloc] initWithImage:[images objectAtIndex:indexPath.row]]];
+    [cell.selectedBackgroundView addSubview:galleryImage];
     return cell;
 }
 

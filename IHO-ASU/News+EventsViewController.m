@@ -13,10 +13,6 @@
 #import "EventDetailsViewController.h"
 
 @interface News_EventsViewController ()
-{
-    NSArray *newsItems;
-    NSArray *eventItems;
-}
 @end
 
 @implementation News_EventsViewController
@@ -35,29 +31,9 @@
     [super viewDidLoad];
     
     
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    //menubar specifications
-    //[self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
-   // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-
-    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-
-    newsItems = [[NSArray alloc] init];
-    eventItems = [[NSArray alloc] init];
-    NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
-    
-    if (sqlite3_open([sqLiteDb UTF8String],&_asuIHO)==SQLITE_OK)
-    {
-        newsItems = [self newsDetailInfo];
-        eventItems = [self eventsDetailInfo];
-    }
-    
 }
 
-
+/*
 -(NSArray *) newsDetailInfo{
     
     NSMutableArray *obj = [[NSMutableArray alloc ] init ];
@@ -142,18 +118,7 @@
     return 3;
 }
 
--(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    
-    
-    if(section==0){
-        [UIFont fontWithName:@"Arial-BoldMT" size:10];
-        return @"News";}
-    else if(section==1){
-        return @"Event";}
-    else
-        return @"Travel and Learn";
-    
-}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -248,6 +213,14 @@
 }
 
 
+*/
+
+-(void)reloadTableView
+{
+    
+    [self reloadTableView];
+    
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -255,5 +228,6 @@
     
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
 }
+ 
 
 @end

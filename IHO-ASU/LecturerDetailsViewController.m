@@ -20,9 +20,9 @@
 
 @synthesize lectID=_lectID,lectImage=_lectImage,bio=_bio,lecttitle=_lecttitle;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -49,8 +49,9 @@
         if (detail!= nil) {
            
             _lectImage.image=[UIImage imageWithData:detail.image];
-            _lecttitle.text = detail.name;
+            _lecttitle.text = detail.title;
             _bio.text = detail.bio;
+            [_bio setScrollEnabled:YES];
             
             
         }
@@ -60,7 +61,7 @@
         NSLog(@"Not working");
     }
 
-    
+'''''''''''''''''''''''''''''''''''''''''''''''''''
     
     
     
@@ -108,7 +109,6 @@
             NSString *email =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)];
             newItem = [[LecturerDetail alloc] initWithLectid:LectID name:Name image:imgData bio:Bio title:title link:link email:email];
             
-            break;
         }
        
     }
@@ -142,7 +142,19 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:detail.link]];
 }
 
+-(void)reloadTableView
+{
+    
+    [self reloadTableView];
+    
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
 
 
 @end

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
-@interface TravelandLearnViewController : UIViewController
-- (IBAction)travelPlace1:(id)sender;
-- (IBAction)travelPlace2:(id)sender;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollContent;
+@interface TravelandLearnViewController : UITableViewController
+@property (strong, nonatomic) NSString *databasePath;
+@property (nonatomic) sqlite3 *asuIHO;
 
-@property (weak, nonatomic) IBOutlet UIView *contentView;
+-(NSArray *) trDetailsInfo;
+
 @end

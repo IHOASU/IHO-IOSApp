@@ -19,39 +19,44 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view, typically from a nib.
     
     bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     NSString *htmlpath = nil;
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(100, 4, 10,  36)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width/1.5, self.navigationController.navigationBar.frame.size.height/1.5)];
+    
     imageView.image = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    //self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     //[self.navigationItem se]
-
+    UIView *logoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
+    [logoView addSubview:imageView];
+    
     //UIImage *logo = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
-    self.navigationItem.titleView = imageView ;
+    //self.navigationItem.titleView = imageView ;
+    [self.navigationItem setTitleView:logoView];
+    
     news.layer.cornerRadius=15;
     //[news setBackgroundColor:[UIColor colorWithRed:0 green:0.2 blue:0.4 alpha:1.0]];
     about.layer.cornerRadius=15;
     //[about setBackgroundColor:[UIColor colorWithRed:0 green:0.2f blue:0.4f alpha:1.0]];
     donate.layer.cornerRadius=15;
-   // [donate setBackgroundColor:[UIColor colorWithRed:0 green:0.2f blue:0.4f alpha:1.0]];
+    // [donate setBackgroundColor:[UIColor colorWithRed:0 green:0.2f blue:0.4f alpha:1.0]];
     gallery.layer.cornerRadius=15;
     //[gallery setBackgroundColor:[UIColor colorWithRed:0 green:0.2f blue:0.4f alpha:1.0]];
     contact.layer.cornerRadius=15;
     //[contact setBackgroundColor:[UIColor colorWithRed:0 green:0.2f blue:0.4f alpha:1.0]];
     field.layer.cornerRadius=15;
-   // [field setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0]];
+    // [field setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0]];
     
     
     self.ihoLogo.scalesPageToFit = YES;
     self.ihoLogo.scrollView.scrollEnabled=NO;
     self.ihoLogo.scrollView.bounces=NO;
     if(!ipad)
-    htmlpath = [[NSBundle mainBundle] pathForResource:@"skull" ofType:@"html"];
+        htmlpath = [[NSBundle mainBundle] pathForResource:@"skull" ofType:@"html"];
     else
-     htmlpath = [[NSBundle mainBundle] pathForResource:@"skulliPad" ofType:@"html"];
-
+        htmlpath = [[NSBundle mainBundle] pathForResource:@"skulliPad" ofType:@"html"];
+    
     NSString *html = [NSString stringWithContentsOfFile:htmlpath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@", [[NSBundle mainBundle] bundlePath]]];
     ihoLogo.scalesPageToFit = YES;
@@ -60,39 +65,39 @@
     //set up toolbar
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2,5,self.view.frame.size.width,100)];
     [title setNumberOfLines:1];
-        title.text = @"ASU IHO @2014";
-    [self.navigationController.toolbar addSubview:title];
+    title.text = @"ASU IHO @2014";
+    self.toolbarItems  = [NSArray arrayWithObjects:nil,title,nil, nil];
     
-    }
+}
 
 
 
 /*- (void)awakeFromNib
-{
-    isShowingLandscapeView = NO;
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(orientationChanged:)
-                                                 name:UIDeviceOrientationDidChangeNotification
-                                               object:nil];
-}
-
-- (void)orientationChanged:(NSNotification *)notification
-{
-    UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
-    if (UIDeviceOrientationIsLandscape(deviceOrientation) &&
-        !isShowingLandscapeView)
-    {
-        [self performSegueWithIdentifier:@"DisplayAlternateView" sender:self];
-        isShowingLandscapeView = YES;
-    }
-    else if (UIDeviceOrientationIsPortrait(deviceOrientation) &&
-             isShowingLandscapeView)
-    {
-        [self dismissViewControllerAnimated:YES completion:nil];
-        isShowingLandscapeView = NO;
-    }
-}*/
+ {
+ isShowingLandscapeView = NO;
+ [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
+ [[NSNotificationCenter defaultCenter] addObserver:self
+ selector:@selector(orientationChanged:)
+ name:UIDeviceOrientationDidChangeNotification
+ object:nil];
+ }
+ 
+ - (void)orientationChanged:(NSNotification *)notification
+ {
+ UIDeviceOrientation deviceOrientation = [UIDevice currentDevice].orientation;
+ if (UIDeviceOrientationIsLandscape(deviceOrientation) &&
+ !isShowingLandscapeView)
+ {
+ [self performSegueWithIdentifier:@"DisplayAlternateView" sender:self];
+ isShowingLandscapeView = YES;
+ }
+ else if (UIDeviceOrientationIsPortrait(deviceOrientation) &&
+ isShowingLandscapeView)
+ {
+ [self dismissViewControllerAnimated:YES completion:nil];
+ isShowingLandscapeView = NO;
+ }
+ }*/
 
 
 

@@ -13,8 +13,6 @@
 
 @interface FieldViewController ()
 {
-NSArray *lectItems;
-NSArray *scItems;
 }
 @end
 
@@ -35,8 +33,8 @@ NSArray *scItems;
 	// Do any additional setup after loading the view.
     
    // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
-   // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+/*
     lectItems = [[NSArray alloc] init];
     scItems = [[NSArray alloc] init];
     NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
@@ -45,9 +43,9 @@ NSArray *scItems;
     {
         lectItems = [self lectDetailInfo];
         scItems = [self scDetailsInfo];
-    }
+    }*/
 }
-
+/*
 -(NSArray *) scDetailsInfo{
     NSMutableArray *obj = [[NSMutableArray alloc ] init ];
     sqlite3_stmt *statement;
@@ -88,7 +86,7 @@ NSArray *scItems;
     NSMutableArray *obj = [[NSMutableArray alloc ] init ];
     sqlite3_stmt *statement;
     
-    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Bio,Link,Email FROM Lecturer"];
+    NSString *query = [NSString stringWithFormat:@"SELECT LectID,Name,Image,Bio,Title,Link,Email FROM Lecturer"];
     const char *query_stmt = [query UTF8String];
     if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
     {
@@ -251,5 +249,32 @@ NSArray *scItems;
     
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
 }
+*/
 
+-(UIView *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    
+     if(section==2)
+     {
+      [UIFont fontWithName:@"Arial-BoldMT" size:14];
+         
+         return @"STUDENT BLOG-NOTES";
+     }
+    
+    return nil;
+}
+
+-(void)reloadTableView
+{
+    
+    [self reloadTableView];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
 @end

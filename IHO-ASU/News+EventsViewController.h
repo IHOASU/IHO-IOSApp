@@ -15,11 +15,5 @@
 
 @interface News_EventsViewController : UITableViewController
 
-@property (strong, nonatomic) NSString *databasePath;
-@property (nonatomic) sqlite3 *asuIHO;
-
-
--(NSArray *) newsDetailInfo;
--(NSArray *) eventsDetailInfo;
 
 @end

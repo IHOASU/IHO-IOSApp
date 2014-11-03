@@ -7,6 +7,7 @@
 //
 
 #import "ConnectViewController.h"
+#import <MessageUI/MessageUI.h>
 
 @interface ConnectViewController ()
 
@@ -152,4 +153,36 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
     
 }
+
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
+    picker.mailComposeDelegate = self;
+    
+    
+    NSString *emailTitle = @"ENews Subscription";
+    // Email Content
+    NSString *messageBody = @"Sign me up for E News!";
+    // To address
+    NSArray *toRecipents = [NSArray arrayWithObject:@"iho@asu.edu"];
+    
+     [picker setSubject:emailTitle];
+    [picker setMessageBody:messageBody isHTML:NO];
+    [picker setToRecipients:toRecipents];
+    
+    
+    
+    [self presentViewController:picker animated:YES completion:nil];
+    
+    
+    
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+
 @end

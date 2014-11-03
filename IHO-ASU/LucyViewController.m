@@ -30,7 +30,7 @@ UIWebView *displayLucy;
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Lucy" ofType:@"html"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"lucy" ofType:@"html"];
     if (path){
         
         NSData *data=[NSData dataWithContentsOfFile:path];

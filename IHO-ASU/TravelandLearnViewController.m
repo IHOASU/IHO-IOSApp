@@ -7,28 +7,41 @@
 //
 
 #import "TravelandLearnViewController.h"
+#import "NSObject+Travel.h"
 
 @interface TravelandLearnViewController ()
-
+{
+   NSArray *trItems;
+}
 @end
 
 @implementation TravelandLearnViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
    // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
-    //self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    
+        trItems = [[NSArray alloc] init];
+    NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
+    
+    if (sqlite3_open([sqLiteDb UTF8String],&_asuIHO)==SQLITE_OK)
+    {
+               trItems = [self trDetailsInfo];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -37,24 +50,130 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (IBAction)travelPlace1:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://iho.asu.edu/outreach/travel/galapagos2014"]];
-
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 2;
 }
 
-- (IBAction)travelPlace2:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://iho.asu.edu/outreach/travel/france2013"]];
+ - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+ {
+ #warning Incomplete method implementation.
+ // Return the number of rows in the section.
+ if(section==0)
+ return 1;
+ else
+ return [trItems count];
+ 
+ }
 
+
+-(NSArray *) trDetailsInfo{
+    NSMutableArray *obj = [[NSMutableArray alloc ] init ];
+    sqlite3_stmt *statement;
+    
+    NSString *query = [NSString stringWithFormat:@"SELECT TravelId,TravelText,TravelLink FROM TravelLearn"];
+    const char *query_stmt = [query UTF8String];
+    if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
+    {
+        while(sqlite3_step(statement)==SQLITE_ROW){
+            
+            int TRID = sqlite3_column_int(statement, 0);
+            
+            //read data from the result
+            
+            NSString *title =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+            NSString *link  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
+            Travel *newItem = [[Travel alloc] initWithTrid:TRID Traveltitle:title TravelLink:link];
+            if(title==nil)
+                NSLog(@"No data present");
+            else
+                //UIImage *img = [[UIImage alloc]initWithData:imgData ];
+                [obj addObject:newItem];
+            
+            
+            NSLog(@"retrieved data");
+            
+        }
+    }
+    sqlite3_finalize(statement);
+    
+    sqlite3_close(_asuIHO);
+    return obj;
 }
+
+
+ 
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+ {
+ 
+ 
+ if(indexPath.section==0){
+ static NSString *CellIdentifier = @"initCell";
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+ [cell setBackgroundColor:[UIColor whiteColor]];
+     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width,self.tableView.frame.size.height/1.5)];
+     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(10, 5, 150, 30)];
+     title.text = @"TRAVEL AND LEARN" ;
+     [title setFont:[UIFont fontWithName:@"Arial-BoldMT" size:12]];
+     [title setNumberOfLines:1];
+     UIImageView *initImage = [[UIImageView alloc] initWithFrame:CGRectMake(80,40,175,150)];
+     initImage.image = [ UIImage imageNamed:@"travellearnimge.jpg"];
+     UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(10, 190, 304, 110)];
+     text.scrollEnabled = YES;
+     text.text = @"IHO’s travel program is different from any other travel experience. This is not just travel—it is immersion in the span of human history, hosted by IHO and ASU scientists who add a richer understanding of your travel destination. At the same time, our travel adventures are designed for fun, excitement, and comfort and take advantage of the best accommodations and sailing vessels available in the industry. We partner with top travel providers who are specialists in exotic areas of the world. Plus, tour leaders, such as Bill Kimbel and Don Johanson, have been accompanying our travelers since the 1980s to Ethiopia, France, Galápagos, Madagascar, South Africa, and Tanzania, as well as being seasoned world travelers themselves. From years of experience, we understand the balance between a great travel experience and a rich learning program. In fact, our trips are so unique and engaging that we have many satisfied repeat travelers.";
+     [text setFont:[UIFont fontWithName:@"Arial" size:12]];
+     [view addSubview:initImage];
+     [view addSubview:title];
+     [view addSubview:text];
+  [cell addSubview:view];
+ return cell;
+ }
+ else {
+ static NSString *CellIdentifier = @"eachCell";
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+ Travel *Item = [trItems objectAtIndex:indexPath.row];
+ [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
+ [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
+ [cell.textLabel setText:[NSString stringWithString:Item.Traveltitle]];
+ return cell;
+ }
+  }
+ 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section==0)
+        return 330;
+    else
+        return 44;
+}
+
+ -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+ if (indexPath.section==1){
+ [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+ 
+ Travel *info  = [trItems objectAtIndex:indexPath.row];
+ [[UIApplication sharedApplication] openURL:[NSURL URLWithString:info.TravelLink]];
+ }
+ 
+ 
+ }
+
+-(void)reloadTableView
+{
+    
+    [self reloadTableView];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
 @end
