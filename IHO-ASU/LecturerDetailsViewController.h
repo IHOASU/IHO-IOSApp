@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *bio;
 @property (weak, nonatomic) IBOutlet UIButton *linkBu;
 @property (weak, nonatomic) IBOutlet UIButton *emailBu;
+@property (weak, nonatomic) IBOutlet UILabel *nameTitle;
 
 - (IBAction)linkB:(id)sender;
 

@@ -17,11 +17,12 @@
 
 @implementation EventDetailsViewController
 
-@synthesize whenDetail,whereDetail,descDetail,eventID=_eventID;
+@synthesize whenDetail,whereDetail,descDetail,eventID=_eventID,eventTitle;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -47,6 +48,7 @@
         
         // Do any additional setup after loading the view.
         if (event!= nil) {
+            [eventTitle setText:event.title];
             [whenDetail setText:event.when];
             [whereDetail setText:event.where];
             [descDetail setText:event.description];
@@ -57,6 +59,16 @@
         NSLog(@"Not working");
     }
     
+    self.tableView.separatorColor = [UIColor clearColor];
+    
+
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [whenDetail sizeToFit];
+    [whereDetail sizeToFit];
+    [descDetail sizeToFit];
 }
 
 - (void)didReceiveMemoryWarning
@@ -80,7 +92,7 @@
     EventsDetail *item = nil;
     sqlite3_stmt *statement;
     
-    NSString *query = [NSString stringWithFormat:@"SELECT EventId,EventWhen,EventWhere,mapLink,EventDesc,EventReg FROM Events where EventId=%d",eventId];
+    NSString *query = [NSString stringWithFormat:@"SELECT EventId,EventTitle,EventWhen,EventWhere,mapLink,EventDesc,EventReg FROM Events where EventId=%d",eventId];
     const char *query_stmt = [query UTF8String];
     if(sqlite3_prepare_v2(_asuIHO,query_stmt,-1,&statement,NULL)==SQLITE_OK)
     {
@@ -89,16 +101,17 @@
             int iD = sqlite3_column_int(statement, 0);
             
             //read data from the result
-            NSString *when =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
-            NSString *where = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
-            NSString *mapLink  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
-            NSString *desc  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
-            NSString *registerLink  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 5)];
+            NSString *title =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 1)];
+            NSString *when =  [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 2)];
+            NSString *where = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 3)];
+            NSString *mapLink  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 4)];
+            NSString *desc  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 5)];
+            NSString *registerLink  = [NSString  stringWithUTF8String:(char *)sqlite3_column_text(statement, 6)];
 
 
-            item = [[EventsDetail alloc] initWitheventid:iD when:when where:where mapLink:mapLink description:desc registerLink:registerLink];
+            item = [[EventsDetail alloc] initWitheventid:iD title:title when:when where:where mapLink:mapLink description:desc registerLink:registerLink];
+                        
             
-            break;
         }
     }
     sqlite3_finalize(statement);

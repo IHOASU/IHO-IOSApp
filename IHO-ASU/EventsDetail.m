@@ -18,11 +18,12 @@
     return self;
 }
 
--(id)initWitheventid:(int)eventId when:(NSString *)when where:(NSString *)where mapLink:(NSString *)mapLink description:(NSString *)description registerLink:(NSString *)registerLink{
+-(id)initWitheventid:(int)eventId title:(NSString *)title when:(NSString *)when where:(NSString *)where mapLink:(NSString *)mapLink description:(NSString *)description registerLink:(NSString *)registerLink{
    
     if ((self = [super init]))
     {
         self.eventId = eventId;
+        self.title = title;
         self.when = when;
         self.where = where;
         self.maplink = mapLink;

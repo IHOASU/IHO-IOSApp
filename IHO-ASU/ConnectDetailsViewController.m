@@ -33,10 +33,10 @@
 
     
     self.TextLocation.selectable = YES;
-    TextLocation.font = [UIFont fontWithName:@"Arial" size:9];
+    TextLocation.font = [UIFont fontWithName:@"Arial" size:14];
     [TextLocation setText:@"Social Sciences Building,Room 103\n951 South Cady Mall\nTempe, AZ 85287-4101"];
     self.TextContact.selectable = YES;
-    TextContact.font = [UIFont fontWithName:@"Arial" size:9];
+    TextContact.font = [UIFont fontWithName:@"Arial" size:14];
     NSString *contact = @"Phone:480.727.6580\nFax:480.727.6570\nEmail:iho@asu.edu";
     TextContact.text = contact;
     
@@ -67,13 +67,13 @@
 }
 
 - (IBAction)buttonCon:(id)sender {
-    NSString *link=@"https://iho.asu.edu/";
+    NSString *link=@"https://iho.asu.edu/contact/contact-us";
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 
 }
 
 - (IBAction)buttonLoc:(id)sender {
-    NSString *link=@"https://iho.asu.edu/";
+    NSString *link=@"https://iho.asu.edu/contact/contact-us";
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
 }
 @end

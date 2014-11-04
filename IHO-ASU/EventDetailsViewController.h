@@ -11,14 +11,15 @@
 
 @class EventsDetail;
 
-@interface EventDetailsViewController : UIViewController{
+@interface EventDetailsViewController : UITableViewController{
     int _eventID;
 }
-@property (weak, nonatomic) IBOutlet UITextView *whenDetail;
+@property (weak, nonatomic) IBOutlet UILabel *eventTitle;
+@property (weak, nonatomic) IBOutlet UILabel *whenDetail;
 
-@property (weak, nonatomic) IBOutlet UITextView *whereDetail;
+@property (weak, nonatomic) IBOutlet UILabel *whereDetail;
 
-@property (weak, nonatomic) IBOutlet UITextView *descDetail;
+@property (weak, nonatomic) IBOutlet UILabel *descDetail;
 
 - (IBAction)mapIt:(id)sender;
 

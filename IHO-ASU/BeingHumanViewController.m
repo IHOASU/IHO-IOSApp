@@ -48,4 +48,8 @@
 }
 */
 
+- (IBAction)becomingLink:(id)sender {
+    NSString *link=@"http://becominghuman.org";
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:link]];
+}
 @end

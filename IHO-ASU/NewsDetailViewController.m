@@ -16,11 +16,11 @@
 @end
 
 @implementation NewsDetailViewController
-@synthesize newsId=_newsId,newsContent,newsImage,newsLink;
+@synthesize newsId=_newsId,newsContent,newsImage;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
     }
@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
    // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
-   // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
     NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
@@ -44,7 +44,6 @@
     // Do any additional setup after loading the view.
         if (details != nil) {
         newsImage.image = [UIImage imageWithData:details.image];
-        [newsLink setTitle:@"Click to know more" forState:UIControlStateNormal];
         [newsContent setFont:[UIFont fontWithName:@"Arial" size:15]];
         [newsContent setText:details.text];
         
@@ -55,7 +54,7 @@
         NSLog(@"Not working");
     }
     
-    
+    self.tableView.separatorColor = [UIColor clearColor];
 
 }
 
@@ -94,7 +93,10 @@
     
 }
 
-
+-(void)viewDidLayoutSubviews
+{
+    [newsContent sizeToFit];
+}
 
 - (void)didReceiveMemoryWarning
 {

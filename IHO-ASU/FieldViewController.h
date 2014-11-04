@@ -17,6 +17,7 @@
 @property (strong, nonatomic) NSString *databasePath;
 @property (nonatomic) sqlite3 *asuIHO;
 
+- (IBAction)visitNow:(id)sender;
 
 -(NSArray *) lectDetailInfo;
 -(NSArray *) scDetailsInfo;

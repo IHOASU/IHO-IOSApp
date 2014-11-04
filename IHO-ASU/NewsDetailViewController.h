@@ -11,12 +11,11 @@
 
 @class NewsDetail;
 
-@interface NewsDetailViewController : UIViewController{
+@interface NewsDetailViewController : UITableViewController{
     int _newsId;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *newsImage;
-@property (weak, nonatomic) IBOutlet UITextView *newsContent;
-@property (weak, nonatomic) IBOutlet UIButton *newsLink;
+@property (weak, nonatomic) IBOutlet UILabel *newsContent;
 @property (nonatomic,assign) int newsId;
 
 @property (nonatomic) sqlite3 *asuIHO;

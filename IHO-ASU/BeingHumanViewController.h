@@ -10,4 +10,5 @@
 
 @interface BeingHumanViewController : UIViewController
 
+- (IBAction)becomingLink:(id)sender;
 @end

@@ -106,6 +106,7 @@
     [cell.textLabel setTextColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     [cell.textLabel setFont:[UIFont fontWithName:@"Arial-BoldMT" size:15]];
     [cell.textLabel setText:[NSString stringWithString:Item.Sciencetitle]];
+    [cell.textLabel setNumberOfLines:2];
     return cell;
     
 }

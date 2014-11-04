@@ -251,10 +251,10 @@
 }
 */
 
--(UIView *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     
-     if(section==2)
+     if(section==3)
      {
       [UIFont fontWithName:@"Arial-BoldMT" size:14];
          
@@ -271,10 +271,17 @@
     
 }
 
+
+
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+}
+
+
+- (IBAction)visitNow:(id)sender {
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://asuiho.wordpress.com"]];
 }
 @end

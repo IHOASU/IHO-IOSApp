@@ -9,7 +9,7 @@
 #import "ConnectViewController.h"
 #import <MessageUI/MessageUI.h>
 
-@interface ConnectViewController ()
+@interface ConnectViewController () <MFMailComposeViewControllerDelegate>
 
 @end
 
@@ -156,11 +156,14 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
     [self.tableView deselectRowAtIndexPath:self.tableView.indexPathForSelectedRow animated:YES];
+    if(indexPath.row==1){
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
     
-    
+    picker.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     NSString *emailTitle = @"ENews Subscription";
     // Email Content
     NSString *messageBody = @"Sign me up for E News!";
@@ -174,7 +177,7 @@
     
     
     [self presentViewController:picker animated:YES completion:nil];
-    
+    }
     
     
 }

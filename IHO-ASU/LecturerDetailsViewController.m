@@ -18,7 +18,7 @@
 
 @implementation LecturerDetailsViewController
 
-@synthesize lectID=_lectID,lectImage=_lectImage,bio=_bio,lecttitle=_lecttitle;
+@synthesize lectID=_lectID,lectImage=_lectImage,bio=_bio,lecttitle=_lecttitle,nameTitle=_nameTitle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
   //  [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
-   // self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     detail  = nil;
     // Do any additional setup after loading the view.
@@ -51,6 +51,7 @@
             _lectImage.image=[UIImage imageWithData:detail.image];
             _lecttitle.text = detail.title;
             _bio.text = detail.bio;
+            _nameTitle.text = detail.name;
            
             
             
@@ -62,7 +63,7 @@
     }
 
     self.tableView.separatorColor = [UIColor clearColor];
-   
+      
 }
 
 
@@ -70,6 +71,8 @@
     MFMailComposeViewController *picker = [[MFMailComposeViewController alloc] init];
     picker.mailComposeDelegate = self;
     
+    picker.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+   
     
     // Set up the recipients.
     NSArray *toRecipients = [NSArray arrayWithObject:detail.email];
