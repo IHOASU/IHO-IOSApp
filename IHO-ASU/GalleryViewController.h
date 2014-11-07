@@ -9,7 +9,8 @@
 #import <sqlite3.h>
 #import <UIKit/UIKit.h>
 
-@interface GalleryViewController : UICollectionViewController
+
+@interface GalleryViewController : UITableViewController
 
 @property (strong, nonatomic) NSString *databasePath;
 @property (nonatomic) sqlite3 *asuIHO;

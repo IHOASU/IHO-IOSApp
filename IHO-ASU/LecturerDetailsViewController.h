@@ -15,21 +15,20 @@
     int _lectID;
     
 }
-
-
-@property (weak, nonatomic) IBOutlet UIImageView *lectImage;
-
-@property (weak, nonatomic) IBOutlet UILabel *lecttitle;
-@property (weak, nonatomic) IBOutlet UILabel *bio;
-@property (weak, nonatomic) IBOutlet UIButton *linkBu;
-@property (weak, nonatomic) IBOutlet UIButton *emailBu;
-@property (weak, nonatomic) IBOutlet UILabel *nameTitle;
-
-- (IBAction)linkB:(id)sender;
-
 @property (nonatomic,assign) int lectID;
 @property (nonatomic) sqlite3 *asuIHO;
+
+@property (weak, nonatomic) IBOutlet UIImageView *lectImage;
+@property (weak, nonatomic) IBOutlet UILabel *lecttitle;
+@property (weak, nonatomic) IBOutlet UILabel *bio;
+@property (weak, nonatomic) IBOutlet UILabel *nameTitle;
+@property (weak, nonatomic) NSString *email;
+
+- (IBAction)linkB:(id)sender;
 - (IBAction)emailQ:(id)sender;
+
+
+
 
 
 -(LecturerDetail *) lectDetail:(int)lecID;

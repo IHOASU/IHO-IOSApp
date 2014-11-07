@@ -29,14 +29,14 @@
 {
     [super viewDidLoad];
     
-    
+    bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
 	// Do any additional setup after loading the view.
     //menubar specifications
   //  [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
-    
+    if(!ipad){
     //Assign label
     CGRect textview1 = CGRectMake(10, 0,300, 100);
     UILabel *link_desc1 = [[UILabel alloc] initWithFrame:textview1];
@@ -56,7 +56,7 @@
     [self.view addSubview:link_desc1];
     [self.view addSubview:link_desc2];
     
-    
+    }
 }
 
 - (void)didReceiveMemoryWarning

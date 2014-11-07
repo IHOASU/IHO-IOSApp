@@ -74,6 +74,8 @@
 		5FB10DF41910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai in Resources */ = {isa = PBXBuildFile; fileRef = 5FB10DF31910594F00081FB2 /* Lucy_FullSkeleton_uncolored.ai */; };
 		5FB10DF719105A3600081FB2 /* LucyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FB10DF619105A3600081FB2 /* LucyViewController.m */; };
 		5FC93CC41910F96A0037ED99 /* rsz_iho_h_mg.png in Resources */ = {isa = PBXBuildFile; fileRef = 5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */; };
+		8C0D20A31A0ADE90003FE4DC /* NSObject+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */; };
+		8C0D20A61A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */; };
 		8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */; };
 		8C3B8B9519FE996D005020D3 /* NSObject+Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */; };
 		8C3B8B9819FEAC78005020D3 /* UITableViewController+NewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */; };
@@ -195,6 +197,10 @@
 		5FB10DF519105A3600081FB2 /* LucyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LucyViewController.h; sourceTree = "<group>"; };
 		5FB10DF619105A3600081FB2 /* LucyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LucyViewController.m; sourceTree = "<group>"; };
 		5FC93CC31910F96A0037ED99 /* rsz_iho_h_mg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rsz_iho_h_mg.png; sourceTree = "<group>"; };
+		8C0D20A11A0ADE8F003FE4DC /* NSObject+image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+image.h"; sourceTree = "<group>"; };
+		8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+image.m"; sourceTree = "<group>"; };
+		8C0D20A41A0B8E55003FE4DC /* UITableViewController+LecturerGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+LecturerGallery.h"; sourceTree = "<group>"; };
+		8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+LecturerGallery.m"; sourceTree = "<group>"; };
 		8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IHOlogoforapp.jpg; sourceTree = "<group>"; };
 		8C3B8B9319FE996D005020D3 /* NSObject+Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Travel.h"; sourceTree = "<group>"; };
 		8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Travel.m"; sourceTree = "<group>"; };
@@ -350,6 +356,10 @@
 				8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */,
 				8C3B8B9919FEAC93005020D3 /* UITableViewController+EventsList.h */,
 				8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */,
+				8C0D20A11A0ADE8F003FE4DC /* NSObject+image.h */,
+				8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */,
+				8C0D20A41A0B8E55003FE4DC /* UITableViewController+LecturerGallery.h */,
+				8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */,
 			);
 			path = "IHO-ASU";
 			sourceTree = "<group>";
@@ -574,10 +584,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */,
+				8C0D20A61A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m in Sources */,
 				5F4BF9A11904C09400EF3BFF /* ConnectDetailsViewController.m in Sources */,
 				8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */,
 				5F92418519080F6F0097D1F4 /* EventsDetail.m in Sources */,
 				5F566B1F18FC45400042F4CA /* DonateSiteViewController.m in Sources */,
+				8C0D20A31A0ADE90003FE4DC /* NSObject+image.m in Sources */,
 				5F566B2418FC45400042F4CA /* GalleryViewController.m in Sources */,
 				5F566AC318FC43A60042F4CA /* main.m in Sources */,
 				5F566B2A18FC45400042F4CA /* MainViewController.m in Sources */,

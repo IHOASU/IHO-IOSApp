@@ -8,6 +8,7 @@
 
 #import "LecturerDetailsViewController.h"
 #import "LecturerDetail.h"
+#import "UITableViewController+LecturerGallery.h"
 #import <MessageUI/MessageUI.h>
 
 @interface LecturerDetailsViewController ()<MFMailComposeViewControllerDelegate>
@@ -25,6 +26,7 @@
     self = [super initWithStyle:style];
     if (self) {
         // Custom initialization
+        
     }
     return self;
 }
@@ -52,7 +54,7 @@
             _lecttitle.text = detail.title;
             _bio.text = detail.bio;
             _nameTitle.text = detail.name;
-           
+            self.email = detail.email;
             
             
         }
@@ -82,6 +84,15 @@
     [self presentViewController:picker animated:YES completion:nil];
 
     
+}
+
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"viewLectGallery"]){
+        LecturerGallery *getDetails = segue.destinationViewController;
+        getDetails.lectEmail = self.email;
+        
+    }
 }
 
 -(void)viewDidLayoutSubviews
@@ -158,6 +169,7 @@
  
  }
 */
+
 
 - (IBAction)linkB:(id)sender {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:detail.link]];
