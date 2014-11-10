@@ -16,6 +16,7 @@
     // Override point for customization after application launch.
    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(6/255.0) green:(56/255.0) blue:(104/255.0) alpha:1]];
     [[UIToolbar appearance] setBarTintColor:[UIColor colorWithRed:(6/255.0) green:(56/255.0) blue:(104/255.0) alpha:1]];
+    ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
        return YES;
 }
 							

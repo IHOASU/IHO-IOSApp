@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface IHOAppDelegate : UIResponder <UIApplicationDelegate>
-
+{
+    BOOL ipad;
+}
 @property (strong, nonatomic) UIWindow *window;
+
 
 @end

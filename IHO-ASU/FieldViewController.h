@@ -19,8 +19,8 @@
 
 - (IBAction)visitNow:(id)sender;
 
--(NSArray *) lectDetailInfo;
--(NSArray *) scDetailsInfo;
+//-(NSArray *) lectDetailInfo;
+//-(NSArray *) scDetailsInfo;
 -(void)reloadTableView;
 
 @end

@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
    // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
@@ -55,6 +56,36 @@
     }
     
     self.tableView.separatorColor = [UIColor clearColor];
+    self.navigationController.toolbarHidden = NO;
+    [self.navigationController.toolbar setTranslucent:NO];
+    [UIFont fontWithName:@"Arial-MT" size:15];
+    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
+                                    target:self action:nil];
+    
+    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    target:self action:nil];
+    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
+    if(!ipad){
+        
+        [customItem1 setWidth:55];
+        [customItem2 setWidth:90];
+        
+    }
+    else{
+        
+    }
+    
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             customItem1,customItem2,nil];
+    
+    self.toolbarItems = toolbarItems;
+    
+
 
 }
 

@@ -77,19 +77,20 @@
 		8C0D20A31A0ADE90003FE4DC /* NSObject+image.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */; };
 		8C0D20A61A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */; };
 		8C190A4519E6FF520091ACFB /* IHOlogoforapp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */; };
+		8C2A5EB31A0D81DD0020A400 /* jqm-icon-pack-2.0-original.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A5EB21A0D81DD0020A400 /* jqm-icon-pack-2.0-original.css */; };
+		8C2A5EB61A0D81F50020A400 /* custom.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A5EB41A0D81F50020A400 /* custom.css */; };
+		8C2A5EB71A0D81F50020A400 /* photoswipe.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A5EB51A0D81F50020A400 /* photoswipe.css */; };
+		8C2A5EB91A0D84AA0020A400 /* lucy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C2A5EB81A0D84AA0020A400 /* lucy.html */; };
+		8C2A5EBC1A1174860020A400 /* UITableViewController+TryMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C2A5EBB1A1174860020A400 /* UITableViewController+TryMain.m */; };
 		8C3B8B9519FE996D005020D3 /* NSObject+Travel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */; };
 		8C3B8B9819FEAC78005020D3 /* UITableViewController+NewsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */; };
 		8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */; };
-		8C3B8B9D19FEDC71005020D3 /* lucy.html in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9C19FEDC71005020D3 /* lucy.html */; };
 		8C3B8BA119FEDDFF005020D3 /* jquery-1.10.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */; };
 		8C3B8BA219FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */; };
 		8C3B8BA319FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */; };
 		8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */; };
 		8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */; };
-		8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */; };
 		8CA4677919FE6D4D006F79E3 /* FB.png in Resources */ = {isa = PBXBuildFile; fileRef = 8CA4677819FE6D4D006F79E3 /* FB.png */; };
-		8CB30F571A07D17700DEBA30 /* UIViewController+ImageContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */; };
-		8CB30F581A07D17700DEBA30 /* UIViewController+ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,13 +203,18 @@
 		8C0D20A41A0B8E55003FE4DC /* UITableViewController+LecturerGallery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+LecturerGallery.h"; sourceTree = "<group>"; };
 		8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+LecturerGallery.m"; sourceTree = "<group>"; };
 		8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IHOlogoforapp.jpg; sourceTree = "<group>"; };
+		8C2A5EB21A0D81DD0020A400 /* jqm-icon-pack-2.0-original.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jqm-icon-pack-2.0-original.css"; sourceTree = "<group>"; };
+		8C2A5EB41A0D81F50020A400 /* custom.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = custom.css; sourceTree = "<group>"; };
+		8C2A5EB51A0D81F50020A400 /* photoswipe.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = photoswipe.css; sourceTree = "<group>"; };
+		8C2A5EB81A0D84AA0020A400 /* lucy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lucy.html; sourceTree = "<group>"; };
+		8C2A5EBA1A1174860020A400 /* UITableViewController+TryMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+TryMain.h"; sourceTree = "<group>"; };
+		8C2A5EBB1A1174860020A400 /* UITableViewController+TryMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+TryMain.m"; sourceTree = "<group>"; };
 		8C3B8B9319FE996D005020D3 /* NSObject+Travel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Travel.h"; sourceTree = "<group>"; };
 		8C3B8B9419FE996D005020D3 /* NSObject+Travel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Travel.m"; sourceTree = "<group>"; };
 		8C3B8B9619FEAC78005020D3 /* UITableViewController+NewsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+NewsList.h"; sourceTree = "<group>"; };
 		8C3B8B9719FEAC78005020D3 /* UITableViewController+NewsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+NewsList.m"; sourceTree = "<group>"; };
 		8C3B8B9919FEAC93005020D3 /* UITableViewController+EventsList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+EventsList.h"; sourceTree = "<group>"; };
 		8C3B8B9A19FEAC93005020D3 /* UITableViewController+EventsList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+EventsList.m"; sourceTree = "<group>"; };
-		8C3B8B9C19FEDC71005020D3 /* lucy.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lucy.html; sourceTree = "<group>"; };
 		8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-1.10.2.min.js"; sourceTree = "<group>"; };
 		8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "jquery.mobile-1.4.2.min.css"; sourceTree = "<group>"; };
 		8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery.mobile-1.4.2.min.js"; sourceTree = "<group>"; };
@@ -216,13 +222,7 @@
 		8C6700B519FC34C50041FA6E /* UITableViewController+LecturerList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+LecturerList.m"; sourceTree = "<group>"; };
 		8C6700B819FC377E0041FA6E /* UITableViewController+ScienceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+ScienceList.h"; sourceTree = "<group>"; };
 		8C6700B919FC377E0041FA6E /* UITableViewController+ScienceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+ScienceList.m"; sourceTree = "<group>"; };
-		8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GalleryShowImageViewController.h; sourceTree = "<group>"; };
-		8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GalleryShowImageViewController.m; sourceTree = "<group>"; };
 		8CA4677819FE6D4D006F79E3 /* FB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FB.png; sourceTree = "<group>"; };
-		8CB30F531A07D17700DEBA30 /* UIViewController+ImageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageContent.h"; sourceTree = "<group>"; };
-		8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageContent.m"; sourceTree = "<group>"; };
-		8CB30F551A07D17700DEBA30 /* UIViewController+ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ImageViewController.h"; sourceTree = "<group>"; };
-		8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ImageViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				5F566ABC18FC43A60042F4CA /* IHO-ASU */,
+				5F566ABD18FC43A60042F4CA /* Supporting Files */,
 				5F566ADE18FC43A60042F4CA /* IHO-ASUTests */,
 				5F566AB518FC43A60042F4CA /* Frameworks */,
 				5F566AB418FC43A60042F4CA /* Products */,
@@ -285,12 +286,6 @@
 			isa = PBXGroup;
 			children = (
 				8CA4677819FE6D4D006F79E3 /* FB.png */,
-				8C91F80219F1D91F0025C5FB /* GalleryShowImageViewController.h */,
-				8C91F80319F1D91F0025C5FB /* GalleryShowImageViewController.m */,
-				8CB30F531A07D17700DEBA30 /* UIViewController+ImageContent.h */,
-				8CB30F541A07D17700DEBA30 /* UIViewController+ImageContent.m */,
-				8CB30F551A07D17700DEBA30 /* UIViewController+ImageViewController.h */,
-				8CB30F561A07D17700DEBA30 /* UIViewController+ImageViewController.m */,
 				5F566AC518FC43A60042F4CA /* IHOAppDelegate.h */,
 				5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */,
 				5F566AC818FC43A60042F4CA /* Main_iPhone.storyboard */,
@@ -335,15 +330,10 @@
 				5F566AFB18FC45400042F4CA /* DonateSiteViewController.m */,
 				5F566AFC18FC45400042F4CA /* DonateViewController.h */,
 				5F566AFD18FC45400042F4CA /* DonateViewController.m */,
-				5F566AF018FC45400042F4CA /* Base.lproj */,
-				5F566B3018FC46120042F4CA /* Resources */,
-				5F566AFE18FC45400042F4CA /* en.lproj */,
 				5F566ACF18FC43A60042F4CA /* IHOViewController.m */,
 				5F566ACE18FC43A60042F4CA /* IHOViewController.h */,
-				5F566AF718FC45400042F4CA /* CreditDetails.html */,
 				5F566AF818FC45400042F4CA /* CreditDetailsViewController.h */,
 				5F566AF918FC45400042F4CA /* CreditDetailsViewController.m */,
-				5F566ABD18FC43A60042F4CA /* Supporting Files */,
 				5FB10DF519105A3600081FB2 /* LucyViewController.h */,
 				5FB10DF619105A3600081FB2 /* LucyViewController.m */,
 				8C6700B419FC34C50041FA6E /* UITableViewController+LecturerList.h */,
@@ -360,6 +350,11 @@
 				8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */,
 				8C0D20A41A0B8E55003FE4DC /* UITableViewController+LecturerGallery.h */,
 				8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */,
+				5F566AF018FC45400042F4CA /* Base.lproj */,
+				5F566B3018FC46120042F4CA /* Resources */,
+				5F566AFE18FC45400042F4CA /* en.lproj */,
+				8C2A5EBA1A1174860020A400 /* UITableViewController+TryMain.h */,
+				8C2A5EBB1A1174860020A400 /* UITableViewController+TryMain.m */,
 			);
 			path = "IHO-ASU";
 			sourceTree = "<group>";
@@ -373,6 +368,7 @@
 				5F566AC418FC43A60042F4CA /* IHO-ASU-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = "IHO-ASU";
 			sourceTree = "<group>";
 		};
 		5F566ADE18FC43A60042F4CA /* IHO-ASUTests */ = {
@@ -413,10 +409,14 @@
 		5F566B3018FC46120042F4CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5F566AF718FC45400042F4CA /* CreditDetails.html */,
+				8C2A5EB81A0D84AA0020A400 /* lucy.html */,
+				8C2A5EB41A0D81F50020A400 /* custom.css */,
+				8C2A5EB51A0D81F50020A400 /* photoswipe.css */,
+				8C2A5EB21A0D81DD0020A400 /* jqm-icon-pack-2.0-original.css */,
 				8C3B8B9E19FEDDFF005020D3 /* jquery-1.10.2.min.js */,
 				8C3B8B9F19FEDDFF005020D3 /* jquery.mobile-1.4.2.min.css */,
 				8C3B8BA019FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js */,
-				8C3B8B9C19FEDC71005020D3 /* lucy.html */,
 				8C190A4419E6FF520091ACFB /* IHOlogoforapp.jpg */,
 				5F566B1618FC45400042F4CA /* skull.html */,
 				5F9BA5461912B2DE002F26A6 /* rsz_launch_iphone_retina.png */,
@@ -528,6 +528,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2A5EB61A0D81F50020A400 /* custom.css in Resources */,
 				5F566B6E18FC467B0042F4CA /* sediments.jpg in Resources */,
 				8C3B8BA119FEDDFF005020D3 /* jquery-1.10.2.min.js in Resources */,
 				5F566B6318FC467B0042F4CA /* invest.png in Resources */,
@@ -537,11 +538,12 @@
 				5F566B6818FC467B0042F4CA /* lucy_chin.png in Resources */,
 				5F566B6218FC467B0042F4CA /* Images.xcassets in Resources */,
 				5F566B6A18FC467B0042F4CA /* lucy.png in Resources */,
-				8C3B8B9D19FEDC71005020D3 /* lucy.html in Resources */,
 				5F566B2E18FC45400042F4CA /* skull.html in Resources */,
 				5F566B1A18FC45400042F4CA /* Main_iPad.storyboard in Resources */,
 				5F566B6918FC467B0042F4CA /* lucy_skull.png in Resources */,
 				5F9BA5471912B2DE002F26A6 /* rsz_launch_iphone_retina.png in Resources */,
+				8C2A5EB71A0D81F50020A400 /* photoswipe.css in Resources */,
+				8C2A5EB31A0D81DD0020A400 /* jqm-icon-pack-2.0-original.css in Resources */,
 				5F566B2118FC45400042F4CA /* InfoPlist.strings in Resources */,
 				5F9E8C1C18FDBE350008C7F1 /* search-icon-64.png in Resources */,
 				8C3B8BA319FEDDFF005020D3 /* jquery.mobile-1.4.2.min.js in Resources */,
@@ -559,6 +561,7 @@
 				5F38C3BB18FEE30C003A62CC /* skulliPad.html in Resources */,
 				5F69C23E19103649009DC156 /* travellearnimge.jpg in Resources */,
 				5F566ACA18FC43A60042F4CA /* Main_iPhone.storyboard in Resources */,
+				8C2A5EB91A0D84AA0020A400 /* lucy.html in Resources */,
 				5FB10DF2191051F500081FB2 /* asuIHO.db in Resources */,
 				5F9E8C1918FDBE350008C7F1 /* About.html in Resources */,
 				5F566B1D18FC45400042F4CA /* CreditDetails.html in Resources */,
@@ -584,6 +587,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C6700BA19FC377E0041FA6E /* UITableViewController+ScienceList.m in Sources */,
+				8C2A5EBC1A1174860020A400 /* UITableViewController+TryMain.m in Sources */,
 				8C0D20A61A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m in Sources */,
 				5F4BF9A11904C09400EF3BFF /* ConnectDetailsViewController.m in Sources */,
 				8C6700B619FC34C50041FA6E /* UITableViewController+LecturerList.m in Sources */,
@@ -608,12 +612,9 @@
 				5F566B2818FC45400042F4CA /* LecturerDetail.m in Sources */,
 				5F566B1918FC45400042F4CA /* AboutViewController.m in Sources */,
 				5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */,
-				8C91F80419F1D91F0025C5FB /* GalleryShowImageViewController.m in Sources */,
 				5F566B2318FC45400042F4CA /* GalleryOptionsViewController.m in Sources */,
-				8CB30F581A07D17700DEBA30 /* UIViewController+ImageViewController.m in Sources */,
 				5F566B1E18FC45400042F4CA /* CreditDetailsViewController.m in Sources */,
 				5F566AD018FC43A60042F4CA /* IHOViewController.m in Sources */,
-				8CB30F571A07D17700DEBA30 /* UIViewController+ImageContent.m in Sources */,
 				5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */,
 				8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */,
 				5F566B2218FC45400042F4CA /* FieldViewController.m in Sources */,

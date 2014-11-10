@@ -14,8 +14,8 @@
 @end
 
 @implementation LucyViewController
-//@synthesize displayLucy;
-UIWebView *displayLucy;
+@synthesize displayLucy;
+//UIWebView *displayLucy;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,19 +29,51 @@ UIWebView *displayLucy;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     // Do any additional setup after loading the view.
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"lucy" ofType:@"html"];
-    if (path){
-        
-        NSData *data=[NSData dataWithContentsOfFile:path];
-        displayLucy =  [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-100)];
-        [displayLucy loadData:data MIMEType:@"text/html" textEncodingName:@"convert"  baseURL:nil];
-        displayLucy.scalesPageToFit=YES;
+    NSString *htmlpath = [[NSBundle mainBundle] pathForResource:@"lucy" ofType:@"html"];
+    if (htmlpath){
+        NSString *html = [NSString stringWithContentsOfFile:htmlpath encoding:NSUTF8StringEncoding error:nil];
+        NSURL *baseURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@", [[NSBundle mainBundle] bundlePath]]];
+        displayLucy.scalesPageToFit=NO;
+        [self.displayLucy loadHTMLString:html baseURL:baseURL];
         displayLucy.scrollView.showsVerticalScrollIndicator=YES;
         displayLucy.scrollView.scrollEnabled= YES;
-        [self.view addSubview:displayLucy];
+        //[self.view addSubview:displayLucy];
+        
     }
+    
+    self.navigationController.toolbarHidden = NO;
+    [self.navigationController.toolbar setTranslucent:NO];
+    [UIFont fontWithName:@"Arial-MT" size:15];
+    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
+                                    target:self action:nil];
+    
+    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    target:self action:nil];
+    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
+    if(!ipad){
+        
+        [customItem1 setWidth:55];
+        [customItem2 setWidth:90];
+        
+    }
+    else{
+        
+    }
+    
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             customItem1,customItem2,nil];
+    
+    self.toolbarItems = toolbarItems;
+
 }
+
 
 - (void)didReceiveMemoryWarning
 {

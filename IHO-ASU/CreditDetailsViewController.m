@@ -7,6 +7,7 @@
 //
 
 #import "CreditDetailsViewController.h"
+#import "MainViewController.h"
 
 @interface CreditDetailsViewController ()
 
@@ -27,10 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     // Do any additional setup after loading the view.
     //menubar specifications
-    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0 ]];
-    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
 
     
@@ -40,9 +40,38 @@
         
         NSData *data=[NSData dataWithContentsOfFile:path];
         [creditText loadData:data MIMEType:@"text/html" textEncodingName:@"convert"  baseURL:nil];
-        creditText.scrollView.scrollEnabled= FALSE;
+        creditText.scrollView.scrollEnabled= TRUE;
+        [creditText setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
         [self.view addSubview:creditText];
     }
+    self.navigationController.toolbarHidden = NO;
+    [self.navigationController.toolbar setTranslucent:NO];
+    [UIFont fontWithName:@"Arial-MT" size:15];
+    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
+                                    target:self action:nil];
+    
+    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    target:self action:nil];
+    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
+    if(!ipad){
+        
+        [customItem1 setWidth:55];
+        [customItem2 setWidth:90];
+        
+    }
+    else{
+        
+    }
+    
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             customItem1,customItem2,nil];
+    
+    self.toolbarItems = toolbarItems;
 
     
 }

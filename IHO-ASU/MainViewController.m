@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "CreditDetailsViewController.h"
 
 @interface MainViewController ()
 
@@ -14,7 +15,7 @@
 
 @implementation MainViewController
 
-@synthesize  news,field,donate,about,gallery,contact,menu,ihoLogo,credit;
+@synthesize  news,field,donate,about,gallery,contact,ihoLogo,customItem1,coR,credits;
 
 - (void)viewDidLoad
 {
@@ -23,13 +24,15 @@
     UIImageView *imageView;
     bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     NSString *htmlpath = nil;
-    
     if(!ipad){
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width/1.5, self.navigationController.navigationBar.frame.size.height/1.5)];
     }
-    else{
+    else
+    {
         imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width/2.5, self.navigationController.navigationBar.frame.size.height/1.5)];
+        
     }
+    
     imageView.image = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
     UIView *logoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
     [logoView addSubview:imageView];
@@ -50,52 +53,37 @@
     field.layer.cornerRadius=15;
     // [field setBackgroundColor:[UIColor colorWithRed:0.22f green:0.42f blue:0.62f alpha:1.0]];
     
-    
-    self.ihoLogo.scalesPageToFit = YES;
-    self.ihoLogo.scrollView.scrollEnabled=NO;
-    self.ihoLogo.scrollView.bounces=NO;
+
     
     if(!ipad)
-    htmlpath = [[NSBundle mainBundle] pathForResource:@"skull" ofType:@"html"];
-    else
-     htmlpath = [[NSBundle mainBundle] pathForResource:@"skulliPad" ofType:@"html"];
+        htmlpath = [[NSBundle mainBundle] pathForResource:@"skull" ofType:@"html"];
+    else{
+        htmlpath = [[NSBundle mainBundle] pathForResource:@"skulliPad" ofType:@"html"];
+        [ihoLogo setFrame:CGRectMake(102,383 , 593, 475)];
+    }
     
     NSString *html = [NSString stringWithContentsOfFile:htmlpath encoding:NSUTF8StringEncoding error:nil];
     NSURL *baseURL = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@", [[NSBundle mainBundle] bundlePath]]];
     ihoLogo.scalesPageToFit = NO;
     [self.ihoLogo loadHTMLString:html baseURL:baseURL];
-    ihoLogo.scrollView.scrollEnabled=false;
+    ihoLogo.scrollView.scrollEnabled=NO;
+    
     //set up toolbar
-    
-    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
-                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
-                                    target:self action:nil];
-   
-    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"IHOASU 2014" style:UIBarButtonItemStyleDone
-                                    target:self action:nil];
-    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
-    
-    UIBarButtonItem *customItem3 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"Credits" style:UIBarButtonItemStyleDone
-                                    target:self action:nil];
-   customItem3.tintColor = [UIColor colorWithWhite:1 alpha:1];
-    UIBarButtonItem *customItem4 = [[UIBarButtonItem alloc]
-                                    initWithTitle:nil style:UIBarButtonItemStyleDone
-                                    target:self action:nil];
-
-
-    NSArray *toolbarItems = [NSArray arrayWithObjects: 
-                             customItem1,customItem2, customItem3,customItem4, nil];
-    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(5,5,100,100)];
-    [title setNumberOfLines:1];
-    title.text = @"ASU IHO @2014";
     self.navigationController.toolbarHidden = NO;
     [self.navigationController.toolbar setTranslucent:NO];
-    self.toolbarItems = toolbarItems;
-   
     
+    NSShadow *shadow = [NSShadow new];
+    [shadow setShadowColor:[UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]];
+    [shadow setShadowOffset:CGSizeMake(0, 1)];
    
+    NSDictionary *textAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Arial-MT" size:14],
+                                    NSFontAttributeName,[UIColor whiteColor],NSForegroundColorAttributeName,nil] ;
+    
+    [coR setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+    [coR setTintColor:[UIColor colorWithWhite:1 alpha:1]];
+    [credits setTitleTextAttributes:textAttributes forState:UIControlStateNormal];
+      [credits setTintColor:[UIColor colorWithWhite:1 alpha:1]];
+    
 }
 
 
@@ -129,10 +117,6 @@
 
 
 
--(void) creditPage{
-    
-}
-
 -(void) viewWillAppear:(BOOL)animated{
     
 }
@@ -142,5 +126,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 @end

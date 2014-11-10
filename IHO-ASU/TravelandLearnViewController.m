@@ -11,6 +11,9 @@
 
 @interface TravelandLearnViewController ()
 {
+    UIImageView *initImage ;
+    bool ipad;
+    UITextView *text;
    NSArray *trItems;
 }
 @end
@@ -30,6 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
     // Do any additional setup after loading the view.
    // [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:0.22f green:0.419f blue:0.619f alpha:1.0 ]];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
@@ -41,7 +45,36 @@
     {
                trItems = [self trDetailsInfo];
     }
+    self.navigationController.toolbarHidden = NO;
+    [self.navigationController.toolbar setTranslucent:NO];
+    [UIFont fontWithName:@"Arial-MT" size:15];
+    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
+                                    target:self action:nil];
     
+    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    target:self action:nil];
+    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
+    if(!ipad){
+        
+        [customItem1 setWidth:55];
+        [customItem2 setWidth:90];
+        
+    }
+    else{
+        
+    }
+    
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             customItem1,customItem2,nil];
+    
+    self.toolbarItems = toolbarItems;
+    
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -119,11 +152,19 @@
      title.text = @"Travel+Learn" ;
      [title setFont:[UIFont fontWithName:@"Arial-BoldMT" size:16]];
      [title setNumberOfLines:1];
-     UIImageView *initImage = [[UIImageView alloc] initWithFrame:CGRectMake(80,40,175,150)];
+     if(!ipad){
+         initImage = [[UIImageView alloc] initWithFrame:CGRectMake(80,40,175,150)];
+         text =  [[UITextView alloc] initWithFrame:CGRectMake(10, 190, 304, 100)];
+     }
+     else{
+         initImage = [[UIImageView alloc] initWithFrame:CGRectMake(80,40,200,200)];
+         text =  [[UITextView alloc] initWithFrame:CGRectMake(10, 190, self.view.frame.size.width*3/4, 110)];
+     }
+     
      initImage.image = [ UIImage imageNamed:@"travellearnimge.jpg"];
      initImage.contentMode = UIViewContentModeScaleAspectFit;
-     UITextView *text = [[UITextView alloc] initWithFrame:CGRectMake(10, 190, 304, 110)];
      text.scrollEnabled = YES;
+     text.editable = NO;
      text.text = @"IHO’s travel program is different from any other travel experience. This is not just travel—it is immersion in the span of human history, hosted by IHO and ASU scientists who add a richer understanding of your travel destination. At the same time, our travel adventures are designed for fun, excitement, and comfort and take advantage of the best accommodations and sailing vessels available in the industry. We partner with top travel providers who are specialists in exotic areas of the world. Plus, tour leaders, such as Bill Kimbel and Don Johanson, have been accompanying our travelers since the 1980s to Ethiopia, France, Galápagos, Madagascar, South Africa, and Tanzania, as well as being seasoned world travelers themselves. From years of experience, we understand the balance between a great travel experience and a rich learning program. In fact, our trips are so unique and engaging that we have many satisfied repeat travelers.";
      [text setFont:[UIFont fontWithName:@"Arial" size:14]];
      [view addSubview:initImage];

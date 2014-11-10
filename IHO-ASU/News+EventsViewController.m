@@ -29,7 +29,39 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+
+    bool ipad = ([[UIDevice currentDevice]userInterfaceIdiom ] == UIUserInterfaceIdiomPad);
+    //set up toolbar
+    self.navigationController.toolbarHidden = NO;
+    [self.navigationController.toolbar setTranslucent:NO];
+    [UIFont fontWithName:@"Arial-MT" size:15];
+    UIBarButtonItem *customItem1 = [[UIBarButtonItem alloc]
+                                    initWithTitle:nil style:UIBarButtonItemStyleBordered
+                                    target:self action:nil];
     
+    UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
+                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    target:self action:nil];
+    customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
+    
+    
+    if(!ipad){
+        
+        [customItem1 setWidth:55];
+        [customItem2 setWidth:90];
+        
+    }
+    else{
+        
+    }
+    
+    
+    NSArray *toolbarItems = [NSArray arrayWithObjects:
+                             customItem1,customItem2,nil];
+    
+    self.toolbarItems = toolbarItems;
+
     
 }
 
