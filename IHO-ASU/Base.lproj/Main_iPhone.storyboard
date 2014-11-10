@@ -16,14 +16,14 @@
                         <color key="barTintColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="mzy-bH-17p" kind="relationship" relationship="rootViewController" id="A1B-Q7-qBa"/>
+                        <segue destination="5uE-e4-54Z" kind="relationship" relationship="rootViewController" id="zyK-lh-yie"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZM-BR-sL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1384" y="102"/>
+            <point key="canvasLocation" x="-1227" y="-631"/>
         </scene>
-        <!--TryMain-->
+        <!--Try Main-->
         <scene sceneID="YBM-Jc-4LH">
             <objects>
                 <tableViewController id="5uE-e4-54Z" customClass="TryMain" sceneMemberID="viewController">
@@ -40,55 +40,73 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqB-72-j1k">
-                                                    <rect key="frame" x="35" y="31" width="116" height="32"/>
+                                                    <rect key="frame" x="16" y="26" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="News+Events"/>
+                                                    <connections>
+                                                        <segue destination="ywo-EW-ig8" kind="push" id="C3J-VM-IMW"/>
+                                                    </connections>
                                                 </button>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jVc-YT-IZa">
-                                                    <rect key="frame" x="181" y="31" width="116" height="32"/>
+                                                    <rect key="frame" x="176" y="26" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="Field Notes">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ccg-xF-qjz" kind="push" id="7I2-NT-fRO"/>
+                                                    </connections>
                                                 </button>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQ5-ZF-J84">
-                                                    <rect key="frame" x="35" y="79" width="116" height="32"/>
+                                                    <rect key="frame" x="16" y="71" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="Connect">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="ncw-pV-wiP" kind="push" id="65q-Gn-awo"/>
+                                                    </connections>
                                                 </button>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ep-1s-n0E">
-                                                    <rect key="frame" x="181" y="79" width="116" height="32"/>
+                                                    <rect key="frame" x="176" y="71" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="Gallery">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="his-uE-L0t" kind="push" id="RIA-nf-b5l"/>
+                                                    </connections>
                                                 </button>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ato-pN-yKU">
-                                                    <rect key="frame" x="35" y="127" width="116" height="32"/>
+                                                    <rect key="frame" x="16" y="118" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="About">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Z1L-lO-x9V" kind="push" id="p45-lr-6e8"/>
+                                                    </connections>
                                                 </button>
+                                                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-4n-l5q">
+                                                    <rect key="frame" x="8" y="159" width="305" height="297"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </webView>
                                                 <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZ7-Cm-CL7">
-                                                    <rect key="frame" x="181" y="127" width="116" height="32"/>
+                                                    <rect key="frame" x="176" y="118" width="128" height="30"/>
                                                     <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                                     <state key="normal" title="Donate">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="Dey-ad-IJH" kind="push" id="xUT-6e-ynh"/>
+                                                    </connections>
                                                 </button>
-                                                <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rb0-4n-l5q">
-                                                    <rect key="frame" x="8" y="173" width="305" height="297"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </webView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -100,14 +118,32 @@
                             <outlet property="delegate" destination="5uE-e4-54Z" id="8pM-pq-nmf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="TryMain" id="b6F-gf-prW"/>
+                    <toolbarItems>
+                        <barButtonItem width="46" id="fHo-QB-gaV"/>
+                        <barButtonItem title="ASU IHO 2014" id="Fqv-h8-HsZ"/>
+                        <barButtonItem title="credits" width="99" style="plain" id="O4r-0F-62m">
+                            <connections>
+                                <segue destination="BEl-jq-Akb" kind="push" id="BRT-bi-OVw"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="b6F-gf-prW"/>
                     <connections>
+                        <outlet property="about" destination="ato-pN-yKU" id="NI4-pd-wd4"/>
+                        <outlet property="coR" destination="Fqv-h8-HsZ" id="o0G-yP-8Gt"/>
+                        <outlet property="connect" destination="IQ5-ZF-J84" id="ZtT-7R-aqz"/>
+                        <outlet property="credits" destination="O4r-0F-62m" id="diW-QG-cJK"/>
+                        <outlet property="customItem1" destination="fHo-QB-gaV" id="MUb-xc-atB"/>
+                        <outlet property="donate" destination="SZ7-Cm-CL7" id="Dge-jp-ZTD"/>
+                        <outlet property="field" destination="jVc-YT-IZa" id="TXW-q2-rRF"/>
+                        <outlet property="gallery" destination="5Ep-1s-n0E" id="yrb-mz-LxV"/>
                         <outlet property="ihologo" destination="rb0-4n-l5q" id="73I-gy-CJP"/>
+                        <outlet property="news" destination="RqB-72-j1k" id="dwy-Oa-mHq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVg-4g-KcJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1323" y="768"/>
+            <point key="canvasLocation" x="-6" y="-327"/>
         </scene>
         <!--Credits-->
         <scene sceneID="siG-P2-LzF">
@@ -122,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QXw-Lk-hUE">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="467"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -136,14 +172,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeL-nI-OQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1046" y="949"/>
+            <point key="canvasLocation" x="-871" y="503"/>
         </scene>
         <!--About-->
         <scene sceneID="Bxx-Oy-oHW">
             <objects>
                 <tableViewController title="About" id="Z1L-lO-x9V" customClass="AboutViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Yee-kb-4MP">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -266,7 +302,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBx-f8-QLQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-963" y="1314"/>
+            <point key="canvasLocation" x="-403" y="952"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="hSW-Xi-ntT">
@@ -277,7 +313,7 @@
                         <viewControllerLayoutGuide type="bottom" id="i4k-6h-lAh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLy-hb-rgY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktS-1v-vON">
@@ -287,9 +323,6 @@
                                 <state key="normal" title="Field Notes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ccg-xF-qjz" kind="push" id="fRT-hf-Uhc"/>
-                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBf-bj-BaH">
                                 <rect key="frame" x="16" y="123" width="128" height="30"/>
@@ -298,9 +331,6 @@
                                 <state key="normal" title="About">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Z1L-lO-x9V" kind="push" id="oM4-JI-dU4"/>
-                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hV3-H3-M2F">
                                 <rect key="frame" x="16" y="75" width="128" height="30"/>
@@ -309,18 +339,12 @@
                                 <state key="normal" title="Connect">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="ncw-pV-wiP" kind="push" id="aFz-o2-bol"/>
-                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80l-nc-e8m">
                                 <rect key="frame" x="16" y="26" width="128" height="30"/>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
                                 <state key="normal" title="News+Events"/>
-                                <connections>
-                                    <segue destination="ywo-EW-ig8" kind="push" id="fQK-JB-U6t"/>
-                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-9h-7rQ">
                                 <rect key="frame" x="176" y="123" width="128" height="30"/>
@@ -329,9 +353,6 @@
                                 <state key="normal" title="Donate">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Dey-ad-IJH" kind="push" id="edw-jO-yXN"/>
-                                </connections>
                             </button>
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6Y-Zu-YpE">
                                 <rect key="frame" x="176" y="75" width="128" height="30"/>
@@ -340,12 +361,8 @@
                                 <state key="normal" title="Gallery">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="his-uE-L0t" kind="push" id="2aU-lS-j6b"/>
-                                </connections>
                             </button>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lpu-Ks-sAR">
-                                <rect key="frame" x="8" y="173" width="305" height="279"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -353,16 +370,8 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem width="46" id="hxg-dh-QOn"/>
-                        <barButtonItem title="ASU IHO 2014" id="S30-xE-nmh">
-                            <connections>
-                                <segue destination="5uE-e4-54Z" kind="push" id="JiE-by-Q3F"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem title="credits" width="99" style="plain" id="WgW-hj-HpX">
-                            <connections>
-                                <segue destination="BEl-jq-Akb" kind="push" id="bqT-LT-he6"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem title="ASU IHO 2014" id="S30-xE-nmh"/>
+                        <barButtonItem title="credits" width="99" style="plain" id="WgW-hj-HpX"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="HeP-Gl-ehD"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
@@ -381,14 +390,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZJO-FK-bC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-855" y="15"/>
+            <point key="canvasLocation" x="-1791" y="407"/>
         </scene>
         <!--Connect-->
         <scene sceneID="YDV-JD-RFR">
             <objects>
                 <tableViewController id="ncw-pV-wiP" customClass="ConnectViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="UHC-ct-1Yv">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -523,7 +532,7 @@
             <objects>
                 <tableViewController id="2NS-Bz-S2X" customClass="ConnectDetailsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="YDB-Pw-Hs6">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -722,7 +731,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eLD-ZU-QHb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mnt-MW-0Nk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYX-3Z-ZL8">
@@ -993,31 +1002,12 @@
             </objects>
             <point key="canvasLocation" x="-480" y="-2026"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="8CB-U5-oPN">
-            <objects>
-                <viewController id="j1C-Au-Hsa" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GUs-gj-zGr"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZQr-o8-CmR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wLr-JO-VFi">
-                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yke-82-G9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1724" y="-653"/>
-        </scene>
         <!--Field Notes-->
         <scene sceneID="uMT-mb-pLW">
             <objects>
                 <tableViewController id="ccg-xF-qjz" customClass="FieldViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="Zdp-W1-IJ2">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1215,7 +1205,6 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nJg-zv-PG6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
@@ -1239,7 +1228,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Vc-Me-mwo"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hse-h3-SPo">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wel-sj-YdD">
@@ -1305,11 +1294,10 @@
                         <viewControllerLayoutGuide type="bottom" id="MRF-ny-ZDd"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YsO-c0-qo5">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rdq-R8-isz">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
@@ -1331,7 +1319,7 @@
             <objects>
                 <tableViewController id="ywo-EW-ig8" customClass="News_EventsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="9x4-AL-geG">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
