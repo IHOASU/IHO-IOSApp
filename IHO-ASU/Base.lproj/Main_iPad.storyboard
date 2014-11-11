@@ -16,12 +16,137 @@
                         <color key="barTintColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="GFp-JN-o4Z" kind="relationship" relationship="rootViewController" id="9YT-tB-L2a"/>
+                        <segue destination="dBA-wy-lbF" kind="relationship" relationship="rootViewController" id="Eyb-e0-bGt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qXW-xx-rgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2619" y="1288"/>
+            <point key="canvasLocation" x="-3327" y="1192"/>
+        </scene>
+        <!--Try Main-->
+        <scene sceneID="cyw-u9-uBy">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h6-1u-eI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="dBA-wy-lbF" customClass="TryMain" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2fT-a0-ixh">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="5M1-J0-4jK">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="915" id="9cK-ce-4W2">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9cK-ce-4W2" id="ml3-0g-Wrb">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-hU-gkv">
+                                                    <rect key="frame" x="102" y="58" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.22352941179999999" green="0.42352941179999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="News+Events"/>
+                                                    <connections>
+                                                        <segue destination="ZeS-C8-xHy" kind="push" id="chz-tB-BE7"/>
+                                                    </connections>
+                                                </button>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmf-lV-Nc6">
+                                                    <rect key="frame" x="426" y="58" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.22352941179999999" green="0.41960784309999999" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Field Notes">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="3Gg-r3-uEC" kind="push" id="v8s-oK-W6Q"/>
+                                                    </connections>
+                                                </button>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5y-U0-z8n">
+                                                    <rect key="frame" x="102" y="150" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Connect">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="iAg-2e-BFr" kind="push" id="lFR-F6-ZKC"/>
+                                                    </connections>
+                                                </button>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lJ-rI-o0J">
+                                                    <rect key="frame" x="426" y="150" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Gallery">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="XoF-XB-mVm" kind="push" id="rb0-8T-gmU"/>
+                                                    </connections>
+                                                </button>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPN-oB-bIH">
+                                                    <rect key="frame" x="102" y="245" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="About">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="Uut-IW-Nxl" kind="push" id="eYN-te-G6L"/>
+                                                    </connections>
+                                                </button>
+                                                <webView contentMode="scaleAspectFit" fixedFrame="YES" allowsInlineMediaPlayback="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-T0-NQz">
+                                                    <rect key="frame" x="102" y="363" width="556" height="455"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <dataDetectorType key="dataDetectorTypes"/>
+                                                </webView>
+                                                <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTF-JM-zOn">
+                                                    <rect key="frame" x="426" y="245" width="226" height="54"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
+                                                    <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="Donate">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <segue destination="dBi-v7-prp" kind="push" id="Ty0-b8-xY5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dBA-wy-lbF" id="pFG-7B-nMx"/>
+                            <outlet property="delegate" destination="dBA-wy-lbF" id="Oto-IL-P7d"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems>
+                        <barButtonItem width="152" style="plain" id="5Ck-EV-wKU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem title="copyright@IHO ASU 2014" width="244" id="wx0-f8-eTy">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                        <barButtonItem title="credits" id="a37-O3-MzJ">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="X2G-at-S9n" kind="push" id="3wD-iM-r4P"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="kNe-jH-Ihx"/>
+                    <connections>
+                        <outlet property="ihologo" destination="mdt-T0-NQz" id="dDm-xM-DgH"/>
+                    </connections>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="-2458" y="1359"/>
         </scene>
         <!--Credits-->
         <scene sceneID="iez-Ed-L35">
@@ -36,7 +161,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruH-sh-6Oz">
-                                <rect key="frame" x="0.0" y="-6" width="774" height="922"/>
+                                <rect key="frame" x="0.0" y="0.0" width="766" height="937"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                         </subviews>
@@ -44,7 +169,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Credits" id="uI7-n8-u6Y"/>
                     <connections>
-                        <outlet property="creditText" destination="ruH-sh-6Oz" id="Zpi-ZB-hDm"/>
+                        <outlet property="creditText" destination="ruH-sh-6Oz" id="EFe-xa-0Cv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxe-In-Sgs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,7 +181,7 @@
             <objects>
                 <tableViewController id="Uut-IW-Nxl" customClass="AboutViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nO9-9c-f1j">
-                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -68,7 +193,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ASU IHO vertical.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BGJ-QU-YHR">
-                                                    <rect key="frame" x="82" y="36" width="587" height="119.5"/>
+                                                    <rect key="frame" x="82" y="36" width="587" height="120"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -79,7 +204,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D04-Tj-rr1">
-                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="274.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="768" height="275"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </webView>
                                             </subviews>
@@ -155,134 +280,11 @@
             </objects>
             <point key="canvasLocation" x="-1783" y="2560"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="c1a-MJ-9xY">
-            <objects>
-                <viewController id="GFp-JN-o4Z" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Tj8-aY-tvV"/>
-                        <viewControllerLayoutGuide type="bottom" id="wVx-7d-1D6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="upv-xV-fLc">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wmf-lV-Nc6">
-                                <rect key="frame" x="426" y="58" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.22352941179999999" green="0.41960784309999999" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Field Notes">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3Gg-r3-uEC" kind="push" id="mKu-a2-hlh"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lJ-rI-o0J">
-                                <rect key="frame" x="426" y="150" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Gallery">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="XoF-XB-mVm" kind="push" id="rb0-8T-gmU"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPN-oB-bIH">
-                                <rect key="frame" x="102" y="244" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="About">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Uut-IW-Nxl" kind="push" id="eYN-te-G6L"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RTF-JM-zOn">
-                                <rect key="frame" x="426" y="244" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Donate">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="dBi-v7-prp" kind="push" id="Ty0-b8-xY5"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5y-U0-z8n">
-                                <rect key="frame" x="102" y="150" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.123354806" green="0.3452127089" blue="0.72129755429999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Connect">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="iAg-2e-BFr" kind="push" id="lFR-F6-ZKC"/>
-                                </connections>
-                            </button>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udb-hU-gkv">
-                                <rect key="frame" x="102" y="58" width="226" height="54"/>
-                                <color key="backgroundColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="21"/>
-                                <color key="tintColor" red="0.22352941179999999" green="0.42352941179999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="News+Events"/>
-                                <connections>
-                                    <segue destination="ZeS-C8-xHy" kind="push" id="chz-tB-BE7"/>
-                                </connections>
-                            </button>
-                            <webView contentMode="scaleAspectFit" fixedFrame="YES" allowsInlineMediaPlayback="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mdt-T0-NQz">
-                                <rect key="frame" x="88" y="383" width="593" height="475"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem width="152" style="plain" id="5Ck-EV-wKU">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem title="copyright@IHO ASU 2014" width="244" id="wx0-f8-eTy">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                        <barButtonItem title="Credits" width="163" id="cC4-TK-gha">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <segue destination="X2G-at-S9n" kind="push" id="Dqp-f2-gmx"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="GXl-2v-Z8k"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <connections>
-                        <outlet property="about" destination="aPN-oB-bIH" id="tB2-78-pPN"/>
-                        <outlet property="coR" destination="wx0-f8-eTy" id="lZ2-86-zJs"/>
-                        <outlet property="contact" destination="r5y-U0-z8n" id="9lg-LM-XU6"/>
-                        <outlet property="credits" destination="cC4-TK-gha" id="s3a-Hx-NdZ"/>
-                        <outlet property="customItem1" destination="5Ck-EV-wKU" id="auM-DK-67P"/>
-                        <outlet property="donate" destination="RTF-JM-zOn" id="kEf-Wz-jZ0"/>
-                        <outlet property="field" destination="Wmf-lV-Nc6" id="hqT-fv-lYd"/>
-                        <outlet property="gallery" destination="6lJ-rI-o0J" id="Ve2-zt-Hrl"/>
-                        <outlet property="ihoLogo" destination="mdt-T0-NQz" id="c80-qo-26r"/>
-                        <outlet property="news" destination="Udb-hU-gkv" id="vM4-9d-Onz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A8f-9V-qv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1595" y="1326"/>
-        </scene>
         <!--Connect-->
         <scene sceneID="7s2-TK-fCf">
             <objects>
                 <tableViewController id="iAg-2e-BFr" customClass="ConnectViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mHC-lo-BVW">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mHC-lo-BVW">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -424,7 +426,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LcP-Ka-BMc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c2n-EV-mnS">
-                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bru-uw-avT">
@@ -481,7 +483,7 @@ If you would like to send donation by check, please make your donation payable t
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-aa-fln">
-                                                    <rect key="frame" x="115" y="9" width="417" height="321.5"/>
+                                                    <rect key="frame" x="115" y="9" width="417" height="322"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -700,7 +702,7 @@ If you would like to send donation by check, please make your donation payable t
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="hLf-yv-D9C" kind="push" id="FK6-Zh-iPX"/>
+                                            <segue destination="hLf-yv-D9C" kind="push" id="85z-qa-aBV"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -804,7 +806,7 @@ If you would like to send donation by check, please make your donation payable t
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYt-Jx-8BB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1211" y="178"/>
+            <point key="canvasLocation" x="-1516" y="868"/>
         </scene>
         <!--Science List-->
         <scene sceneID="zvu-hY-sBb">
@@ -845,9 +847,18 @@ If you would like to send donation by check, please make your donation payable t
                     <view key="view" contentMode="scaleToFill" id="Oak-8T-lwg">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-sf-7u5">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="ZEW-oZ-y17"/>
+                    <connections>
+                        <outlet property="displayLucy" destination="JQa-sf-7u5" id="Ulz-Bs-7bY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVp-se-UeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -898,8 +909,15 @@ If you would like to send donation by check, please make your donation payable t
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-8G-sAe">
+                                                    <rect key="frame" x="148" y="49" width="240" height="85"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIR-62-Wfy">
-                                                    <rect key="frame" x="46" y="187" width="162" height="30"/>
+                                                    <rect key="frame" x="37" y="162" width="162" height="30"/>
                                                     <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                                                     <state key="normal" title="IHO Location Page">
@@ -914,13 +932,6 @@ If you would like to send donation by check, please make your donation payable t
                                                         <action selector="buttonLoc:" destination="wig-1y-guj" eventType="touchUpInside" id="TiE-lN-FS2"/>
                                                     </connections>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDE-8G-sAe">
-                                                    <rect key="frame" x="148" y="49" width="240" height="128"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -945,8 +956,15 @@ If you would like to send donation by check, please make your donation payable t
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrS-sm-VGV">
+                                                    <rect key="frame" x="138" y="34" width="240" height="89"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Vj-Pj-6ym">
-                                                    <rect key="frame" x="46" y="176" width="162" height="30"/>
+                                                    <rect key="frame" x="41" y="151" width="162" height="30"/>
                                                     <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
                                                     <state key="normal" title="IHO Contact Page">
@@ -961,13 +979,6 @@ If you would like to send donation by check, please make your donation payable t
                                                         <action selector="buttonCon:" destination="wig-1y-guj" eventType="touchUpInside" id="8Xx-jU-Rhy"/>
                                                     </connections>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rrS-sm-VGV">
-                                                    <rect key="frame" x="138" y="34" width="240" height="128"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1039,7 +1050,7 @@ If you would like to send donation by check, please make your donation payable t
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="initCell" rowHeight="590" id="jbU-bA-ZAd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="initCell" rowHeight="500" id="jbU-bA-ZAd">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jbU-bA-ZAd" id="Bcs-q4-zVd">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -1050,9 +1061,10 @@ If you would like to send donation by check, please make your donation payable t
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dW0-kA-vKO" id="Df9-kC-1fv">
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.023529411760000001" green="0.21960784310000001" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -1083,7 +1095,7 @@ If you would like to send donation by check, please make your donation payable t
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ksa-eI-d7b">
-                                                    <rect key="frame" x="235" y="14" width="337" height="258.5"/>
+                                                    <rect key="frame" x="235" y="14" width="337" height="259"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1129,6 +1141,9 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="linkB:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="6WC-3m-Udl"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-Hs-2Yg">
                                                     <rect key="frame" x="251" y="123" width="267" height="57"/>
@@ -1138,6 +1153,9 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="emailQ:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="reG-TX-jN0"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-He-QjO">
                                                     <rect key="frame" x="251" y="210" width="267" height="57"/>
@@ -1148,7 +1166,7 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="ASS-O3-3U0" kind="push" id="Ba9-rK-FuK"/>
+                                                        <segue destination="ASS-O3-3U0" kind="push" id="6bB-G9-kV9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1187,16 +1205,18 @@ If you would like to send donation by check, please make your donation payable t
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2P2-bU-Gxv" id="4Rw-q2-pMA">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46P-rm-QE6">
-                                            <rect key="frame" x="66" y="334" width="515" height="77"/>
-                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-6p-Uxl">
                                             <rect key="frame" x="264" y="71" width="240" height="128"/>
                                         </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text goes here" translatesAutoresizingMaskIntoConstraints="NO" id="BhG-uW-FCF">
+                                            <rect key="frame" x="68" y="315" width="550" height="106"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1243,7 +1263,7 @@ If you would like to send donation by check, please make your donation payable t
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O1y-pJ-gMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1244" y="-989"/>
+            <point key="canvasLocation" x="-1302" y="-468"/>
         </scene>
         <!--Event Details View Controller-->
         <scene sceneID="tiD-pV-Cko">
@@ -1400,7 +1420,7 @@ If you would like to send donation by check, please make your donation payable t
                         <viewControllerLayoutGuide type="bottom" id="Pri-J6-lzj"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Gt-lB-BaU">
-                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2zj-4q-XEv">
@@ -1468,16 +1488,18 @@ If you would like to send donation by check, please make your donation payable t
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4NW-1U-5pS" id="czE-nf-R1c">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ7-Yj-lks">
-                                            <rect key="frame" x="69" y="335" width="515" height="77"/>
-                                            <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView userInteractionEnabled="NO" tag="101" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cBy-OL-j2Z">
                                             <rect key="frame" x="105" y="39" width="437" height="293"/>
                                         </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="102" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text goes here" translatesAutoresizingMaskIntoConstraints="NO" id="qBw-5b-Up2">
+                                            <rect key="frame" x="68" y="345" width="550" height="86"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -1501,16 +1523,12 @@ If you would like to send donation by check, please make your donation payable t
                         <viewControllerLayoutGuide type="bottom" id="YpR-2l-hki"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="aGU-Rg-9II">
-                        <rect key="frame" x="0.0" y="64" width="768" height="916"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vg-0p-zzz">
+                                <rect key="frame" x="-7" y="-21" width="775" height="937"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vas-yl-occ">
-                                <rect key="frame" x="29" y="20" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1518,12 +1536,12 @@ If you would like to send donation by check, please make your donation payable t
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Support IHO" id="4rc-vb-IhI"/>
                     <connections>
-                        <outlet property="asuLink" destination="Vas-yl-occ" id="pCC-Tb-aqZ"/>
+                        <outlet property="asuLink" destination="0vg-0p-zzz" id="VKp-C1-SYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cMl-ld-pyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="429" y="2672"/>
+            <point key="canvasLocation" x="435" y="2672"/>
         </scene>
     </scenes>
     <resources>

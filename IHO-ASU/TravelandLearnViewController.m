@@ -157,8 +157,9 @@
          text =  [[UITextView alloc] initWithFrame:CGRectMake(10, 190, 304, 100)];
      }
      else{
+         view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.width,600)];
          initImage = [[UIImageView alloc] initWithFrame:CGRectMake(80,40,200,200)];
-         text =  [[UITextView alloc] initWithFrame:CGRectMake(10, 190, self.view.frame.size.width*3/4, 110)];
+         text =  [[UITextView alloc] initWithFrame:CGRectMake(10, 190, self.view.frame.size.width*2.5/3,100)];
      }
      
      initImage.image = [ UIImage imageNamed:@"travellearnimge.jpg"];
@@ -209,6 +210,12 @@
     
     [self reloadTableView];
     
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section==1)
+    cell.backgroundColor = [UIColor colorWithRed:(0/255.0) green:(56/255.0) blue:(104/255.0) alpha:1.0];
 }
 
 - (void)viewWillAppear:(BOOL)animated

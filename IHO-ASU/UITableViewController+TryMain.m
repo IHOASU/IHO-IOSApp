@@ -34,10 +34,10 @@
     }
     else
     {
-        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width/2.5, self.navigationController.navigationBar.frame.size.height/1.5)];
+        imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0,0,self.navigationController.navigationBar.frame.size.width/3, self.navigationController.navigationBar.frame.size.height/1.5)];
         
     }
-    
+    NSLog(@"%f",self.navigationController.navigationController.navigationBar.frame.size.height);
     imageView.image = [UIImage imageNamed:@"IHOlogoforapp.jpg"];
     UIView *logoView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, imageView.frame.size.width, imageView.frame.size.height)];
     [logoView addSubview:imageView];
