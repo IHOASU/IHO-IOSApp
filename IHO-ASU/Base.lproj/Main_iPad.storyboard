@@ -273,7 +273,7 @@
                     <navigationItem key="navigationItem" title="About" id="hSe-wj-1xb"/>
                     <connections>
                         <outlet property="about_link" destination="D04-Tj-rr1" id="FnZ-Iw-7z4"/>
-                        <outlet property="mapIt" destination="cD2-N1-cNp" id="YUa-bj-Bmo"/>
+                        <outlet property="mapIt" destination="cD2-N1-cNp" id="xE8-wg-4en"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JqQ-M3-s9u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1142,7 +1142,7 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="linkB:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="6WC-3m-Udl"/>
+                                                        <action selector="linkB:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="1ZZ-iO-aqu"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGx-Hs-2Yg">
@@ -1154,7 +1154,7 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="emailQ:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="reG-TX-jN0"/>
+                                                        <action selector="emailQ:" destination="qY6-PD-Rfl" eventType="touchUpInside" id="iu1-Xf-XlQ"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Vc-He-QjO">
@@ -1166,7 +1166,7 @@ If you would like to send donation by check, please make your donation payable t
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="ASS-O3-3U0" kind="push" id="6bB-G9-kV9"/>
+                                                        <segue destination="ASS-O3-3U0" kind="push" identifier="viewLectGallery" id="6bB-G9-kV9"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1205,8 +1205,8 @@ If you would like to send donation by check, please make your donation payable t
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2P2-bU-Gxv" id="4Rw-q2-pMA">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="103" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-6p-Uxl">
-                                            <rect key="frame" x="264" y="71" width="240" height="128"/>
+                                        <imageView userInteractionEnabled="NO" tag="103" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-6p-Uxl">
+                                            <rect key="frame" x="150" y="71" width="400" height="200"/>
                                         </imageView>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="104" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="text goes here" translatesAutoresizingMaskIntoConstraints="NO" id="BhG-uW-FCF">
                                             <rect key="frame" x="68" y="315" width="550" height="106"/>
