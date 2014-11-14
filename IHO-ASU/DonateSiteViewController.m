@@ -39,6 +39,7 @@
     NSString *link=@"https://securelb.imodules.com/s/1469/foundation/Inner2Columns3.aspx?sid=1469&gid=2&pgid=426&cid=1155&bledit=1&dids=216";
     NSURL *url = [NSURL URLWithString:link];
     NSURLRequest *link_request = [NSURLRequest requestWithURL:url];
+    [asuLink setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [asuLink loadRequest:link_request];
     [self.view addSubview:asuLink];
     self.navigationController.toolbarHidden = NO;

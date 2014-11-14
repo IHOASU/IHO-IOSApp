@@ -42,7 +42,8 @@
         //[self.view addSubview:displayLucy];
         
     }
-    
+    [displayLucy setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+
     self.navigationController.toolbarHidden = NO;
     [self.navigationController.toolbar setTranslucent:NO];
     [UIFont fontWithName:@"Arial-MT" size:15];
@@ -80,6 +81,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)willAnimateRotationToInterfaceOrientation: (UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [displayLucy setFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];

@@ -26,7 +26,6 @@
         <!--Try Main-->
         <scene sceneID="cyw-u9-uBy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3h6-1u-eI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="dBA-wy-lbF" customClass="TryMain" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2fT-a0-ixh">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="916"/>
@@ -145,6 +144,7 @@
                         <outlet property="ihologo" destination="mdt-T0-NQz" id="dDm-xM-DgH"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h6-1u-eI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2458" y="1359"/>
         </scene>
@@ -482,7 +482,7 @@ If you would like to send donation by check, please make your donation payable t
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DNl-eJ-35B" id="l3A-ab-qZ2">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-aa-fln">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BTi-aa-fln">
                                                     <rect key="frame" x="115" y="9" width="417" height="322"/>
                                                 </imageView>
                                             </subviews>
