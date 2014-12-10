@@ -82,15 +82,14 @@
                                     target:self action:nil];
     
     UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    initWithTitle:@"ASU IHO 2014" style:UIBarButtonItemStyleDone
                                     target:self action:nil];
     customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
     
     
     if(!ipad){
-        
-        [customItem1 setWidth:55];
-        [customItem2 setWidth:90];
+        [customItem1 setWidth:self.navigationController.toolbar.frame.size.width/4];
+        [customItem2 setWidth:self.navigationController.toolbar.frame.size.width/2];
         
     }
     else{

@@ -50,7 +50,7 @@
                                     target:self action:nil];
     
     UIBarButtonItem *customItem2 = [[UIBarButtonItem alloc]
-                                    initWithTitle:@"@IHO ASU 2014" style:UIBarButtonItemStyleDone
+                                    initWithTitle:@"ASU IHO 2014" style:UIBarButtonItemStyleDone
                                     target:self action:nil];
     customItem2.tintColor = [UIColor colorWithWhite:1 alpha:1];
     

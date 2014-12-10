@@ -285,13 +285,10 @@
 		5F566ABC18FC43A60042F4CA /* IHO-ASU */ = {
 			isa = PBXGroup;
 			children = (
-				8CA4677819FE6D4D006F79E3 /* FB.png */,
 				5F566AC518FC43A60042F4CA /* IHOAppDelegate.h */,
 				5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */,
 				5F566AC818FC43A60042F4CA /* Main_iPhone.storyboard */,
 				5F566ACB18FC43A60042F4CA /* Main_iPad.storyboard */,
-				5F566B0E18FC45400042F4CA /* MainViewController.h */,
-				5F566B0F18FC45400042F4CA /* MainViewController.m */,
 				5F566B1018FC45400042F4CA /* News+EventsViewController.h */,
 				5F566B1118FC45400042F4CA /* News+EventsViewController.m */,
 				5F566B1218FC45400042F4CA /* NewsDetail.h */,
@@ -350,6 +347,8 @@
 				8C0D20A21A0ADE8F003FE4DC /* NSObject+image.m */,
 				8C0D20A41A0B8E55003FE4DC /* UITableViewController+LecturerGallery.h */,
 				8C0D20A51A0B8E55003FE4DC /* UITableViewController+LecturerGallery.m */,
+				5F566B0E18FC45400042F4CA /* MainViewController.h */,
+				5F566B0F18FC45400042F4CA /* MainViewController.m */,
 				5F566AF018FC45400042F4CA /* Base.lproj */,
 				5F566B3018FC46120042F4CA /* Resources */,
 				5F566AFE18FC45400042F4CA /* en.lproj */,
@@ -409,6 +408,7 @@
 		5F566B3018FC46120042F4CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8CA4677819FE6D4D006F79E3 /* FB.png */,
 				5F566AF718FC45400042F4CA /* CreditDetails.html */,
 				8C2A5EB81A0D84AA0020A400 /* lucy.html */,
 				8C2A5EB41A0D81F50020A400 /* custom.css */,
