@@ -16,7 +16,7 @@
 @end
 
 @implementation NewsDetailViewController
-@synthesize newsId=_newsId,newsContent,newsImage;
+@synthesize newsId=_newsId,newsContent,newsImage,NewsTitle;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,6 +45,7 @@
     // Do any additional setup after loading the view.
         if (details != nil) {
         newsImage.image = [UIImage imageWithData:details.image];
+            [NewsTitle setText:details.newstitle];
         [newsContent setFont:[UIFont fontWithName:@"Arial" size:15]];
         [newsContent setText:details.text];
         

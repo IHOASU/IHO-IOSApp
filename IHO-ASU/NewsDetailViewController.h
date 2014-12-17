@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *newsImage;
 @property (weak, nonatomic) IBOutlet UILabel *newsContent;
 @property (nonatomic,assign) int newsId;
+@property (weak, nonatomic) IBOutlet UILabel *NewsTitle;
 
 @property (nonatomic) sqlite3 *asuIHO;
 
