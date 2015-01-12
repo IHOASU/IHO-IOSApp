@@ -39,7 +39,19 @@
 
     event  = nil;
     // Do any additional setup after loading the view.
-    NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
+    NSString *sqLiteDb;
+    NSArray* paths= [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
+                                                           inDomains:NSUserDomainMask];
+    if([paths count] > 0)
+    {
+        NSURL *copyURL = (NSURL*) [paths lastObject];
+        copyURL = [copyURL URLByAppendingPathComponent:@"asuIHO"];
+        copyURL = [copyURL URLByAppendingPathExtension:@"db"];
+        sqLiteDb = [copyURL path];
+        
+        //sqLiteDb = [ pathForResource:@"asuIHO" ofType:@"db"];
+        
+    }
     
     if (sqlite3_open([sqLiteDb UTF8String],&_asuIHO)==SQLITE_OK)
     {

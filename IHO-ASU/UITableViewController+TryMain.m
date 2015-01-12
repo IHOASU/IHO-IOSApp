@@ -7,6 +7,7 @@
 //
 
 #import "UITableViewController+TryMain.h"
+static sqlite3 *asuIHO = nil;
 
 @implementation TryMain
 @synthesize  news,field,donate,about,gallery,connect,ihologo,customItem1,coR,credits;
@@ -15,6 +16,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+       
         // Custom initialization
     }
     return self;
@@ -24,6 +26,8 @@
 
 - (void)viewDidLoad
 {
+     [self copyDatabase];
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     UIImageView *imageView;
@@ -91,6 +95,69 @@
     
 }
 
+
+//code from apple developers website
+
+ -(void)copyDatabase
+{
+    /* NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+     NSString* dbPath = [documentsPath stringByAppendingPathComponent:@"StayhealthyExercises-1.sqlite"];
+     BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:dbPath];
+     
+     if (!fileExists) {
+     NSLog(@"Didn't find database");
+     // get the source path to copy from
+     // NSString *dbSourcePath = [[NSBundle mainBundle] pathForResource:@"StayhealthyExercises-1" ofType:@"sqlite"];
+     NSString *dbSourcePath = [[[NSBundle mainBundle] resourcePath  ]stringByAppendingPathComponent:@"StayhealthyExercises-1.sqlite"];
+     // copy db to documents
+     [[NSFileManager defaultManager] copyItemAtPath:dbSourcePath toPath:dbPath error:nil];
+     }*/
+    //create path to Application Support directory
+    NSString *databasePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+   // NSArray* paths= [[NSFileManager defaultManager] URLsForDirectory:NSApplicationSupportDirector                                                              inDomains:NSUserDomainMask];
+    NSString *dbPath = [databasePath stringByAppendingPathComponent:@"asuIHO.db"];
+    BOOL fileExisting = [[NSFileManager defaultManager ]fileExistsAtPath:dbPath];
+    
+    if(!fileExisting)
+   //if([paths count] > 0)
+   {
+       //retrieve path of database file and construct URL to it
+       //NSString *pathBundle = [[NSBundle mainBundle] pathForResource:@"asuIHO" ofType:@"db"];
+       NSURL *urlBundle = [[NSBundle mainBundle] URLForResource:@"asuIHO" withExtension:@"db"];
+      // NSURL *urlBundle = [NSURL fileURLWithPath:pathBundle];
+       
+       
+       
+       //create application support
+       NSString *appSupportDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+       //In case of no Application Support Directory
+       if (![[NSFileManager defaultManager] fileExistsAtPath:appSupportDir isDirectory:NULL]) {
+           NSError *error = nil;
+           //create it
+           if (![[NSFileManager defaultManager] createDirectoryAtPath:appSupportDir withIntermediateDirectories:YES attributes:nil error:&error]) {
+               NSLog(@"%@", error.localizedDescription);
+           }
+       }
+       
+       NSURL *copyURL = [NSURL fileURLWithPath:appSupportDir];
+       
+       /*
+       //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+          NSError *error = nil;
+           // Just try to copy the directory.
+       if(![[NSFileManager defaultManager] copyItemAtURL:urlBundle toURL:copyURL error:&error]){
+           NSLog(@"%@",error.localizedDescription);
+           ;}
+       */
+       NSString *nameDB = @"asuIHO.db";
+       NSData *dataDB = [NSData dataWithContentsOfURL:urlBundle];
+       NSString *path = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:nameDB];
+       [[NSFileManager defaultManager] createFileAtPath:path contents:dataDB attributes:nil];
+       
+       //});
+   }
+    
+}
 
 
 /*- (void)awakeFromNib

@@ -20,7 +20,6 @@
 		5F566AC718FC43A60042F4CA /* IHOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */; };
 		5F566ACA18FC43A60042F4CA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F566AC818FC43A60042F4CA /* Main_iPhone.storyboard */; };
 		5F566ACD18FC43A60042F4CA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F566ACB18FC43A60042F4CA /* Main_iPad.storyboard */; };
-		5F566AD018FC43A60042F4CA /* IHOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F566ACF18FC43A60042F4CA /* IHOViewController.m */; };
 		5F566AD918FC43A60042F4CA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F566AD818FC43A60042F4CA /* XCTest.framework */; };
 		5F566ADA18FC43A60042F4CA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F566AB618FC43A60042F4CA /* Foundation.framework */; };
 		5F566ADB18FC43A60042F4CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F566ABA18FC43A60042F4CA /* UIKit.framework */; };
@@ -123,8 +122,6 @@
 		5F566AC618FC43A60042F4CA /* IHOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHOAppDelegate.m; sourceTree = "<group>"; };
 		5F566AC918FC43A60042F4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5F566ACC18FC43A60042F4CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		5F566ACE18FC43A60042F4CA /* IHOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IHOViewController.h; sourceTree = "<group>"; };
-		5F566ACF18FC43A60042F4CA /* IHOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IHOViewController.m; sourceTree = "<group>"; };
 		5F566AD718FC43A60042F4CA /* IHO-ASUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHO-ASUTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F566AD818FC43A60042F4CA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5F566AE018FC43A60042F4CA /* IHO-ASUTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IHO-ASUTests-Info.plist"; sourceTree = "<group>"; };
@@ -327,8 +324,6 @@
 				5F566AFB18FC45400042F4CA /* DonateSiteViewController.m */,
 				5F566AFC18FC45400042F4CA /* DonateViewController.h */,
 				5F566AFD18FC45400042F4CA /* DonateViewController.m */,
-				5F566ACF18FC43A60042F4CA /* IHOViewController.m */,
-				5F566ACE18FC43A60042F4CA /* IHOViewController.h */,
 				5F566AF818FC45400042F4CA /* CreditDetailsViewController.h */,
 				5F566AF918FC45400042F4CA /* CreditDetailsViewController.m */,
 				5FB10DF519105A3600081FB2 /* LucyViewController.h */,
@@ -614,7 +609,6 @@
 				5F92417C1907F6480097D1F4 /* BeingHumanViewController.m in Sources */,
 				5F566B2318FC45400042F4CA /* GalleryOptionsViewController.m in Sources */,
 				5F566B1E18FC45400042F4CA /* CreditDetailsViewController.m in Sources */,
-				5F566AD018FC43A60042F4CA /* IHOViewController.m in Sources */,
 				5F9241821907FD460097D1F4 /* EventDetailsViewController.m in Sources */,
 				8C3B8B9B19FEAC93005020D3 /* UITableViewController+EventsList.m in Sources */,
 				5F566B2218FC45400042F4CA /* FieldViewController.m in Sources */,
@@ -779,14 +773,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tanmaya Nelapatla (RZFTPT7QVW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanmaya Nelapatla (RZFTPT7QVW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IHO-ASU/IHO-ASU-Prefix.pch";
 				INFOPLIST_FILE = "IHO-ASU/IHO-ASU-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7efbf820-90e8-422d-b658-81ce8b94eac7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -796,14 +790,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Tanmaya Nelapatla (RZFTPT7QVW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Tanmaya Nelapatla (RZFTPT7QVW)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IHO-ASU/IHO-ASU-Prefix.pch";
 				INFOPLIST_FILE = "IHO-ASU/IHO-ASU-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "7efbf820-90e8-422d-b658-81ce8b94eac7";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
